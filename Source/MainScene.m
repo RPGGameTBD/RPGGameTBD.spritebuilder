@@ -107,7 +107,9 @@
 {
     NSLog(@"New Game Pressed");
     CCScene *firstLevel = [CCBReader loadAsScene:@"FirstLevel"];
-    [[CCDirector sharedDirector] replaceScene:firstLevel];}
+    [[CCDirector sharedDirector] replaceScene:firstLevel];
+    NSLog(@"Nick's Change");
+}
 
 - (void) continueGameCreate
 {
