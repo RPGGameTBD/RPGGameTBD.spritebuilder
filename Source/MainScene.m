@@ -117,5 +117,34 @@
     NSLog(@"Continue Game Pressed");
 }
 
+- (void)bulletRemoved:(CCNode *)bullet {
+    
+    // load particle effect
+    CCParticleSystem *explosion = (CCParticleSystem *)[CCBReader load:@"BulletExplosion"];
+    // make the particle effect clean itself up, once it is completed
+    explosion.autoRemoveOnFinish = TRUE;
+    // place the particle effect on the bullets position
+    explosion.position = bullet.position;
+    // add the particle effect to the same node the bullet is on
+    [bullet.parent addChild:explosion];
+    
+    [bullet removeFromParent];
+    NSLog(@"Boom!");
+}
+
+//Physics delegation
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair bullet:(CCNode *)nodeA wildcard:(CCNode *)nodeB
+{
+    
+    float energy = [pair totalKineticEnergy];
+    
+    
+    //if energy is large enough remove the bullet
+    if (energy > 0.f)
+    {
+        [self bulletRemoved:nodeA];
+    }
+}
+
 
 @end

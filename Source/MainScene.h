@@ -10,7 +10,7 @@
 #import "LeftButton.h"
 #import "RightButton.h"
 
-@interface MainScene : CCNode
+@interface MainScene : CCNode <CCPhysicsCollisionDelegate>
 {
 
 }
