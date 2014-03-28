@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D08481B18C7E37B00ED2488 /* LeftButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D08481A18C7E37B00ED2488 /* LeftButton.m */; };
 		5D08481F18C7E38D00ED2488 /* RightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D08481E18C7E38D00ED2488 /* RightButton.m */; };
+		5D58C2E318E62843001EB69B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E218E62843001EB69B /* Bullet.m */; };
+		5D58C2E718E628D7001EB69B /* Dude.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E618E628D7001EB69B /* Dude.m */; };
 		7D2CE40518E2546800878AB6 /* FirstLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CE40418E2546800878AB6 /* FirstLevel.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -62,6 +64,10 @@
 		5D08481A18C7E37B00ED2488 /* LeftButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftButton.m; sourceTree = "<group>"; };
 		5D08481D18C7E38D00ED2488 /* RightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightButton.h; sourceTree = "<group>"; };
 		5D08481E18C7E38D00ED2488 /* RightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightButton.m; sourceTree = "<group>"; };
+		5D58C2E118E62843001EB69B /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
+		5D58C2E218E62843001EB69B /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
+		5D58C2E518E628D7001EB69B /* Dude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dude.h; sourceTree = "<group>"; };
+		5D58C2E618E628D7001EB69B /* Dude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dude.m; sourceTree = "<group>"; };
 		7D2CE40318E2546800878AB6 /* FirstLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLevel.h; sourceTree = "<group>"; };
 		7D2CE40418E2546800878AB6 /* FirstLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLevel.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
@@ -139,8 +145,12 @@
 				5D08481E18C7E38D00ED2488 /* RightButton.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				5D58C2E118E62843001EB69B /* Bullet.h */,
+				5D58C2E218E62843001EB69B /* Bullet.m */,
 				7D2CE40318E2546800878AB6 /* FirstLevel.h */,
 				7D2CE40418E2546800878AB6 /* FirstLevel.m */,
+				5D58C2E518E628D7001EB69B /* Dude.h */,
+				5D58C2E618E628D7001EB69B /* Dude.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -333,8 +343,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D58C2E318E62843001EB69B /* Bullet.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				5D08481F18C7E38D00ED2488 /* RightButton.m in Sources */,
+				5D58C2E718E628D7001EB69B /* Dude.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				7D2CE40518E2546800878AB6 /* FirstLevel.m in Sources */,
 				5D08481B18C7E37B00ED2488 /* LeftButton.m in Sources */,

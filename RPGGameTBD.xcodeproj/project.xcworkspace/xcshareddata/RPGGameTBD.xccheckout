@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>21BF9487-E813-4CCD-87CE-CE8B310CFC3A</string>
+	<string>122B3CD6-45DA-45C0-8C12-924F7E7675FD</string>
 	<key>IDESourceControlProjectName</key>
 	<string>RPGGameTBD</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E172A3BA-319E-4C35-9E18-E1CBD46B20A8</key>
-		<string>https://github.com/RPGGameTBD/stub.spritebuilder.git</string>
+		<key>CD3A053C-5208-467E-9493-963408EA4E39</key>
+		<string>ssh://github.com/RPGGameTBD/RPGGameTBD.spritebuilder.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>RPGGameTBD.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E172A3BA-319E-4C35-9E18-E1CBD46B20A8</key>
+		<key>CD3A053C-5208-467E-9493-963408EA4E39</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/RPGGameTBD/stub.spritebuilder.git</string>
+	<string>ssh://github.com/RPGGameTBD/RPGGameTBD.spritebuilder.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E172A3BA-319E-4C35-9E18-E1CBD46B20A8</string>
+	<string>CD3A053C-5208-467E-9493-963408EA4E39</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E172A3BA-319E-4C35-9E18-E1CBD46B20A8</string>
+			<string>CD3A053C-5208-467E-9493-963408EA4E39</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RPGGameTBD.spritebuilder</string>
 		</dict>
