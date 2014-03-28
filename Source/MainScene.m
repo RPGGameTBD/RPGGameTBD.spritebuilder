@@ -60,6 +60,7 @@
 -(void)jump
 {
     NSLog(@"CALLED JUMP");
+    NSLog(@"KJKJKJKJ");
     /* make sure he can't jump too high */
     CGRect playerRect = dude.boundingBox;
     playerRect.size.height = 5;
