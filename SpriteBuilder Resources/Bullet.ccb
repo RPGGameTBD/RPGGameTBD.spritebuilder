@@ -25,7 +25,7 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string>Dude</string>
+		<string>Bullet</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -35,7 +35,7 @@
 		<key>physicsBody</key>
 		<dict>
 			<key>affectedByGravity</key>
-			<true/>
+			<false/>
 			<key>allowsRotation</key>
 			<false/>
 			<key>bodyShape</key>
@@ -47,7 +47,7 @@
 			<key>dynamic</key>
 			<true/>
 			<key>elasticity</key>
-			<real>0.89999997615814209</real>
+			<real>0.30000001192092896</real>
 			<key>friction</key>
 			<real>0.30000001192092896</real>
 			<key>points</key>
@@ -57,20 +57,16 @@
 					<real>0.0</real>
 				</array>
 				<array>
-					<real>24.410125732421875</real>
-					<real>-2.80078125</real>
+					<real>0.0</real>
+					<real>6</real>
 				</array>
 				<array>
-					<real>28.980438232421875</real>
-					<real>27.5703125</real>
+					<real>6</real>
+					<real>6</real>
 				</array>
 				<array>
-					<real>25.714813232421875</real>
-					<real>41.80078125</real>
-				</array>
-				<array>
-					<real>6.386688232421875</real>
-					<real>38.79296875</real>
+					<real>6</real>
+					<real>0.0</real>
 				</array>
 			</array>
 		</dict>
@@ -130,7 +126,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>temp_dude.png</string>
+					<string>bullet.png</string>
 				</array>
 			</dict>
 			<dict>
