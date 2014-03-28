@@ -11,7 +11,7 @@
 #import "RightButton.h"
 #import "Dude.h"
 
-@interface MainScene : CCNode
+@interface MainScene : CCNode <CCPhysicsCollisionDelegate>
 {
 
 }
