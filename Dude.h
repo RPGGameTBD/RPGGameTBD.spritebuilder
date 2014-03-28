@@ -10,4 +10,6 @@
 
 @interface Dude : CCSprite
 
+@property (nonatomic) int health;
+
 @end

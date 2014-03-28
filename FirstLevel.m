@@ -19,6 +19,7 @@
 @synthesize levelObjects;
 
 @synthesize enemy1;
+@synthesize healthLabel;
 
 - (void)didLoadFromCCB
 {
@@ -27,6 +28,10 @@
     [rightButton setExclusiveTouch:NO];
     [leftButton setDude:dude];
     [rightButton setDude:dude];
+    [dude setHealth:100];
+    //healthLabel = [[CCLabelAtlas alloc] init];
+    //[self addChild:healthLabel];
+    
     [physicsNodeFL setGravity:ccp(0, -250)];
     ground = [[levelObjects children] objectAtIndex:0];
     

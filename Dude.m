@@ -10,4 +10,6 @@
 
 @implementation Dude
 
+@synthesize health;
+
 @end

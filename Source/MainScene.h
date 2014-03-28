@@ -9,6 +9,7 @@
 #import "CCNode.h"
 #import "LeftButton.h"
 #import "RightButton.h"
+#import "Dude.h"
 
 @interface MainScene : CCNode
 {
@@ -19,7 +20,7 @@
 @property (nonatomic, strong) CCButton *jumpButton;
 @property (nonatomic, strong) LeftButton *leftButton;
 @property (nonatomic, strong) RightButton *rightButton;
-@property (nonatomic, strong) CCSprite *dude;
+@property (nonatomic, strong) Dude *dude;
 @property (nonatomic, strong) CCPhysicsNode *physicsNodeMS;
 @property (nonatomic, strong) CCSprite *ground;
 @property (nonatomic, strong) CCSprite *freshGame;

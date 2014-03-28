@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LeftButton.h"
 #import "RightButton.h"
+#import "Dude.h"
 
 @interface FirstLevel : CCNode
 
@@ -16,11 +17,13 @@
 @property (nonatomic, strong) CCButton *jumpButton;
 @property (nonatomic, strong) LeftButton *leftButton;
 @property (nonatomic, strong) RightButton *rightButton;
-@property (nonatomic, strong) CCSprite *dude;
+@property (nonatomic, strong) Dude *dude;
 @property (nonatomic, strong) CCPhysicsNode *physicsNodeFL;
 @property (nonatomic, strong) CCSprite *ground;
 @property (nonatomic, strong) CCNode *levelObjects;
 
 @property (nonatomic, strong) CCSprite *enemy1;
+
+@property (nonatomic, strong) CCLabelAtlas *healthLabel;
 
 @end
