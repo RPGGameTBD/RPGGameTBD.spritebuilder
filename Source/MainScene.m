@@ -57,6 +57,29 @@
     
 }
 
+//touch sensing
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    NSLog(@"in touchBegan");
+    CGPoint currentPos = [touch locationInNode:physicsNodeMS];
+    
+    
+    // loads the Bullet.ccb we have set up in Spritebuilder
+    CCNode *bullet = [CCBReader load:@"Bullet"];
+    [bullet.physicsBody setCollisionGroup:dude];
+    
+    // position the bullet at the penguin
+    bullet.position = dude.position;
+    
+    // add the bullet to the physicsNode of this scene (because it has physics enabled)
+    [physicsNodeMS addChild:bullet];
+    
+    CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
+    CGPoint force = ccpMult(launchDirection, 80);
+    [bullet.physicsBody applyForce:force];
+    
+    
+}
+
 -(void)jump
 {
     NSLog(@"CALLED JUMP");
@@ -145,6 +168,5 @@
         [self bulletRemoved:nodeA];
     }
 }
-
 
 @end
