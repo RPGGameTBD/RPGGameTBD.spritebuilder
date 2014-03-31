@@ -24,6 +24,6 @@
 
 @property (nonatomic, strong) CCSprite *enemy1;
 
-@property (nonatomic, strong) CCLabelAtlas *healthLabel;
+@property (nonatomic, strong) CCLabelTTF *healthLabel;
 
 @end
