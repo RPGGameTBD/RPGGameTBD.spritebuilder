@@ -26,6 +26,7 @@
 @property (nonatomic, strong) CCSprite *freshGame;
 @property (nonatomic, strong) CCSprite *continueGame;
 
+
 /* Not from SpriteBuilder */
 @property (nonatomic, strong) CCButton *freshGameButton;
 @property (nonatomic, strong) CCButton *continueGameButton;

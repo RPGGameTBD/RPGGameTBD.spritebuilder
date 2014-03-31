@@ -143,6 +143,8 @@
 - (void) continueGameCreate
 {
     NSLog(@"Continue Game Pressed");
+    CCNode *layer = [CCBReader load:@"Layer"];
+    [physicsNodeMS addChild:layer];
 }
 
 - (void)bulletRemoved:(CCNode *)bullet {
