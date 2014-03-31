@@ -28,9 +28,15 @@
     [rightButton setExclusiveTouch:NO];
     [leftButton setDude:dude];
     [rightButton setDude:dude];
+    
+    /* set up health label */
     [dude setHealth:100];
-    //healthLabel = [[CCLabelAtlas alloc] init];
-    //[self addChild:healthLabel];
+    healthLabel = [[CCLabelTTF alloc] init];
+    [healthLabel setAnchorPoint:ccp(0,0)];
+    [healthLabel setPosition:ccp(10, 300)];
+    [healthLabel setString:[NSString stringWithFormat:@"%d",[dude health]]];
+    [self addChild:healthLabel];
+    
     
     [physicsNodeFL setGravity:ccp(0, -250)];
     ground = [[levelObjects children] objectAtIndex:0];
@@ -39,10 +45,13 @@
     [physicsNodeFL runAction:follow];
     
     [self schedule:@selector(enemyUpdate) interval:0.5];
+    [self schedule:@selector(deathCheck) interval: 0.1];
 }
 
 -(void)jump
 {
+    [dude setHealth:dude.health - 1];
+    [healthLabel setString:[NSString stringWithFormat:@"%d",[dude health]]];
     NSLog(@"ANOTHER JUMP");
     NSLog(@"CALLED JUMP");
     /* make sure he can't jump too high */
@@ -122,4 +131,25 @@
             [enemy.physicsBody applyForce:ccp(0, 10000)];
         }
     }}
+
+- (void) deathCheck
+{
+    if ([dude position].y < -10 || [dude health] < 90)
+    {
+        
+        NSLog(@"Dead");
+        CCLabelTTF *deadLabel = [[CCLabelTTF alloc] init];
+        [deadLabel setAnchorPoint:ccp(0,0)];
+        [deadLabel setPosition:ccp(150, 150)];
+        [deadLabel setString:@"DEAD"];
+        [self addChild:deadLabel];
+        
+        
+        
+        
+        CCScene *mainScreen = [CCBReader loadAsScene:@"MainScene"];
+        [[CCDirector sharedDirector] replaceScene:mainScreen];
+    }
+        
+}
 @end
