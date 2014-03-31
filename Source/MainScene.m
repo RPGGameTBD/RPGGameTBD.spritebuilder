@@ -25,6 +25,7 @@
 
 - (void)didLoadFromCCB
 {
+    [self setUserInteractionEnabled:YES];
     [jumpButton setExclusiveTouch:NO];
     [leftButton setExclusiveTouch:NO];
     [rightButton setExclusiveTouch:NO];
