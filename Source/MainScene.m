@@ -51,6 +51,9 @@
     [continueGameButton setTarget:self selector:@selector(continueGameCreate)];
     [self addChild:continueGameButton];
     
+    [dude.physicsBody setCollisionGroup:dude];
+    [physicsNodeMS setCollisionDelegate:self];
+    
 }
 
 - (void)update:(CCTime)delta
@@ -75,7 +78,9 @@
     [physicsNodeMS addChild:bullet];
     
     CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
-    CGPoint force = ccpMult(launchDirection, 80);
+    double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
+    CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
+    CGPoint force = ccpMult(unitDir, 500);
     [bullet.physicsBody applyForce:force];
     
     
@@ -84,7 +89,6 @@
 -(void)jump
 {
     NSLog(@"CALLED JUMP");
-    NSLog(@"KJKJKJKJ");
     /* make sure he can't jump too high */
     CGRect playerRect = dude.boundingBox;
     playerRect.size.height = 5;
@@ -144,13 +148,13 @@
 - (void)bulletRemoved:(CCNode *)bullet {
     
     // load particle effect
-    CCParticleSystem *explosion = (CCParticleSystem *)[CCBReader load:@"BulletExplosion"];
+   // CCParticleSystem *explosion = (CCParticleSystem *)[CCBReader load:@"BulletExplosion"];
     // make the particle effect clean itself up, once it is completed
-    explosion.autoRemoveOnFinish = TRUE;
+    //explosion.autoRemoveOnFinish = TRUE;
     // place the particle effect on the bullets position
-    explosion.position = bullet.position;
+    //explosion.position = bullet.position;
     // add the particle effect to the same node the bullet is on
-    [bullet.parent addChild:explosion];
+    //[bullet.parent addChild:explosion];
     
     [bullet removeFromParent];
     NSLog(@"Boom!");
@@ -159,6 +163,7 @@
 //Physics delegation
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair bullet:(CCNode *)nodeA wildcard:(CCNode *)nodeB
 {
+    NSLog(@"Collision");
     
     float energy = [pair totalKineticEnergy];
     
