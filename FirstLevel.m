@@ -38,7 +38,7 @@
     [self addChild:healthLabel];
     
     
-    [physicsNodeFL setGravity:ccp(0, -250)];
+    //[physicsNodeFL setGravity:ccp(0, -250)];
     ground = [[levelObjects children] objectAtIndex:1];
     CCSprite *background = [[levelObjects children] objectAtIndex:0];
     
@@ -47,6 +47,8 @@
     
     //[self schedule:@selector(enemyUpdate) interval:0.5];
     [self schedule:@selector(deathCheck) interval: 0.1];
+    NSLog(@"%f", [[dude physicsBody] mass]);
+    NSLog(@"%f", [[enemy1 physicsBody] mass]);
 }
 
 -(void)jump
@@ -65,7 +67,7 @@
         groundRect.size.height = 60;
         if (CGRectIntersectsRect(playerRect, groundRect))
         {
-            [dude.physicsBody applyForce:ccp(0, 10000)];
+            [dude.physicsBody applyForce:ccp(0, 1000000)];
         }
     }
 }
