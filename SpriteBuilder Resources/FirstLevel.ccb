@@ -39,9 +39,9 @@
 						<key>displayName</key>
 						<string>Layer</string>
 						<key>memberVarAssignmentName</key>
-						<string>levelObjects</string>
+						<string></string>
 						<key>memberVarAssignmentType</key>
-						<integer>1</integer>
+						<integer>0</integer>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -85,23 +85,61 @@
 								<key>type</key>
 								<string>CCBFile</string>
 								<key>value</key>
-								<string>SecondLevelStuff.ccb</string>
+								<string>FirstLevelSchema.ccb</string>
 							</dict>
 						</array>
 					</dict>
 					<dict>
 						<key>baseClass</key>
-						<string>CCBFile</string>
+						<string>CCNode</string>
 						<key>children</key>
 						<array/>
 						<key>customClass</key>
-						<string></string>
+						<string>Dude</string>
 						<key>displayName</key>
 						<string>Dude</string>
 						<key>memberVarAssignmentName</key>
-						<string>dude</string>
+						<string>hero</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
+						<key>physicsBody</key>
+						<dict>
+							<key>affectedByGravity</key>
+							<true/>
+							<key>allowsRotation</key>
+							<true/>
+							<key>bodyShape</key>
+							<integer>0</integer>
+							<key>cornerRadius</key>
+							<real>0.0</real>
+							<key>density</key>
+							<real>1</real>
+							<key>dynamic</key>
+							<true/>
+							<key>elasticity</key>
+							<real>0.30000001192092896</real>
+							<key>friction</key>
+							<real>0.30000001192092896</real>
+							<key>points</key>
+							<array>
+								<array>
+									<real>0.0</real>
+									<real>0.0</real>
+								</array>
+								<array>
+									<real>31.574188232421875</real>
+									<real>0.296875</real>
+								</array>
+								<array>
+									<real>32</real>
+									<real>32</real>
+								</array>
+								<array>
+									<real>0.0</real>
+									<real>32</real>
+								</array>
+							</array>
+						</dict>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -119,11 +157,35 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>269</real>
-									<real>24</real>
+									<real>302</real>
+									<real>85</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>contentSize</string>
+								<key>type</key>
+								<string>Size</string>
+								<key>value</key>
+								<array>
+									<real>0.0</real>
+									<real>0.0</real>
+									<integer>0</integer>
+									<integer>0</integer>
+								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>anchorPoint</string>
+								<key>type</key>
+								<string>Point</string>
+								<key>value</key>
+								<array>
+									<real>0.0</real>
+									<real>0.0</real>
 								</array>
 							</dict>
 							<dict>
@@ -133,83 +195,15 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>0.20000000298023224</real>
-									<real>0.20000000298023224</real>
+									<real>1</real>
+									<real>1</real>
 									<false/>
 									<integer>0</integer>
 								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>ccbFile</string>
-								<key>type</key>
-								<string>CCBFile</string>
-								<key>value</key>
-								<string>Hero.ccb</string>
 							</dict>
 						</array>
 						<key>selected</key>
 						<true/>
-					</dict>
-					<dict>
-						<key>baseClass</key>
-						<string>CCBFile</string>
-						<key>children</key>
-						<array/>
-						<key>customClass</key>
-						<string></string>
-						<key>displayName</key>
-						<string>CCBFile</string>
-						<key>memberVarAssignmentName</key>
-						<string>enemy1</string>
-						<key>memberVarAssignmentType</key>
-						<integer>1</integer>
-						<key>properties</key>
-						<array>
-							<dict>
-								<key>name</key>
-								<string>name</string>
-								<key>type</key>
-								<string>StringSimple</string>
-								<key>value</key>
-								<string></string>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>position</string>
-								<key>type</key>
-								<string>Position</string>
-								<key>value</key>
-								<array>
-									<real>386</real>
-									<real>91</real>
-									<integer>0</integer>
-									<integer>0</integer>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>scale</string>
-								<key>type</key>
-								<string>ScaleLock</string>
-								<key>value</key>
-								<array>
-									<real>1</real>
-									<real>1</real>
-									<false/>
-									<integer>0</integer>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
-								<string>ccbFile</string>
-								<key>type</key>
-								<string>CCBFile</string>
-								<key>value</key>
-								<string>Dude.ccb</string>
-							</dict>
-						</array>
 					</dict>
 				</array>
 				<key>customClass</key>

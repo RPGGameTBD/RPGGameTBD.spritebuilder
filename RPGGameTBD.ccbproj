@@ -86,8 +86,10 @@
 		<key></key>
 		<dict>
 			<key>previewFolderHidden</key>
-			<true/>
+			<false/>
 		</dict>
+		<key>RPGImages-master/main character/body/lower_torso.png</key>
+		<dict/>
 		<key>Sprites</key>
 		<dict/>
 		<key>ccbResources</key>

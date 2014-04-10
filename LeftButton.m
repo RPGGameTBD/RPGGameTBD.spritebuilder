@@ -16,6 +16,11 @@
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     NSLog(@"left touch");
+    [dude setFlipX:TRUE];
+    for (CCSprite *child in [dude children])
+    {
+        [child setFlipX:TRUE];
+    }
     [[dude physicsBody] setVelocity:ccp(-200, dude.physicsBody.velocity.y)];
 }
 

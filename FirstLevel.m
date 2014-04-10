@@ -13,7 +13,9 @@
 @synthesize jumpButton;
 @synthesize leftButton;
 @synthesize rightButton;
-@synthesize dude;
+@synthesize hero;
+@synthesize heroLeft;
+@synthesize heroRight;
 @synthesize physicsNodeFL;
 @synthesize ground;
 @synthesize levelObjects;
@@ -23,41 +25,48 @@
 
 - (void)didLoadFromCCB
 {
+    
+    NSLog(@"%d", heroRight.children.count);
+    for (CCSprite *child in heroRight.children)
+    {
+        [heroRight removeChild:child];
+        [hero addChild:child];
+    }
+        
+    
     [jumpButton setExclusiveTouch:NO];
     [leftButton setExclusiveTouch:NO];
     [rightButton setExclusiveTouch:NO];
-    [leftButton setDude:dude];
-    [rightButton setDude:dude];
+    [leftButton setDude:hero];
+    [rightButton setDude:hero];
     
     /* set up health label */
-    [dude setHealth:100];
+    [hero setHealth:100];
     healthLabel = [[CCLabelTTF alloc] init];
     [healthLabel setAnchorPoint:ccp(0,0)];
     [healthLabel setPosition:ccp(10, 300)];
-    [healthLabel setString:[NSString stringWithFormat:@"%d",[dude health]]];
+    [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
     [self addChild:healthLabel];
     
-    
-    //[physicsNodeFL setGravity:ccp(0, -250)];
     ground = [[levelObjects children] objectAtIndex:1];
     CCSprite *background = [[levelObjects children] objectAtIndex:0];
     
-    CCActionFollow *follow = [CCActionFollow actionWithTarget:dude worldBoundary:background.boundingBox];
+    CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:background.boundingBox];
     [physicsNodeFL runAction:follow];
     
-    //[self schedule:@selector(enemyUpdate) interval:0.5];
+    [self schedule:@selector(enemyUpdate) interval:0.5];
     [self schedule:@selector(deathCheck) interval: 0.1];
-    NSLog(@"%f", [[dude physicsBody] mass]);
-    NSLog(@"%f", [[enemy1 physicsBody] mass]);
+    [hero.physicsBody setMass:10];
+    [enemy1.physicsBody setMass:5];
 }
 
 -(void)jump
 {
-    [dude setHealth:dude.health - 1];
-    [healthLabel setString:[NSString stringWithFormat:@"%d",[dude health]]];
+    [hero setHealth:hero.health - 1];
+    [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
     NSLog(@"CALLED JUMP");
     /* make sure he can't jump too high */
-    CGRect playerRect = dude.boundingBox;
+    CGRect playerRect = hero.boundingBox;
     playerRect.size.height = 5;
     
     for (CCSprite *sf in [levelObjects children])
@@ -67,7 +76,7 @@
         groundRect.size.height = 60;
         if (CGRectIntersectsRect(playerRect, groundRect))
         {
-            [dude.physicsBody applyForce:ccp(0, 1000000)];
+            [hero.physicsBody applyForce:ccp(0, 50000)];
         }
     }
 }
@@ -77,7 +86,7 @@
     int distance = [self distanceToEnemy:enemy1];
     if (distance < 568 && distance > 50)
     {
-        CGRect heroRect = dude.boundingBox;
+        CGRect heroRect = hero.boundingBox;
         CGRect enemyRect = enemy1.boundingBox;
         
         CGPoint heroOrigin = heroRect.origin;
@@ -105,7 +114,7 @@
 
 - (int) distanceToEnemy:(CCSprite *)enemy
 {
-    CGRect heroRect = dude.boundingBox;
+    CGRect heroRect = hero.boundingBox;
     CGRect enemyRect = enemy.boundingBox;
     
     CGPoint p1 = heroRect.origin;
@@ -136,7 +145,7 @@
 
 - (void) deathCheck
 {
-    if ([dude position].y < -10 || [dude health] < 0)
+    if ([hero position].y < -10 || [hero health] < 0)
     {
         
         NSLog(@"Dead");
