@@ -39,12 +39,13 @@
     
     
     [physicsNodeFL setGravity:ccp(0, -250)];
-    ground = [[levelObjects children] objectAtIndex:0];
+    ground = [[levelObjects children] objectAtIndex:1];
+    CCSprite *background = [[levelObjects children] objectAtIndex:0];
     
-    CCActionFollow *follow = [CCActionFollow actionWithTarget:dude worldBoundary:levelObjects.boundingBox];
+    CCActionFollow *follow = [CCActionFollow actionWithTarget:dude worldBoundary:background.boundingBox];
     [physicsNodeFL runAction:follow];
     
-    [self schedule:@selector(enemyUpdate) interval:0.5];
+    //[self schedule:@selector(enemyUpdate) interval:0.5];
     [self schedule:@selector(deathCheck) interval: 0.1];
 }
 
@@ -52,7 +53,6 @@
 {
     [dude setHealth:dude.health - 1];
     [healthLabel setString:[NSString stringWithFormat:@"%d",[dude health]]];
-    NSLog(@"ANOTHER JUMP");
     NSLog(@"CALLED JUMP");
     /* make sure he can't jump too high */
     CGRect playerRect = dude.boundingBox;
@@ -134,7 +134,7 @@
 
 - (void) deathCheck
 {
-    if ([dude position].y < -10 || [dude health] < 90)
+    if ([dude position].y < -10 || [dude health] < 0)
     {
         
         NSLog(@"Dead");
