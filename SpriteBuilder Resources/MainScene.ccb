@@ -820,8 +820,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>288</real>
-									<real>54</real>
+									<real>329</real>
+									<real>145</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -846,9 +846,11 @@
 								<key>type</key>
 								<string>CCBFile</string>
 								<key>value</key>
-								<string>Dude.ccb</string>
+								<string>enemy.ccb</string>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -940,8 +942,6 @@
 						<real>0.5</real>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

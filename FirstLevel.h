@@ -10,8 +10,9 @@
 #import "LeftButton.h"
 #import "RightButton.h"
 #import "Dude.h"
+#import "Enemy1.h"
 
-@interface FirstLevel : CCNode
+@interface FirstLevel : CCNode <CCPhysicsCollisionDelegate>
 
 /* SpriteBuilder variables */
 @property (nonatomic, strong) CCButton *jumpButton;
@@ -23,10 +24,10 @@
 @property (nonatomic, strong) CCSprite *ground;
 @property (nonatomic, strong) CCNode *levelObjects;
 
-@property (nonatomic, strong) CCSprite *enemy1;
+@property (nonatomic, strong) Enemy1 *enemy1;
 
 @property (nonatomic, strong) CCLabelTTF *healthLabel;
 
-@property (nonatomic, strong) Dude *hero;
+@property (nonatomic, strong) Hero *hero;
 
 @end

@@ -25,14 +25,10 @@
 
 - (void)didLoadFromCCB
 {
-    
-    NSLog(@"%d", heroRight.children.count);
-    for (CCSprite *child in heroRight.children)
-    {
-        [heroRight removeChild:child];
-        [hero addChild:child];
-    }
-        
+    [self setUserInteractionEnabled:TRUE];
+    [hero.physicsBody setCollisionGroup:hero];
+    [enemy1.physicsBody setCollisionGroup:enemy1];
+    [physicsNodeFL setCollisionDelegate:self];
     
     [jumpButton setExclusiveTouch:NO];
     [leftButton setExclusiveTouch:NO];
@@ -48,6 +44,9 @@
     [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
     [self addChild:healthLabel];
     
+    /*set up enemy health */
+    [enemy1 setHealth:30];
+    
     ground = [[levelObjects children] objectAtIndex:1];
     CCSprite *background = [[levelObjects children] objectAtIndex:0];
     
@@ -62,8 +61,6 @@
 
 -(void)jump
 {
-    [hero setHealth:hero.health - 1];
-    [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
     NSLog(@"CALLED JUMP");
     /* make sure he can't jump too high */
     CGRect playerRect = hero.boundingBox;
@@ -84,7 +81,7 @@
 - (void) enemyUpdate
 {
     int distance = [self distanceToEnemy:enemy1];
-    if (distance < 568 && distance > 50)
+    if (distance < 568 && distance > 150)
     {
         CGRect heroRect = hero.boundingBox;
         CGRect enemyRect = enemy1.boundingBox;
@@ -94,13 +91,15 @@
         if (heroOrigin.x > enemyOrigin.x)
         {
             [enemy1.physicsBody setVelocity:ccp(100, enemy1.physicsBody.velocity.y)];
+            [enemy1 setFlipX:FALSE];
         }
         else
         {
             [enemy1.physicsBody setVelocity:ccp(-100, enemy1.physicsBody.velocity.y)];
+            [enemy1 setFlipX:TRUE];
         }
         
-        if (heroOrigin.y > enemyOrigin.y)
+        if (heroOrigin.y > enemyOrigin.y + 20)
         {
             [self enemyJump:enemy1];
         }
@@ -108,6 +107,25 @@
     else
     {
         [enemy1.physicsBody setVelocity:ccp(0, enemy1.physicsBody.velocity.y)];
+        
+        CGPoint currentPos = hero.position;
+        
+        
+        // loads the Bullet.ccb we have set up in Spritebuilder
+        CCNode *bullet = [CCBReader load:@"Bullet"];
+        [bullet.physicsBody setCollisionGroup:enemy1];
+        
+        // position the bullet at the hero
+        bullet.position = enemy1.position;
+        
+        // add the bullet to the physicsNode of this scene (because it has physics enabled)
+        [physicsNodeFL addChild:bullet];
+        
+        CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
+        double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
+        CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
+        CGPoint force = ccpMult(unitDir, 500);
+        [bullet.physicsBody applyForce:force];
     }
     
 }
@@ -145,7 +163,7 @@
 
 - (void) deathCheck
 {
-    if ([hero position].y < -10 || [hero health] < 0)
+    if ([hero position].y < -10 || [hero health] <= 0)
     {
         
         NSLog(@"Dead");
@@ -161,6 +179,69 @@
         CCScene *mainScreen = [CCBReader loadAsScene:@"MainScene"];
         [[CCDirector sharedDirector] replaceScene:mainScreen];
     }
+    
+    /* check enemy deaths */
+    if (enemy1.health <= 0)
+    {
+        [self unschedule:@selector(enemyUpdate)];
+        [enemy1 removeFromParent];
+    }
         
 }
+
+//touch sensing
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    NSLog(@"in touchBegan");
+    CGPoint currentPos = [touch locationInNode:physicsNodeFL];
+    
+    
+    // loads the Bullet.ccb we have set up in Spritebuilder
+    CCNode *bullet = [CCBReader load:@"Bullet"];
+    [bullet.physicsBody setCollisionGroup:hero];
+    
+    // position the bullet at the hero
+    bullet.position = hero.position;
+    
+    // add the bullet to the physicsNode of this scene (because it has physics enabled)
+    [physicsNodeFL addChild:bullet];
+    
+    CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
+    double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
+    CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
+    CGPoint force = ccpMult(unitDir, 500);
+    [bullet.physicsBody applyForce:force];
+}
+
+- (void)bulletRemoved:(CCNode *)bullet {
+    
+    [bullet removeFromParent];
+    NSLog(@"Boom!");
+}
+//Physics delegation
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair bullet:(CCNode *)nodeA wildcard:(CCNode *)nodeB
+{
+    NSLog(@"Collision");
+    
+    float energy = [pair totalKineticEnergy];
+    
+    
+    //if energy is large enough remove the bullet
+    if (energy > 0.f)
+    {
+        if (nodeB == hero)
+        {
+            NSLog(@"Hit HERO!!!");
+            [hero setHealth:hero.health - 6];
+            [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
+        }
+        else if (nodeB == enemy1)
+        {
+            NSLog(@"Hit ENEMEY");
+            [enemy1 setHealth:enemy1.health - 6];
+        }
+        [self bulletRemoved:nodeA];
+    }
+}
+
 @end

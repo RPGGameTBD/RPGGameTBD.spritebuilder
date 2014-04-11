@@ -39,9 +39,9 @@
 						<key>displayName</key>
 						<string>Layer</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>levelObjects</string>
 						<key>memberVarAssignmentType</key>
-						<integer>0</integer>
+						<integer>1</integer>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -91,55 +91,17 @@
 					</dict>
 					<dict>
 						<key>baseClass</key>
-						<string>CCNode</string>
+						<string>CCBFile</string>
 						<key>children</key>
 						<array/>
 						<key>customClass</key>
-						<string>Dude</string>
+						<string></string>
 						<key>displayName</key>
-						<string>Dude</string>
+						<string>CCBFile</string>
 						<key>memberVarAssignmentName</key>
 						<string>hero</string>
 						<key>memberVarAssignmentType</key>
 						<integer>1</integer>
-						<key>physicsBody</key>
-						<dict>
-							<key>affectedByGravity</key>
-							<true/>
-							<key>allowsRotation</key>
-							<true/>
-							<key>bodyShape</key>
-							<integer>0</integer>
-							<key>cornerRadius</key>
-							<real>0.0</real>
-							<key>density</key>
-							<real>1</real>
-							<key>dynamic</key>
-							<true/>
-							<key>elasticity</key>
-							<real>0.30000001192092896</real>
-							<key>friction</key>
-							<real>0.30000001192092896</real>
-							<key>points</key>
-							<array>
-								<array>
-									<real>0.0</real>
-									<real>0.0</real>
-								</array>
-								<array>
-									<real>31.574188232421875</real>
-									<real>0.296875</real>
-								</array>
-								<array>
-									<real>32</real>
-									<real>32</real>
-								</array>
-								<array>
-									<real>0.0</real>
-									<real>32</real>
-								</array>
-							</array>
-						</dict>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -157,8 +119,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>302</real>
-									<real>85</real>
+									<real>279</real>
+									<real>181</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -166,26 +128,62 @@
 							</dict>
 							<dict>
 								<key>name</key>
-								<string>contentSize</string>
+								<string>scale</string>
 								<key>type</key>
-								<string>Size</string>
+								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>0.0</real>
-									<real>0.0</real>
-									<integer>0</integer>
+									<real>0.25</real>
+									<real>0.25</real>
+									<false/>
 									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
 								<key>name</key>
-								<string>anchorPoint</string>
+								<string>ccbFile</string>
 								<key>type</key>
-								<string>Point</string>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>HeroRight.ccb</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>baseClass</key>
+						<string>CCBFile</string>
+						<key>children</key>
+						<array/>
+						<key>customClass</key>
+						<string></string>
+						<key>displayName</key>
+						<string>CCBFile</string>
+						<key>memberVarAssignmentName</key>
+						<string>enemy1</string>
+						<key>memberVarAssignmentType</key>
+						<integer>1</integer>
+						<key>properties</key>
+						<array>
+							<dict>
+								<key>name</key>
+								<string>name</string>
+								<key>type</key>
+								<string>StringSimple</string>
+								<key>value</key>
+								<string></string>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>position</string>
+								<key>type</key>
+								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.0</real>
-									<real>0.0</real>
+									<real>459</real>
+									<real>134</real>
+									<integer>0</integer>
+									<integer>0</integer>
+									<integer>0</integer>
 								</array>
 							</dict>
 							<dict>
@@ -200,6 +198,14 @@
 									<false/>
 									<integer>0</integer>
 								</array>
+							</dict>
+							<dict>
+								<key>name</key>
+								<string>ccbFile</string>
+								<key>type</key>
+								<string>CCBFile</string>
+								<key>value</key>
+								<string>enemy.ccb</string>
 							</dict>
 						</array>
 						<key>selected</key>

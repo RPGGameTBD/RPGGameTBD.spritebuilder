@@ -17,10 +17,10 @@
 {
     NSLog(@"left touch");
     [dude setFlipX:TRUE];
-    for (CCSprite *child in [dude children])
+    /*for (CCSprite *child in [dude children])
     {
         [child setFlipX:TRUE];
-    }
+    }*/
     [[dude physicsBody] setVelocity:ccp(-200, dude.physicsBody.velocity.y)];
 }
 
