@@ -28,6 +28,7 @@
 @property (nonatomic, strong) Enemy1 *enemy1;
 
 @property (nonatomic, strong) CCLabelTTF *healthLabel;
+@property (nonatomic, strong) CCLabelTTF *enemyHealthLabel;
 
 @property (nonatomic, strong) Hero *hero;
 

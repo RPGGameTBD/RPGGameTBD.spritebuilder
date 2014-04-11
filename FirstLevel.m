@@ -23,6 +23,7 @@
 
 @synthesize enemy1;
 @synthesize healthLabel;
+@synthesize enemyHealthLabel;
 
 - (void)didLoadFromCCB
 {
@@ -46,19 +47,27 @@
     [self addChild:healthLabel];
     
     /*set up enemy health */
-    [enemy1 setHealth:30];
+    [enemy1 setHealth:100];
+    enemyHealthLabel= [[CCLabelTTF alloc] init];
+    [enemyHealthLabel setAnchorPoint:ccp(0,0)];
+    [enemyHealthLabel setPosition:ccp(enemy1.position.x, enemy1.position.y + 10)];
+    [enemyHealthLabel setString:[NSString stringWithFormat:@"%d",[enemy1 health]]];
+    [[enemy1 parent] addChild:enemyHealthLabel];
     
     
     ground = [[levelObjects children] objectAtIndex:1];
     CCSprite *background = [[levelObjects children] objectAtIndex:0];
     
-    CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:background.boundingBox];
+    CGRect rect = background.boundingBox;
+    rect.size.height*=2;
+    CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:rect];
     [physicsNodeFL runAction:follow];
     
-    [self schedule:@selector(enemyUpdate) interval:0.5];
+    [self schedule:@selector(enemyUpdate) interval:0.1];
     [self schedule:@selector(deathCheck) interval: 0.1];
-    [hero.physicsBody setMass:10];
-    [enemy1.physicsBody setMass:5];
+
+    [hero.physicsBody setMass:1];
+    [enemy1.physicsBody setMass:1];
     
     /*set up method to check position*/
     [self schedule:@selector(checkPosition) interval:0.2];
@@ -78,15 +87,20 @@
         groundRect.size.height = 60;
         if (CGRectIntersectsRect(playerRect, groundRect))
         {
-            [hero.physicsBody applyForce:ccp(0, 50000)];
+            [hero.physicsBody applyForce:ccp(0, 10000)];
         }
     }
 }
 
 - (void) enemyUpdate
 {
+
     int distance = [self distanceToEnemy:enemy1];
-    if (distance < 568 && distance > 150)
+    if ([enemy1 health] < 30)
+    {
+        [enemy1.physicsBody setVelocity:ccp(175, enemy1.physicsBody.velocity.y)];
+    }
+    else if (distance < 568 && distance > 150)
     {
         CGRect heroRect = hero.boundingBox;
         CGRect enemyRect = enemy1.boundingBox;
@@ -104,7 +118,7 @@
             [enemy1 setFlipX:TRUE];
         }
         
-        if (heroOrigin.y > enemyOrigin.y + 20)
+        if (heroOrigin.y > enemyOrigin.y + 40)
         {
             [self enemyJump:enemy1];
         }
@@ -162,7 +176,7 @@
         groundRect.size.height = 60;
         if (CGRectIntersectsRect(enemyRect, groundRect))
         {
-            [enemy.physicsBody applyForce:ccp(0, 10000)];
+            [enemy.physicsBody applyForce:ccp(0, 1000)];
         }
     }}
 
@@ -190,6 +204,7 @@
     {
         [self unschedule:@selector(enemyUpdate)];
         [enemy1 removeFromParent];
+        [enemyHealthLabel removeFromParent];
     }
         
 }
@@ -214,7 +229,7 @@
     CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
     double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
     CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-    CGPoint force = ccpMult(unitDir, 500);
+    CGPoint force = ccpMult(unitDir, 1000);
     [bullet.physicsBody applyForce:force];
 }
 
@@ -244,6 +259,7 @@
         {
             NSLog(@"Hit ENEMY");
             [enemy1 setHealth:enemy1.health - 6];
+            [enemyHealthLabel setString:[NSString stringWithFormat:@"%d",[enemy1 health]]];
         }
         [self bulletRemoved:nodeA];
     }
@@ -267,6 +283,12 @@
             NSLog(@"you suck at this");
         }
     }
+}
+
+- (void)update:(CCTime)delta
+{
+    /* update health label */
+    [enemyHealthLabel setPosition:ccp(enemy1.position.x - 5, enemy1.position.y + 20)];
     
 }
 
