@@ -23,6 +23,7 @@
 @property (nonatomic, strong) CCPhysicsNode *physicsNodeFL;
 @property (nonatomic, strong) CCSprite *ground;
 @property (nonatomic, strong) CCNode *levelObjects;
+@property (nonatomic, strong) CCNode *level2;
 
 @property (nonatomic, strong) Enemy1 *enemy1;
 

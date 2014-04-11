@@ -19,6 +19,7 @@
 @synthesize physicsNodeFL;
 @synthesize ground;
 @synthesize levelObjects;
+@synthesize level2;
 
 @synthesize enemy1;
 @synthesize healthLabel;
@@ -47,6 +48,7 @@
     /*set up enemy health */
     [enemy1 setHealth:30];
     
+    
     ground = [[levelObjects children] objectAtIndex:1];
     CCSprite *background = [[levelObjects children] objectAtIndex:0];
     
@@ -57,6 +59,9 @@
     [self schedule:@selector(deathCheck) interval: 0.1];
     [hero.physicsBody setMass:10];
     [enemy1.physicsBody setMass:5];
+    
+    /*set up method to check position*/
+    [self schedule:@selector(checkPosition) interval:0.2];
 }
 
 -(void)jump
@@ -237,11 +242,32 @@
         }
         else if (nodeB == enemy1)
         {
-            NSLog(@"Hit ENEMEY");
+            NSLog(@"Hit ENEMY");
             [enemy1 setHealth:enemy1.health - 6];
         }
         [self bulletRemoved:nodeA];
     }
+}
+
+- (void) checkPosition
+{
+    CCSprite *door = [[levelObjects children] objectAtIndex:2];
+    CGRect dudeRect = hero.boundingBox;
+    CGRect doorRect = door.boundingBox;
+    if (CGRectIntersectsRect(dudeRect, doorRect))
+    {
+        [levelObjects removeFromParent];
+        level2 = [CCBReader load:@"SecondLevelSchema"];
+        [physicsNodeFL addChild:level2 z:0];
+        [hero removeFromParent];
+        [level2 addChild:hero];
+        CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:level2.boundingBox];
+        [physicsNodeFL runAction:follow];
+        if (level2 == nil) {
+            NSLog(@"you suck at this");
+        }
+    }
+    
 }
 
 @end
