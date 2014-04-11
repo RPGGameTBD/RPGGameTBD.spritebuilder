@@ -14,8 +14,11 @@
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     NSLog(@"right touch");
-    [dude setFlipX:FALSE];
-    for (CCSprite *child in [dude children])
+    if (dude.scaleX < 0) {
+        dude.scaleX *= -1;
+
+    }
+        for (CCSprite *child in [dude children])
     {
         [child setFlipX:FALSE];
     }

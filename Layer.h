@@ -8,6 +8,10 @@
 
 #import "CCNode.h"
 
-@interface Layer : CCNode
+@interface Layer : CCNode{
+    
+}
+
+
 
 @end

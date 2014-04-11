@@ -16,7 +16,10 @@
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     NSLog(@"left touch");
-    [dude setFlipX:TRUE];
+    if (dude.scaleX > 0) {
+        dude.scaleX *= -1;
+        
+    }
     /*for (CCSprite *child in [dude children])
     {
         [child setFlipX:TRUE];
