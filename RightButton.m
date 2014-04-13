@@ -18,17 +18,15 @@
         dude.scaleX *= -1;
 
     }
-        for (CCSprite *child in [dude children])
-    {
-        [child setFlipX:FALSE];
-    }
     [[dude physicsBody] setVelocity:ccp(200, dude.physicsBody.velocity.y)];
 }
 
 -(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
+
     NSLog(@"right cancel");
     [[dude physicsBody] setVelocity:ccp(0, dude.physicsBody.velocity.y)];
+    
 }
 
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event

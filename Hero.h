@@ -1,15 +1,15 @@
 //
-//  Dude.m
+//  Hero.h
 //  RPGGameTBD
 //
 //  Created by Nicholas Hyatt on 3/28/14.
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "Dude.h"
+#import "CCSprite.h"
 
-@implementation Hero
+@interface Hero : CCSprite
 
-@synthesize health;
+@property (nonatomic) int health;
 
 @end

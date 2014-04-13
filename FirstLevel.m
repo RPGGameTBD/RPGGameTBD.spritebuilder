@@ -30,6 +30,7 @@
     [self setUserInteractionEnabled:TRUE];
     [hero.physicsBody setCollisionGroup:hero];
     [enemy1.physicsBody setCollisionGroup:enemy1];
+    [hero.physicsBody setCollisionType:@"hero"];
     [physicsNodeFL setCollisionDelegate:self];
     
     [jumpButton setExclusiveTouch:NO];
@@ -56,6 +57,7 @@
     
     
     ground = [[levelObjects children] objectAtIndex:1];
+    [ground.physicsBody setCollisionType:@"ground"];
     CCSprite *background = [[levelObjects children] objectAtIndex:0];
     
     CGRect rect = background.boundingBox;
@@ -76,8 +78,16 @@
 -(void)jump
 {
     NSLog(@"CALLED JUMP");
+    if (hero.physicsBody.velocity.y > .01 || hero.physicsBody.velocity.y < -.01) {
+        NSLog(@"velocity of y: %f", hero.physicsBody.velocity.y);
+        return;
+    }else{
+            [hero.physicsBody applyForce:ccp(0, 10000)];
+            return;
+    }
+    
     /* make sure he can't jump too high */
-    CGRect playerRect = hero.boundingBox;
+    /*CGRect playerRect = hero.boundingBox;
     playerRect.size.height = 5;
     
     for (CCSprite *sf in [levelObjects children])
@@ -89,12 +99,16 @@
         {
             [hero.physicsBody applyForce:ccp(0, 10000)];
         }
-    }
+    }*/
 }
 
 - (void) enemyUpdate
 {
 
+    int randJump = arc4random() %15;
+    if (randJump == 0) {
+        [self enemyJump:enemy1];
+    }
     int distance = [self distanceToEnemy:enemy1];
     if ([enemy1 health] < 30)
     {
@@ -129,22 +143,28 @@
         
         CGPoint currentPos = hero.position;
         
+        int randShoot = arc4random() % 5;
         
-        // loads the Bullet.ccb we have set up in Spritebuilder
-        CCNode *bullet = [CCBReader load:@"Bullet"];
-        [bullet.physicsBody setCollisionGroup:enemy1];
         
-        // position the bullet at the hero
-        bullet.position = enemy1.position;
+        if (randShoot == 0) {
+            // loads the Bullet.ccb we have set up in Spritebuilder
+            CCNode *bullet = [CCBReader load:@"Bullet"];
+            [bullet.physicsBody setCollisionGroup:enemy1];
+            
+            // position the bullet at the hero
+            bullet.position = enemy1.position;
+            
+            // add the bullet to the physicsNode of this scene (because it has physics enabled)
+            [physicsNodeFL addChild:bullet];
+            
+            CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
+            double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
+            CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
+            CGPoint force = ccpMult(unitDir, 500);
+            [bullet.physicsBody applyForce:force];
+        }
         
-        // add the bullet to the physicsNode of this scene (because it has physics enabled)
-        [physicsNodeFL addChild:bullet];
         
-        CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
-        double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
-        CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-        CGPoint force = ccpMult(unitDir, 500);
-        [bullet.physicsBody applyForce:force];
     }
     
 }
@@ -165,8 +185,14 @@
 
 - (void) enemyJump:(CCSprite *)enemy
 {
+    if (enemy.physicsBody.velocity.y > .01 || enemy.physicsBody.velocity.y < -.01) {
+        return;
+    }else{
+        [enemy.physicsBody applyForce:ccp(0, 7000)];
+        return;
+    }
     /* make sure he can't jump too high */
-    CGRect enemyRect = enemy.boundingBox;
+    /*CGRect enemyRect = enemy.boundingBox;
     enemyRect.size.height = 5;
     
     for (CCSprite *sf in [levelObjects children])
@@ -178,7 +204,8 @@
         {
             [enemy.physicsBody applyForce:ccp(0, 1000)];
         }
-    }}
+    }*/
+}
 
 - (void) deathCheck
 {
@@ -265,6 +292,7 @@
     }
 }
 
+
 - (void) checkPosition
 {
     CCSprite *door = [[levelObjects children] objectAtIndex:2];
@@ -275,13 +303,11 @@
         [levelObjects removeFromParent];
         level2 = [CCBReader load:@"SecondLevelSchema"];
         [physicsNodeFL addChild:level2 z:0];
+        [enemy1 removeFromParent];
         [hero removeFromParent];
         [level2 addChild:hero];
         CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:level2.boundingBox];
         [physicsNodeFL runAction:follow];
-        if (level2 == nil) {
-            NSLog(@"you suck at this");
-        }
     }
 }
 

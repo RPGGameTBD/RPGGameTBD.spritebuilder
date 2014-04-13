@@ -9,7 +9,7 @@
 #import "CCNode.h"
 #import "LeftButton.h"
 #import "RightButton.h"
-#import "Dude.h"
+#import "Hero.h"
 
 @interface MainScene : CCNode <CCPhysicsCollisionDelegate>
 {

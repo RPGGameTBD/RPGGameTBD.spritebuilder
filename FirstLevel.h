@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LeftButton.h"
 #import "RightButton.h"
-#import "Dude.h"
+#import "Hero.h"
 #import "Enemy1.h"
 
 @interface FirstLevel : CCNode <CCPhysicsCollisionDelegate>
