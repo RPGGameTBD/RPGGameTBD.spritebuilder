@@ -331,7 +331,7 @@
     CGRect doorRect = door.boundingBox;
     if (CGRectIntersectsRect(dudeRect, doorRect))
     {
-        /*[levelObjects removeFromParent];
+        [levelObjects removeFromParent];
         level2 = [CCBReader load:@"SecondLevelSchema"];
         [physicsNodeFL addChild:level2 z:0];
         for (int i = 0; i < [enemies count]; i++) {
@@ -343,14 +343,8 @@
         [level2 addChild:hero];
         CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:level2.boundingBox];
         [physicsNodeFL runAction:follow];
-         */
-        CCNode *enemy = [CCBReader load:@"Enemy1"];
-        if(enemy == nil){
-            NSLog(@"no enemy");
-        }
-        //[physicsNodeFL addChild:enemy];
-        //[enemies addObject:enemy];
-        //enemy.position = ccp(50, 50);
+         
+        
     }
 }
 
@@ -362,13 +356,18 @@
         [enemy.enemyHealthLabel setPosition:ccp(enemy.position.x - 5, enemy.position.y + 20)];
     }
     
-    /*if ([enemies count] < 3) {
-        CCNode *enemy = [CCBReader load:@"Enemy1"];
-        [physicsNodeFL addChild:enemy];
-        [enemies addObject:enemy];
-        enemy.position = ccp(50, 50);
-        
-    }*/
+    if ([enemies count] < 3) {
+     CCNode *enemy = [CCBReader load:@"enemy"];
+     Enemy1 *badGuy = enemy;
+     if(enemy == nil){
+     NSLog(@"no enemy");
+     }
+     [physicsNodeFL addChild:enemy];
+     [physicsNodeFL addChild:badGuy.enemyHealthLabel];
+     [enemies addObject:enemy];
+     enemy.position = ccp(50, 50);
+     
+    }
     
     
     
