@@ -11,6 +11,7 @@
 @interface Enemy1 : CCSprite
 
 @property (nonatomic) int health;
+@property (nonatomic, strong) CCLabelTTF *enemyHealthLabel;
 
 
 @end

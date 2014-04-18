@@ -22,14 +22,14 @@
 @synthesize level2;
 
 @synthesize enemy1;
+@synthesize enemies;
 @synthesize healthLabel;
-@synthesize enemyHealthLabel;
+
 
 - (void)didLoadFromCCB
 {
     [self setUserInteractionEnabled:TRUE];
     [hero.physicsBody setCollisionGroup:hero];
-    [enemy1.physicsBody setCollisionGroup:enemy1];
     [hero.physicsBody setCollisionType:@"hero"];
     [physicsNodeFL setCollisionDelegate:self];
     
@@ -47,13 +47,7 @@
     [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
     [self addChild:healthLabel];
     
-    /*set up enemy health */
-    [enemy1 setHealth:100];
-    enemyHealthLabel= [[CCLabelTTF alloc] init];
-    [enemyHealthLabel setAnchorPoint:ccp(0,0)];
-    [enemyHealthLabel setPosition:ccp(enemy1.position.x, enemy1.position.y + 10)];
-    [enemyHealthLabel setString:[NSString stringWithFormat:@"%d",[enemy1 health]]];
-    [[enemy1 parent] addChild:enemyHealthLabel];
+    
     
     
     ground = [[levelObjects children] objectAtIndex:1];
@@ -65,14 +59,19 @@
     CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:rect];
     [physicsNodeFL runAction:follow];
     
+    
+    
     [self schedule:@selector(enemyUpdate) interval:0.1];
-    [self schedule:@selector(deathCheck) interval: 0.1];
+    //[self schedule:@selector(deathCheck) interval: 0.1];
 
     [hero.physicsBody setMass:1];
-    [enemy1.physicsBody setMass:1];
     
     /*set up method to check position*/
     [self schedule:@selector(checkPosition) interval:0.2];
+    enemies = [[NSMutableArray alloc] initWithObjects:enemy1, nil];
+    
+    
+    
 }
 
 -(void)jump
@@ -104,55 +103,59 @@
 
 - (void) enemyUpdate
 {
-
-    int randJump = arc4random() %15;
-    if (randJump == 0) {
-        [self enemyJump:enemy1];
-    }
-    int distance = [self distanceToEnemy:enemy1];
-    if ([enemy1 health] < 30)
-    {
-        [enemy1.physicsBody setVelocity:ccp(175, enemy1.physicsBody.velocity.y)];
-    }
-    else if (distance < 568 && distance > 150)
-    {
-        CGRect heroRect = hero.boundingBox;
-        CGRect enemyRect = enemy1.boundingBox;
-        
-        CGPoint heroOrigin = heroRect.origin;
-        CGPoint enemyOrigin = enemyRect.origin;
-        if (heroOrigin.x > enemyOrigin.x)
+    for (int i = 0; i < [enemies count]; i++){
+        Enemy1 *enemy = [enemies objectAtIndex:i];
+        NSLog(@"enemy array: %@",enemies);
+        int randJump = arc4random() %15;
+        if (randJump == 0) {
+            [self enemyJump:enemy];
+        }
+        int distance = [self distanceToEnemy:enemy];
+        if ([enemy health] < 30)
         {
-            [enemy1.physicsBody setVelocity:ccp(100, enemy1.physicsBody.velocity.y)];
-            [enemy1 setFlipX:FALSE];
+            [enemy.physicsBody setVelocity:ccp(175, enemy.physicsBody.velocity.y)];
+        }
+        else if (distance < 568 && distance > 150)
+        {
+            NSLog(@"before");
+            CGRect heroRect = hero.boundingBox;
+            CGRect enemyRect = enemy.boundingBox;
+        
+            CGPoint heroOrigin = heroRect.origin;
+            CGPoint enemyOrigin = enemyRect.origin;
+            if (heroOrigin.x > enemyOrigin.x)
+            {
+                [enemy.physicsBody setVelocity:ccp(100, enemy.physicsBody.velocity.y)];
+                [enemy setFlipX:FALSE];
+            }
+            else
+            {
+                [enemy.physicsBody setVelocity:ccp(-100, enemy.physicsBody.velocity.y)];
+                [enemy setFlipX:TRUE];
+            }
+        
+            if (heroOrigin.y > enemyOrigin.y + 40)
+            {
+                [self enemyJump:enemy];
+            }
+            NSLog(@"after");
         }
         else
         {
-            [enemy1.physicsBody setVelocity:ccp(-100, enemy1.physicsBody.velocity.y)];
-            [enemy1 setFlipX:TRUE];
-        }
+            [enemy.physicsBody setVelocity:ccp(0, enemy.physicsBody.velocity.y)];
         
-        if (heroOrigin.y > enemyOrigin.y + 40)
-        {
-            [self enemyJump:enemy1];
-        }
-    }
-    else
-    {
-        [enemy1.physicsBody setVelocity:ccp(0, enemy1.physicsBody.velocity.y)];
+            CGPoint currentPos = hero.position;
         
-        CGPoint currentPos = hero.position;
-        
-        int randShoot = arc4random() % 5;
+            int randShoot = arc4random() % 5;
         
         
-        if (randShoot == 0) {
-            // loads the Bullet.ccb we have set up in Spritebuilder
-            CCNode *bullet = [CCBReader load:@"Bullet"];
-            [bullet.physicsBody setCollisionGroup:enemy1];
+            if (randShoot == 0) {
+                // loads the Bullet.ccb we have set up in Spritebuilder
+                CCNode *bullet = [CCBReader load:@"Bullet"];
+                [bullet.physicsBody setCollisionGroup:enemy];
             
             // position the bullet at the hero
-            bullet.position = enemy1.position;
+            bullet.position = enemy.position;
             
             // add the bullet to the physicsNode of this scene (because it has physics enabled)
             [physicsNodeFL addChild:bullet];
@@ -162,11 +165,12 @@
             CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
             CGPoint force = ccpMult(unitDir, 500);
             [bullet.physicsBody applyForce:force];
+            }
+        
+        
         }
-        
-        
     }
-    
+    [self deathCheck];
 }
 
 - (int) distanceToEnemy:(CCSprite *)enemy
@@ -227,13 +231,20 @@
     }
     
     /* check enemy deaths */
-    if (enemy1.health <= 0)
-    {
-        [self unschedule:@selector(enemyUpdate)];
-        [enemy1 removeFromParent];
-        [enemyHealthLabel removeFromParent];
+    NSMutableArray *deadEnemies = [[NSMutableArray alloc] init];
+    for(int i = 0; i < [enemies count]; i++){
+        Enemy1 *enemy = [enemies objectAtIndex:i];
+        if (enemy.health <= 0)
+        {
+            //[self unschedule:@selector(enemyUpdate)];
+            [enemy removeFromParent];
+            [enemy.enemyHealthLabel removeFromParent];
+            [deadEnemies addObject:enemy];
+        }
     }
-        
+    for (int i = 0; i < [deadEnemies count]; i++) {
+        [enemies removeObject:[deadEnemies objectAtIndex:i]];
+    }
 }
 
 //touch sensing
@@ -257,6 +268,18 @@
     double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
     CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
     CGPoint force = ccpMult(unitDir, 1000);
+    //make sure facing in the direction shooting
+    if (unitDir.x > 0) {
+        if (hero.scaleX < 0) {
+            hero.scaleX *= -1;
+            
+        }
+    }else{
+        if (hero.scaleX > 0) {
+            hero.scaleX *= -1;
+            
+        }
+    }
     [bullet.physicsBody applyForce:force];
 }
 
@@ -282,11 +305,19 @@
             [hero setHealth:hero.health - 6];
             [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
         }
-        else if (nodeB == enemy1)
+        else
         {
-            NSLog(@"Hit ENEMY");
-            [enemy1 setHealth:enemy1.health - 6];
-            [enemyHealthLabel setString:[NSString stringWithFormat:@"%d",[enemy1 health]]];
+            
+            for (int i = 0; i < [enemies count]; i++) {
+                if (nodeB == [enemies objectAtIndex:i]) {
+                    NSLog(@"Hit ENEMY");
+                    Enemy1 *enemy = [enemies objectAtIndex:i];
+                    [enemy setHealth:enemy.health - 6];
+                    [enemy.enemyHealthLabel setString:[NSString stringWithFormat:@"%d",[enemy health]]];
+                }
+            }
+            
+            
         }
         [self bulletRemoved:nodeA];
     }
@@ -300,21 +331,47 @@
     CGRect doorRect = door.boundingBox;
     if (CGRectIntersectsRect(dudeRect, doorRect))
     {
-        [levelObjects removeFromParent];
+        /*[levelObjects removeFromParent];
         level2 = [CCBReader load:@"SecondLevelSchema"];
         [physicsNodeFL addChild:level2 z:0];
-        [enemy1 removeFromParent];
+        for (int i = 0; i < [enemies count]; i++) {
+            Enemy1 *enemy = [enemies objectAtIndex:i];
+            [enemy removeFromParent];
+        }
+        enemies = nil;
         [hero removeFromParent];
         [level2 addChild:hero];
         CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:level2.boundingBox];
         [physicsNodeFL runAction:follow];
+         */
+        CCNode *enemy = [CCBReader load:@"Enemy1"];
+        if(enemy == nil){
+            NSLog(@"no enemy");
+        }
+        //[physicsNodeFL addChild:enemy];
+        //[enemies addObject:enemy];
+        //enemy.position = ccp(50, 50);
     }
 }
 
 - (void)update:(CCTime)delta
 {
     /* update health label */
-    [enemyHealthLabel setPosition:ccp(enemy1.position.x - 5, enemy1.position.y + 20)];
+    for (int i = 0; i < [enemies count]; i++) {
+        Enemy1 *enemy = [enemies objectAtIndex:i];
+        [enemy.enemyHealthLabel setPosition:ccp(enemy.position.x - 5, enemy.position.y + 20)];
+    }
+    
+    /*if ([enemies count] < 3) {
+        CCNode *enemy = [CCBReader load:@"Enemy1"];
+        [physicsNodeFL addChild:enemy];
+        [enemies addObject:enemy];
+        enemy.position = ccp(50, 50);
+        
+    }*/
+    
+    
+    
     
 }
 
