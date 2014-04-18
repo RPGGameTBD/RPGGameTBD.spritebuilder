@@ -19,7 +19,8 @@
 @synthesize physicsNodeFL;
 @synthesize ground;
 @synthesize levelObjects;
-@synthesize level2;
+//@synthesize level2;
+@synthesize currLevel;
 
 @synthesize enemy1;
 @synthesize enemies;
@@ -28,6 +29,7 @@
 
 - (void)didLoadFromCCB
 {
+    currLevel = levelObjects;
     [self setUserInteractionEnabled:TRUE];
     [physicsNodeFL setCollisionDelegate:self];
     
@@ -232,7 +234,7 @@
     NSMutableArray *deadEnemies = [[NSMutableArray alloc] init];
     for(int i = 0; i < [enemies count]; i++){
         Enemy1 *enemy = [enemies objectAtIndex:i];
-        if (enemy.health <= 0)
+        if ([enemy position].y < -10 || enemy.health <= 0)
         {
             //[self unschedule:@selector(enemyUpdate)];
             [enemy removeFromParent];
@@ -324,22 +326,22 @@
 
 - (void) checkPosition
 {
-    CCSprite *door = [[levelObjects children] objectAtIndex:2];
+    CCSprite *door = [[currLevel children] objectAtIndex:2];
     CGRect dudeRect = hero.boundingBox;
     CGRect doorRect = door.boundingBox;
     if (CGRectIntersectsRect(dudeRect, doorRect))
     {
-        [levelObjects removeFromParent];
-        level2 = [CCBReader load:@"SecondLevelSchema"];
-        [physicsNodeFL addChild:level2 z:0];
+        [currLevel removeFromParent];
+        currLevel = [CCBReader load:@"SecondLevelSchema"];
+        [physicsNodeFL addChild:currLevel z:0];
         for (int i = 0; i < [enemies count]; i++) {
             Enemy1 *enemy = [enemies objectAtIndex:i];
             [enemy removeFromParent];
         }
         [enemies removeAllObjects];
         [hero removeFromParent];
-        [level2 addChild:hero];
-        CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:level2.boundingBox];
+        [currLevel addChild:hero];
+        CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:currLevel.boundingBox];
         [physicsNodeFL runAction:follow];
          
         
@@ -363,7 +365,7 @@
      [physicsNodeFL addChild:enemy];
      [physicsNodeFL addChild:badGuy.enemyHealthLabel];
      [enemies addObject:enemy];
-     enemy.position = ccp(50, 50);
+     enemy.position = ccp(arc4random() % 800 , 50);
      
     }
     
