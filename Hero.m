@@ -12,4 +12,9 @@
 
 @synthesize health;
 
+- (void)didLoadFromCCB{
+    [self.physicsBody setCollisionGroup:self];
+    [self.physicsBody setCollisionType:@"hero"];
+}
+
 @end

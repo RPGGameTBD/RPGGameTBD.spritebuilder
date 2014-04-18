@@ -24,6 +24,7 @@
 @property (nonatomic, strong) CCSprite *ground;
 @property (nonatomic, strong) CCNode *levelObjects;
 @property (nonatomic, strong) CCNode *level2;
+@property (nonatomic, strong) CCNode *currLevel;
 
 @property (nonatomic, strong) Enemy1 *enemy1;
 @property (nonatomic, strong) NSMutableArray *enemies;

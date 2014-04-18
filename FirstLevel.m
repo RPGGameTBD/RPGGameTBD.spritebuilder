@@ -29,8 +29,6 @@
 - (void)didLoadFromCCB
 {
     [self setUserInteractionEnabled:TRUE];
-    [hero.physicsBody setCollisionGroup:hero];
-    [hero.physicsBody setCollisionType:@"hero"];
     [physicsNodeFL setCollisionDelegate:self];
     
     [jumpButton setExclusiveTouch:NO];
@@ -338,7 +336,7 @@
             Enemy1 *enemy = [enemies objectAtIndex:i];
             [enemy removeFromParent];
         }
-        enemies = nil;
+        [enemies removeAllObjects];
         [hero removeFromParent];
         [level2 addChild:hero];
         CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:level2.boundingBox];
