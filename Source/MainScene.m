@@ -10,31 +10,37 @@
 
 @implementation MainScene
 
+/* buttons */
 @synthesize jumpButton;
 @synthesize leftButton;
 @synthesize rightButton;
-@synthesize dude;
-@synthesize physicsNodeMS;
-@synthesize ground;
-
-@synthesize freshGame;
-@synthesize continueGame;
-
 @synthesize freshGameButton;
 @synthesize continueGameButton;
 
+/* hero */
+@synthesize hero;
+
+/* */
+@synthesize levelObjects;
+@synthesize physicsNodeMS;
+@synthesize ground;
+@synthesize freshGame;
+@synthesize continueGame;
+
+
 - (void)didLoadFromCCB
 {
+    /* some initial setup for buttons and background */
     [self setUserInteractionEnabled:YES];
     [jumpButton setExclusiveTouch:NO];
     [leftButton setExclusiveTouch:NO];
     [rightButton setExclusiveTouch:NO];
-    [leftButton setDude:dude];
-    [rightButton setDude:dude];
-    [physicsNodeMS setGravity:ccp(0, -250)];
-    [self schedule:@selector(checkPosition) interval:0.2];
+    [leftButton setHero:hero];
+    [rightButton setHero:hero];
     
     /* add two buttons */
+    
+    freshGame = [levelObjects.children objectAtIndex:3];
     CGRect door1Rect = freshGame.boundingBox;
     freshGameButton = [CCButton buttonWithTitle:@"New Game?"];
     [freshGameButton setAnchorPoint:ccp(0,0)];
@@ -51,13 +57,11 @@
     [continueGameButton setTarget:self selector:@selector(continueGameCreate)];
     [self addChild:continueGameButton];
     
-    [dude.physicsBody setCollisionGroup:dude];
-    [physicsNodeMS setCollisionDelegate:self];
+    [self schedule:@selector(checkPosition) interval:0.2];
     
-}
-
-- (void)update:(CCTime)delta
-{
+    [hero.physicsBody setMass:1];
+    [hero.physicsBody setCollisionGroup:hero];
+    [physicsNodeMS setCollisionDelegate:self];
     
 }
 
@@ -69,10 +73,10 @@
     
     // loads the Bullet.ccb we have set up in Spritebuilder
     CCNode *bullet = [CCBReader load:@"Bullet"];
-    [bullet.physicsBody setCollisionGroup:dude];
+    [bullet.physicsBody setCollisionGroup:hero];
     
     // position the bullet at the penguin
-    bullet.position = dude.position;
+    bullet.position = hero.position;
     
     // add the bullet to the physicsNode of this scene (because it has physics enabled)
     [physicsNodeMS addChild:bullet];
@@ -89,25 +93,18 @@
 -(void)jump
 {
     NSLog(@"CALLED JUMP");
-    /* make sure he can't jump too high */
-    CGRect playerRect = dude.boundingBox;
-    playerRect.size.height = 5;
-    
-
-    CGRect groundRect = ground.boundingBox;
-    groundRect.origin.y += (groundRect.size.height - 5);
-    groundRect.size.height = 60;
-    if (CGRectIntersectsRect(playerRect, groundRect))
-    {
-        [dude.physicsBody applyForce:ccp(0, 10000)];
+    if (hero.physicsBody.velocity.y > .01 || hero.physicsBody.velocity.y < -.01) {
+        NSLog(@"velocity of y: %f", hero.physicsBody.velocity.y);
+        return;
+    }else{
+        [hero.physicsBody applyForce:ccp(0, 10000)];
+        return;
     }
-
-
 }
 
 - (void) checkPosition
 {
-    CGRect dudeRect = dude.boundingBox;
+    CGRect dudeRect = hero.boundingBox;
     CGRect door1Rect = freshGame.boundingBox;
     CGRect door2Rect = continueGame.boundingBox;
     if (CGRectIntersectsRect(dudeRect, door1Rect))
@@ -146,7 +143,8 @@
     
 }
 
-- (void)bulletRemoved:(CCNode *)bullet {
+- (void)bulletRemoved:(CCNode *)bullet
+{
     
     // load particle effect
    // CCParticleSystem *explosion = (CCParticleSystem *)[CCBReader load:@"BulletExplosion"];

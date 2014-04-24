@@ -16,19 +16,23 @@
 
 }
 
-/* SpriteBuilder variables */
+/* any buttons */
 @property (nonatomic, strong) CCButton *jumpButton;
 @property (nonatomic, strong) LeftButton *leftButton;
 @property (nonatomic, strong) RightButton *rightButton;
-@property (nonatomic, strong) Hero *dude;
+@property (nonatomic, strong) CCButton *freshGameButton;
+@property (nonatomic, strong) CCButton *continueGameButton;
+
+/* Our hero */
+@property (nonatomic, strong) Hero *hero;
+
+/* Main Physics Node */
 @property (nonatomic, strong) CCPhysicsNode *physicsNodeMS;
+
+/* Various Level Objects */
+@property (nonatomic, strong) CCNode *levelObjects;
 @property (nonatomic, strong) CCSprite *ground;
 @property (nonatomic, strong) CCSprite *freshGame;
 @property (nonatomic, strong) CCSprite *continueGame;
-
-
-/* Not from SpriteBuilder */
-@property (nonatomic, strong) CCButton *freshGameButton;
-@property (nonatomic, strong) CCButton *continueGameButton;
 
 @end

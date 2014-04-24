@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5D08481B18C7E37B00ED2488 /* LeftButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D08481A18C7E37B00ED2488 /* LeftButton.m */; };
 		5D08481F18C7E38D00ED2488 /* RightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D08481E18C7E38D00ED2488 /* RightButton.m */; };
-		5D5234E418E9F54F00BE6C76 /* Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5234E318E9F54F00BE6C76 /* Layer.m */; };
 		5D58C2E318E62843001EB69B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E218E62843001EB69B /* Bullet.m */; };
 		5D58C2E718E628D7001EB69B /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E618E628D7001EB69B /* Hero.m */; };
 		7D2CE40518E2546800878AB6 /* FirstLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CE40418E2546800878AB6 /* FirstLevel.m */; };
@@ -66,8 +65,6 @@
 		5D08481A18C7E37B00ED2488 /* LeftButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftButton.m; sourceTree = "<group>"; };
 		5D08481D18C7E38D00ED2488 /* RightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightButton.h; sourceTree = "<group>"; };
 		5D08481E18C7E38D00ED2488 /* RightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightButton.m; sourceTree = "<group>"; };
-		5D5234E218E9F54F00BE6C76 /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
-		5D5234E318E9F54F00BE6C76 /* Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layer.m; sourceTree = "<group>"; };
 		5D58C2E118E62843001EB69B /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
 		5D58C2E218E62843001EB69B /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
 		5D58C2E518E628D7001EB69B /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
@@ -151,8 +148,6 @@
 				5D08481E18C7E38D00ED2488 /* RightButton.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
-				5D5234E218E9F54F00BE6C76 /* Layer.h */,
-				5D5234E318E9F54F00BE6C76 /* Layer.m */,
 				5D58C2E118E62843001EB69B /* Bullet.h */,
 				5D58C2E218E62843001EB69B /* Bullet.m */,
 				7D2CE40318E2546800878AB6 /* FirstLevel.h */,
@@ -281,7 +276,7 @@
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = 423Z9LA22R;
+						DevelopmentTeam = SFYQNF84RJ;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -360,7 +355,6 @@
 				7D98B68B18F8476F005E1EA1 /* Enemy1.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				7D2CE40518E2546800878AB6 /* FirstLevel.m in Sources */,
-				5D5234E418E9F54F00BE6C76 /* Layer.m in Sources */,
 				5D08481B18C7E37B00ED2488 /* LeftButton.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 			);

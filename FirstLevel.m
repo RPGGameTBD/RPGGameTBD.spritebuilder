@@ -36,8 +36,8 @@
     [jumpButton setExclusiveTouch:NO];
     [leftButton setExclusiveTouch:NO];
     [rightButton setExclusiveTouch:NO];
-    [leftButton setDude:hero];
-    [rightButton setDude:hero];
+    [leftButton setHero:hero];
+    [rightButton setHero:hero];
     
     /* set up health label */
     [hero setHealth:100];
