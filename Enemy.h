@@ -8,7 +8,9 @@
 
 #import "CCSprite.h"
 
-@interface Enemy : CCSprite
+@interface Enemy : CCSprite{
+    
+}
 
 - (void) update;
 @property (nonatomic) int health;
