@@ -42,22 +42,30 @@
 
 - (void)didLoadFromCCB
 {
-    NSLog(@"CALLED");
-    MainScene *scene = [MainScene scene];
     [self setHealth:100];
     [self.physicsBody setMass:1];
-    
-    healthLabel= [[CCLabelTTF alloc] init];
-    [scene.levelObjects addChild:healthLabel];
-    [healthLabel setAnchorPoint:ccp(0,0)];
-    [healthLabel setPosition:ccp(self.position.x, self.position.y + 10)];
-    [healthLabel setString:[NSString stringWithFormat:@"100"]];
 }
+
+-(void) updateHealthLabel
+{
+    MainScene *scene = [MainScene scene];
+    if (healthLabel == nil)
+    {
+        healthLabel= [[CCLabelTTF alloc] init];
+        [healthLabel setAnchorPoint:ccp(0,0)];
+        [healthLabel setString:[NSString stringWithFormat:@"100"]];
+        [scene.levelObjects addChild:healthLabel];
+    }
+    else
+    {
+        [healthLabel setPosition:ccp(self.position.x, self.position.y + 10)];
+    }
+}
+
 
 
 - (void) update
 {
-    [healthLabel setPosition:ccp(self.position.x, self.position.y + 10)];
     
     MainScene *scene = [MainScene scene];
     int distance = self.distanceToHero;
@@ -89,6 +97,9 @@
         /* shoot */
     }
     
+    [self updateHealthLabel];
+    
 }
+
 
 @end
