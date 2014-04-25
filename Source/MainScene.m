@@ -61,7 +61,7 @@ static MainScene* refSelf;
     
     [self schedule:@selector(checkPosition) interval:0.2];
     [self schedule:@selector(deathCheck) interval:0.2];
-    [self schedule:@selector(updateEnemies) interval:0.1];
+    [self schedule:@selector(updateEnemies) interval:0.01];
 
     /* hero setup */
     [hero setDead:NO];
@@ -114,7 +114,6 @@ static MainScene* refSelf;
         else if ([child isKindOfClass:Enemy.class])
         {
             [enemies addObject:child];
-            NSLog(@"Enemies:%d", [enemies count]);
         }
     }
     
