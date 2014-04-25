@@ -48,7 +48,7 @@
     [self.physicsBody setMass:1];
     
     healthLabel= [[CCLabelTTF alloc] init];
-    [scene.levelObjects addChild:healthLabel z:3];
+    [scene addChild:healthLabel];
     [healthLabel setAnchorPoint:ccp(0,0)];
     [healthLabel setPosition:ccp(self.position.x, self.position.y + 10)];
     [healthLabel setString:[NSString stringWithFormat:@"100"]];
