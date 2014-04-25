@@ -11,6 +11,7 @@
 @implementation Hero
 
 @synthesize health;
+@synthesize dead;
 
 - (void)didLoadFromCCB{
     [self.physicsBody setCollisionGroup:self];

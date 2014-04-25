@@ -6,13 +6,10 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-
 #import <UIKit/UIKit.h>
 #import "CCButton.h"
+#import "Hero.h"
 
 @interface LeftButton : CCButton
-
-@property BOOL pressed;
-@property CCSprite *dude;
-
+@property Hero *hero;
 @end

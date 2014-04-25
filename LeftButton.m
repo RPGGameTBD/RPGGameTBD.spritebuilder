@@ -9,33 +9,29 @@
 #import "LeftButton.h"
 
 @implementation LeftButton
-@synthesize dude;
+@synthesize hero;
 
-
-
+/* will move player to the left, but only if player is on a surface */
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    NSLog(@"left touch");
-    if (dude.scaleX > 0) {
-        dude.scaleX *= -1;
-        
-    }
-    [[dude physicsBody] setVelocity:ccp(-200, dude.physicsBody.velocity.y)];
+    hero.flipX = true;
+    [[hero physicsBody] setVelocity:ccp(-200, hero.physicsBody.velocity.y)];
 }
+
 
 -(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    [[dude physicsBody] setVelocity:ccp(0, dude.physicsBody.velocity.y)];
+    [[hero physicsBody] setVelocity:ccp(0, hero.physicsBody.velocity.y)];
 }
 
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    [[dude physicsBody] setVelocity:ccp(0, dude.physicsBody.velocity.y)];
+    [[hero physicsBody] setVelocity:ccp(0, hero.physicsBody.velocity.y)];
 }
 
 -(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    NSLog(@"Moved");
+    
 }
 
 

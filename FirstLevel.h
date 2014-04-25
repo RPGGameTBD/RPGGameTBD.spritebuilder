@@ -10,7 +10,7 @@
 #import "LeftButton.h"
 #import "RightButton.h"
 #import "Hero.h"
-#import "Enemy1.h"
+#import "Enemy.h"
 
 @interface FirstLevel : CCNode <CCPhysicsCollisionDelegate>
 
@@ -26,8 +26,12 @@
 @property (nonatomic, strong) CCNode *level2;
 @property (nonatomic, strong) CCNode *currLevel;
 
+<<<<<<< HEAD
 @property (nonatomic, strong) Enemy1 *enemy1;
 @property (nonatomic, strong) NSMutableArray *enemies;
+=======
+@property (nonatomic, strong) Enemy *enemy1;
+>>>>>>> merge
 
 @property (nonatomic, strong) CCLabelTTF *healthLabel;
 
