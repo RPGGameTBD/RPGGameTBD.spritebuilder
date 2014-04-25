@@ -7,8 +7,8 @@
 //
 #import <UIKit/UIKit.h>
 #import "CCButton.h"
+#import "Hero.h"
 
 @interface RightButton : CCButton
-@property BOOL pressed;
-@property CCSprite *dude;
+@property Hero *hero;
 @end

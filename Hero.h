@@ -11,5 +11,6 @@
 @interface Hero : CCSprite
 
 @property (nonatomic) int health;
+@property (nonatomic) bool dead;
 
 @end
