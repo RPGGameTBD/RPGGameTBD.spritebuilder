@@ -36,8 +36,8 @@
     [jumpButton setExclusiveTouch:NO];
     [leftButton setExclusiveTouch:NO];
     [rightButton setExclusiveTouch:NO];
-    [leftButton setDude:hero];
-    [rightButton setDude:hero];
+    [leftButton setHero:hero];
+    [rightButton setHero:hero];
     
     /* set up health label */
     [hero setHealth:100];
@@ -149,10 +149,18 @@
             int randShoot = arc4random() % 5;
         
         
+<<<<<<< HEAD
             if (randShoot == 0) {
                 // loads the Bullet.ccb we have set up in Spritebuilder
                 CCNode *bullet = [CCBReader load:@"Bullet"];
                 [bullet.physicsBody setCollisionGroup:enemy];
+=======
+        if (randShoot == 0) {
+            // loads the Bullet.ccb we have set up in Spritebuilder
+            CCNode *bullet = [CCBReader load:@"Bullet"];
+            [bullet.physicsBody setCollisionGroup:enemy1];
+            [bullet.physicsBody setMass:5];
+>>>>>>> 447114bde272a06c9d06177604285f6b907bac7b
             
             // position the bullet at the hero
             bullet.position = enemy.position;
@@ -163,7 +171,7 @@
             CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
             double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
             CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-            CGPoint force = ccpMult(unitDir, 500);
+            CGPoint force = ccpMult(unitDir, 200000);
             [bullet.physicsBody applyForce:force];
             }
         

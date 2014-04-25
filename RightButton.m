@@ -9,34 +9,29 @@
 #import "RightButton.h"
 
 @implementation RightButton
-@synthesize dude;
+@synthesize hero;
 
+/* will move player to the right, but only if player is on a surface */
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    NSLog(@"right touch");
-    if (dude.scaleX < 0) {
-        dude.scaleX *= -1;
+    hero.flipX = false;
+    [[hero physicsBody] setVelocity:ccp(200, hero.physicsBody.velocity.y)];
 
-    }
-    [[dude physicsBody] setVelocity:ccp(200, dude.physicsBody.velocity.y)];
 }
 
 -(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
-
-    NSLog(@"right cancel");
-    [[dude physicsBody] setVelocity:ccp(0, dude.physicsBody.velocity.y)];
-    
+    [[hero physicsBody] setVelocity:ccp(0, hero.physicsBody.velocity.y)];
 }
 
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    [[dude physicsBody] setVelocity:ccp(0, dude.physicsBody.velocity.y)];
+    [[hero physicsBody] setVelocity:ccp(0, hero.physicsBody.velocity.y)];
 }
 
 -(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    NSLog(@"Moved");
+    
 }
 
 @end
