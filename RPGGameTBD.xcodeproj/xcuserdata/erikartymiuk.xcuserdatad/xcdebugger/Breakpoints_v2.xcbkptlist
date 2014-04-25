@@ -35,13 +35,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FirstLevel.m"
+            filePath = "FirstLevel.m1"
             timestampString = "419996820.58953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "233"
             endingLineNumber = "233"
-            landmarkName = "-deathCheck"
+            landmarkName = "-enemyUpdate"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
