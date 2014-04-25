@@ -15,5 +15,4 @@
     self.physicsBody.collisionType = @"bullet";
 }
 
-
 @end

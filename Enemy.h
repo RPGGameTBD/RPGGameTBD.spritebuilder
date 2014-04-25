@@ -8,9 +8,15 @@
 
 #import "CCSprite.h"
 
-@interface Enemy1 : CCSprite
+@interface Enemy : CCSprite
 
+- (void) update;
 @property (nonatomic) int health;
 
+@end
+
+@interface Cultist : Enemy
+
+@property (nonatomic, strong) CCLabelTTF* healthLabel;
 
 @end

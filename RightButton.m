@@ -11,21 +11,17 @@
 @implementation RightButton
 @synthesize hero;
 
+/* will move player to the right, but only if player is on a surface */
 -(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    NSLog(@"right touch");
-    if (hero.scaleX < 0) {
-        hero.scaleX *= -1;
-    }
+    hero.flipX = false;
     [[hero physicsBody] setVelocity:ccp(200, hero.physicsBody.velocity.y)];
+
 }
 
 -(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
-
-    NSLog(@"right cancel");
     [[hero physicsBody] setVelocity:ccp(0, hero.physicsBody.velocity.y)];
-    
 }
 
 -(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
@@ -35,7 +31,7 @@
 
 -(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    NSLog(@"Moved");
+    
 }
 
 @end

@@ -12,7 +12,9 @@
 		5D58C2E318E62843001EB69B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E218E62843001EB69B /* Bullet.m */; };
 		5D58C2E718E628D7001EB69B /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E618E628D7001EB69B /* Hero.m */; };
 		7D2CE40518E2546800878AB6 /* FirstLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CE40418E2546800878AB6 /* FirstLevel.m */; };
-		7D98B68B18F8476F005E1EA1 /* Enemy1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D98B68A18F8476F005E1EA1 /* Enemy1.m */; };
+		7D6BD35F1909C41C00EEBE24 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6BD35E1909C41C00EEBE24 /* Door.m */; };
+		7D6BD3621909C45000EEBE24 /* Ground.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6BD3611909C45000EEBE24 /* Ground.m */; };
+		7D98B68B18F8476F005E1EA1 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D98B68A18F8476F005E1EA1 /* Enemy.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -71,8 +73,12 @@
 		5D58C2E618E628D7001EB69B /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
 		7D2CE40318E2546800878AB6 /* FirstLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLevel.h; sourceTree = "<group>"; };
 		7D2CE40418E2546800878AB6 /* FirstLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLevel.m; sourceTree = "<group>"; };
-		7D98B68918F8476F005E1EA1 /* Enemy1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy1.h; sourceTree = "<group>"; };
-		7D98B68A18F8476F005E1EA1 /* Enemy1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy1.m; sourceTree = "<group>"; };
+		7D6BD35D1909C41C00EEBE24 /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
+		7D6BD35E1909C41C00EEBE24 /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
+		7D6BD3601909C45000EEBE24 /* Ground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ground.h; sourceTree = "<group>"; };
+		7D6BD3611909C45000EEBE24 /* Ground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ground.m; sourceTree = "<group>"; };
+		7D98B68918F8476F005E1EA1 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		7D98B68A18F8476F005E1EA1 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -148,12 +154,16 @@
 				5D08481E18C7E38D00ED2488 /* RightButton.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				7D6BD35D1909C41C00EEBE24 /* Door.h */,
+				7D6BD35E1909C41C00EEBE24 /* Door.m */,
+				7D6BD3601909C45000EEBE24 /* Ground.h */,
+				7D6BD3611909C45000EEBE24 /* Ground.m */,
 				5D58C2E118E62843001EB69B /* Bullet.h */,
 				5D58C2E218E62843001EB69B /* Bullet.m */,
 				7D2CE40318E2546800878AB6 /* FirstLevel.h */,
 				7D2CE40418E2546800878AB6 /* FirstLevel.m */,
-				7D98B68918F8476F005E1EA1 /* Enemy1.h */,
-				7D98B68A18F8476F005E1EA1 /* Enemy1.m */,
+				7D98B68918F8476F005E1EA1 /* Enemy.h */,
+				7D98B68A18F8476F005E1EA1 /* Enemy.m */,
 				5D58C2E518E628D7001EB69B /* Hero.h */,
 				5D58C2E618E628D7001EB69B /* Hero.m */,
 			);
@@ -350,9 +360,11 @@
 			files = (
 				5D58C2E318E62843001EB69B /* Bullet.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
+				7D6BD3621909C45000EEBE24 /* Ground.m in Sources */,
 				5D08481F18C7E38D00ED2488 /* RightButton.m in Sources */,
 				5D58C2E718E628D7001EB69B /* Hero.m in Sources */,
-				7D98B68B18F8476F005E1EA1 /* Enemy1.m in Sources */,
+				7D98B68B18F8476F005E1EA1 /* Enemy.m in Sources */,
+				7D6BD35F1909C41C00EEBE24 /* Door.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				7D2CE40518E2546800878AB6 /* FirstLevel.m in Sources */,
 				5D08481B18C7E37B00ED2488 /* LeftButton.m in Sources */,

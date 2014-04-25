@@ -11,5 +11,6 @@
 @implementation Hero
 
 @synthesize health;
+@synthesize dead;
 
 @end

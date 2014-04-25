@@ -25,7 +25,7 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string>Hero</string>
+		<string>Cultist</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -58,14 +58,14 @@
 				</array>
 				<array>
 					<real>0.0</real>
-					<real>940</real>
+					<real>164</real>
 				</array>
 				<array>
-					<real>386</real>
-					<real>940</real>
+					<real>47</real>
+					<real>164</real>
 				</array>
 				<array>
-					<real>386</real>
+					<real>47</real>
 					<real>0.0</real>
 				</array>
 			</array>
@@ -126,7 +126,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>hero.png</string>
+					<string>cultist_colored_small.png</string>
 				</array>
 			</dict>
 			<dict>

@@ -150,6 +150,7 @@
             // loads the Bullet.ccb we have set up in Spritebuilder
             CCNode *bullet = [CCBReader load:@"Bullet"];
             [bullet.physicsBody setCollisionGroup:enemy1];
+            [bullet.physicsBody setMass:5];
             
             // position the bullet at the hero
             bullet.position = enemy1.position;
@@ -160,7 +161,7 @@
             CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
             double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
             CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-            CGPoint force = ccpMult(unitDir, 500);
+            CGPoint force = ccpMult(unitDir, 200000);
             [bullet.physicsBody applyForce:force];
         }
         

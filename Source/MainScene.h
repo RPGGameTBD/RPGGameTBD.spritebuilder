@@ -16,23 +16,30 @@
 
 }
 
++ (MainScene*) scene;
+-(void) loadLevel;
+
 /* any buttons */
 @property (nonatomic, strong) CCButton *jumpButton;
 @property (nonatomic, strong) LeftButton *leftButton;
 @property (nonatomic, strong) RightButton *rightButton;
-@property (nonatomic, strong) CCButton *freshGameButton;
-@property (nonatomic, strong) CCButton *continueGameButton;
 
 /* Our hero */
 @property (nonatomic, strong) Hero *hero;
+@property (nonatomic, strong) CCLabelTTF *healthLabel;
+
 
 /* Main Physics Node */
 @property (nonatomic, strong) CCPhysicsNode *physicsNodeMS;
 
 /* Various Level Objects */
 @property (nonatomic, strong) CCNode *levelObjects;
-@property (nonatomic, strong) CCSprite *ground;
-@property (nonatomic, strong) CCSprite *freshGame;
-@property (nonatomic, strong) CCSprite *continueGame;
+
+/* Text description of current level we're on */
+@property (nonatomic, strong) NSString *currLevel;
+
+/* Arrays with all the Doors and Enemiesof the current level */
+@property (nonatomic, strong) NSMutableArray *doors;
+@property (nonatomic, strong) NSMutableArray *enemies;
 
 @end
