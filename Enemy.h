@@ -7,8 +7,9 @@
 //
 
 #import "CCSprite.h"
+#import "Ground.h"
 
-@interface Enemy : CCSprite{
+@interface Enemy : Ground {
     
 }
 

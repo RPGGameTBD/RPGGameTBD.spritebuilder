@@ -17,6 +17,8 @@
 @synthesize buttonText;
 @synthesize button;
 @synthesize point;
+@synthesize flipHero;
+
 
 - (id) init
 {
@@ -27,6 +29,7 @@
     CGRect screenSize = [UIScreen mainScreen].bounds;
     CGPoint position = ccp(screenSize.size.height/2, screenSize.size.width/2);
     point = position;
+    flipHero = NO;
     [self.button setTarget:self selector:@selector(action)];
 
     return self;
@@ -38,8 +41,7 @@
     if (!scene.hero.dead)
     {
         scene.currLevel = self.area;
-        scene.hero.position = point;
-        [scene loadLevel];
+        [scene loadLevelWithHeroPosition:point flipped:self.flipHero];
     }
 }
 
@@ -67,6 +69,8 @@
 -(id) init
 {
     self = [super init];
+    self.point  = ccp(935, 50);
+    self.flipHero = YES;
     self.area = @"LevelA";
     self.buttonText = @"Continue Game?";
     self.button.title = self.buttonText;
@@ -81,6 +85,8 @@
 {
     self = [super init];
     self.area = @"LevelB";
+    self.point = ccp(100, 50);
+    self.flipHero = NO;
     self.buttonText = @"New Game?";
     self.button.title = self.buttonText;
     return self;
@@ -94,6 +100,7 @@
 {
     self = [super init];
     self.point  = ccp(630, 50);
+    self.flipHero = YES;
     self.area = @"LevelC";
     self.buttonText = @"Descend?";
     self.button.title = self.buttonText;
@@ -108,6 +115,7 @@
 {
     self = [super init];
     self.point  = ccp(1046, 50);
+    self.flipHero = YES;
     self.area = @"LevelB";
     self.buttonText = @"Climb?";
     self.button.title = self.buttonText;

@@ -32,7 +32,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>TestBackground</string>
+				<string>LevelA</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -80,7 +80,7 @@
 						<key>value</key>
 						<array>
 							<real>1</real>
-							<real>1.5</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -93,7 +93,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>TestBackground.png</string>
+							<string>LevelA.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -117,7 +117,7 @@
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
-				<string></string>
+				<string>Ground</string>
 				<key>displayName</key>
 				<string>TempGround</string>
 				<key>memberVarAssignmentName</key>
@@ -166,6 +166,14 @@
 				<array>
 					<dict>
 						<key>name</key>
+						<string>visible</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>name</string>
 						<key>type</key>
 						<string>StringSimple</string>
@@ -204,8 +212,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>0.69999998807907104</real>
+							<real>2.2599999904632568</real>
+							<real>0.25</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -253,6 +261,14 @@
 				<array>
 					<dict>
 						<key>name</key>
+						<string>visible</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>name</string>
 						<key>type</key>
 						<string>StringSimple</string>
@@ -266,8 +282,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>137</real>
-							<real>30</real>
+							<real>224</real>
+							<real>65</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -340,6 +356,14 @@
 				<array>
 					<dict>
 						<key>name</key>
+						<string>visible</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>name</string>
 						<key>type</key>
 						<string>StringSimple</string>
@@ -353,8 +377,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>431</real>
-							<real>30</real>
+							<real>542</real>
+							<real>54</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -450,7 +474,7 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>568</real>
+					<real>1282</real>
 					<real>384</real>
 					<integer>0</integer>
 					<integer>0</integer>
@@ -481,6 +505,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -498,7 +524,7 @@
 			<key>scale</key>
 			<real>1</real>
 			<key>width</key>
-			<integer>568</integer>
+			<integer>4000</integer>
 		</dict>
 		<dict>
 			<key>centeredOrigin</key>
@@ -512,7 +538,7 @@
 			<key>scale</key>
 			<real>2</real>
 			<key>width</key>
-			<integer>568</integer>
+			<integer>4000</integer>
 		</dict>
 	</array>
 	<key>sequences</key>

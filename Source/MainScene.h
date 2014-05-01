@@ -17,7 +17,8 @@
 }
 
 + (MainScene*) scene;
--(void) loadLevel;
+-(void) loadLevelWithHeroPosition:(CGPoint)position flipped:(BOOL)flip;
+-(BOOL) heroOnObject;
 
 /* any buttons */
 @property (nonatomic, strong) CCButton *jumpButton;
@@ -41,5 +42,6 @@
 /* Arrays with all the Doors and Enemiesof the current level */
 @property (nonatomic, strong) NSMutableArray *doors;
 @property (nonatomic, strong) NSMutableArray *enemies;
+@property (nonatomic, strong) NSMutableArray *grounds;
 
 @end

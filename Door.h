@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString* area;
 @property (nonatomic, strong) NSString* buttonText;
 @property (nonatomic, strong) CCButton* button;
+@property (nonatomic) BOOL    flipHero;
 
 - (void) showButton;
 - (void) removeButton;

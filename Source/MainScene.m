@@ -9,6 +9,7 @@
 #import "MainScene.h"
 #import "Door.h"
 #import "Enemy.h"
+#import "Ground.h"
 
 @implementation MainScene
 static MainScene* refSelf;
@@ -34,6 +35,9 @@ static MainScene* refSelf;
 
 /*current enemies in level */
 @synthesize enemies;
+
+/*current ground objects in level */
+@synthesize grounds;
 
 /* here is a class method to get ahold of our MainScene node */
 + (MainScene *) scene
@@ -76,27 +80,27 @@ static MainScene* refSelf;
     
     /*load the title screen manually */
     currLevel = @"LevelA";
-    [self loadLevel];
+    [self loadLevelWithHeroPosition:ccp(935, 50) flipped:YES];
 }
 
 /* loads the level specified by currLevel only the main buttons, hero, and health label stay */
 
--(void) loadLevel
+-(void) loadLevelWithHeroPosition:(CGPoint)position flipped:(BOOL) flip
 {
     /* check if level transition from hero death */
     if ([hero dead])
     {
-        CGRect screenSize = [UIScreen mainScreen].bounds;
-        CGPoint position = ccp(screenSize.size.height/2, screenSize.size.width/2);
-        currLevel = @"LevelA";
-        hero.position = position;
+        [hero setDead:NO];
         hero.dead = NO;
         hero.health = 100;
     }
+    hero.position = position;
+    hero.flipX = flip;
     [levelObjects removeFromParent];
     healthLabel = nil;
     doors = [[NSMutableArray alloc] init];
     enemies = [[NSMutableArray alloc] init];
+    grounds = [[NSMutableArray alloc] init];
     
     CCNode *newLevel = [CCBReader load:currLevel];
     levelObjects = newLevel;
@@ -121,11 +125,15 @@ static MainScene* refSelf;
         {
             [enemies addObject:child];
         }
+        
+        if ([child isKindOfClass:Ground.class])
+        {
+            [grounds addObject:child];
+        }
     }
     
     
     [hero.physicsBody setVelocity:ccp(0, 0)];
-    [hero setDead:NO];
 }
 
 /* checkposition will check the characters position against various objects in the
@@ -160,7 +168,19 @@ static MainScene* refSelf;
  */
 -(void)jump
 {
-    [hero.physicsBody applyForce:ccp(0, 5000)];
+    for (Ground* ground in grounds)
+    {
+        /* make it so hero can only jump off of objects */
+        CGRect groundRect = ground.boundingBox;
+        groundRect.origin.y += groundRect.size.height;
+        groundRect.size.height = 1;
+        CGRect heroRect = hero.boundingBox;
+        if (CGRectIntersectsRect(groundRect, heroRect))
+        {
+            [hero.physicsBody applyForce:ccp(0, 5000)];
+            break;
+        }
+    }
 }
 
 /* death occurs if hero falls off a ledge or her heatlh reaches zero */
@@ -170,8 +190,13 @@ static MainScene* refSelf;
     {
         currLevel = @"LevelA";
         hero.dead = YES;
-        [self performSelector:@selector(loadLevel) withObject:self afterDelay:1];
+        [self performSelector:@selector(loadLevelAfterDeath) withObject:nil afterDelay:1];
     }
+}
+
+- (void) loadLevelAfterDeath
+{
+    [self loadLevelWithHeroPosition:ccp(935, 50) flipped:YES];
 }
 
 - (void) updateEnemies
@@ -232,7 +257,7 @@ static MainScene* refSelf;
     }
     else
     {
-        if (hero.health < 0)
+        if (hero.dead)
         {
             [healthLabel setColor:[CCColor redColor]];
             [healthLabel setString:[NSString stringWithFormat:@"DEAD"]];
@@ -261,6 +286,22 @@ static MainScene* refSelf;
             [enemyHealthLabel setPosition:ccp(enemy.position.x, enemy.position.y + enemy.boundingBox.size.height)];
         }
     }
+}
+
+- (BOOL) heroOnObject
+{
+    for (Ground* ground in [MainScene scene].grounds)
+    {
+        CGRect groundRect = ground.boundingBox;
+        groundRect.origin.y += groundRect.size.height;
+        groundRect.size.height = 1;
+        CGRect heroRect = hero.boundingBox;
+        if (CGRectIntersectsRect(groundRect, heroRect))
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 @end

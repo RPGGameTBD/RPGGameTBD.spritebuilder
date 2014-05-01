@@ -217,7 +217,7 @@
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
-				<string></string>
+				<string>Ground</string>
 				<key>displayName</key>
 				<string>TempGround</string>
 				<key>memberVarAssignmentName</key>
@@ -312,7 +312,7 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>10</real>
+							<real>1.9800000190734863</real>
 							<real>0.25</real>
 							<false/>
 							<integer>0</integer>
@@ -343,6 +343,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -438,8 +440,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -471,8 +471,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>1714</real>
-							<real>34</real>
+							<real>643</real>
+							<real>119.99998474121094</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -541,7 +541,7 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>5680</real>
+					<real>1118</real>
 					<real>3200</real>
 					<integer>0</integer>
 					<integer>0</integer>
