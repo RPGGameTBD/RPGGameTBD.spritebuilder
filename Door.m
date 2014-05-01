@@ -50,7 +50,8 @@
         MainScene *scene = [MainScene scene];
         [scene.levelObjects addChild:button];
     }
-    [button setPosition:ccp(self.position.x, self.position.y + 60)];
+    [button setAnchorPoint:ccp(0, 0)];
+    [button setPosition:ccp(self.position.x, self.position.y + 80)];
     [button setVisible:YES];
 }
 
@@ -106,7 +107,7 @@
 -(id) init
 {
     self = [super init];
-    self.point  = ccp(911, 50);
+    self.point  = ccp(1046, 50);
     self.area = @"LevelB";
     self.buttonText = @"Climb?";
     self.button.title = self.buttonText;
