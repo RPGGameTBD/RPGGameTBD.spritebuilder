@@ -13,7 +13,8 @@
 @synthesize health;
 @synthesize dead;
 
-- (void)didLoadFromCCB{
+- (void)didLoadFromCCB
+{
     [self.physicsBody setCollisionGroup:self];
     [self.physicsBody setCollisionType:@"hero"];
 }

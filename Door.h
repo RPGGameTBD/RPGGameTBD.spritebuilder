@@ -10,6 +10,7 @@
 
 @interface Door : CCSprite
 
+@property (nonatomic) CGPoint point;
 @property (nonatomic, strong) NSString* area;
 @property (nonatomic, strong) NSString* buttonText;
 @property (nonatomic, strong) CCButton* button;
@@ -23,4 +24,10 @@
 @end
 
 @interface DoorToB : Door
+@end
+
+@interface DoorToC : Door
+@end
+
+@interface DoorToB2 : Door
 @end

@@ -16,6 +16,7 @@
 @synthesize area;
 @synthesize buttonText;
 @synthesize button;
+@synthesize point;
 
 - (id) init
 {
@@ -23,6 +24,9 @@
     area = @"Placeholder";
     buttonText = @"Placeholder";
     button = [[CCButton alloc] initWithTitle:buttonText];
+    CGRect screenSize = [UIScreen mainScreen].bounds;
+    CGPoint position = ccp(screenSize.size.height/2, screenSize.size.width/2);
+    point = position;
     [self.button setTarget:self selector:@selector(action)];
 
     return self;
@@ -31,8 +35,12 @@
 - (void) action
 {
     MainScene *scene = [MainScene scene];
-    scene.currLevel = self.area;
-    [scene loadLevel];
+    if (!scene.hero.dead)
+    {
+        scene.currLevel = self.area;
+        scene.hero.position = point;
+        [scene loadLevel];
+    }
 }
 
 - (void) showButton
@@ -73,6 +81,34 @@
     self = [super init];
     self.area = @"LevelB";
     self.buttonText = @"New Game?";
+    self.button.title = self.buttonText;
+    return self;
+}
+
+@end
+
+@implementation DoorToC
+
+-(id) init
+{
+    self = [super init];
+    self.point  = ccp(630, 50);
+    self.area = @"LevelC";
+    self.buttonText = @"Descend?";
+    self.button.title = self.buttonText;
+    return self;
+}
+
+@end
+
+@implementation DoorToB2
+
+-(id) init
+{
+    self = [super init];
+    self.point  = ccp(911, 50);
+    self.area = @"LevelB";
+    self.buttonText = @"Climb?";
     self.button.title = self.buttonText;
     return self;
 }

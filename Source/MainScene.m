@@ -68,13 +68,8 @@ static MainScene* refSelf;
     [hero.physicsBody setMass:1];
     [hero.physicsBody setCollisionGroup:hero];
     
-    /* set up health label */
+    /* set up health */
     [hero setHealth:100];
-    healthLabel = [[CCLabelTTF alloc] init];
-    [healthLabel setAnchorPoint:ccp(0,0)];
-    [healthLabel setPosition:ccp(10, 300)];
-    [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
-    [self addChild:healthLabel];
     
     /* set self as collision delegate */
     [physicsNodeMS setCollisionDelegate:self];
@@ -88,7 +83,18 @@ static MainScene* refSelf;
 
 -(void) loadLevel
 {
+    /* check if level transition from hero death */
+    if ([hero dead])
+    {
+        CGRect screenSize = [UIScreen mainScreen].bounds;
+        CGPoint position = ccp(screenSize.size.height/2, screenSize.size.width/2);
+        currLevel = @"LevelA";
+        hero.position = position;
+        hero.dead = NO;
+        hero.health = 100;
+    }
     [levelObjects removeFromParent];
+    healthLabel = nil;
     doors = [[NSMutableArray alloc] init];
     enemies = [[NSMutableArray alloc] init];
     
@@ -117,9 +123,7 @@ static MainScene* refSelf;
         }
     }
     
-    CGRect screenSize = [UIScreen mainScreen].bounds;
-    CGPoint position = ccp(screenSize.size.height/2, screenSize.size.width/2);
-    [hero setPosition:position];
+    
     [hero.physicsBody setVelocity:ccp(0, 0)];
     [hero setDead:NO];
 }
@@ -164,12 +168,6 @@ static MainScene* refSelf;
 {
     if (!hero.dead && ([hero position].y < 30 || [hero health] < 0))
     {
-        CCLabelTTF *deadLabel = [[CCLabelTTF alloc] init];
-        CGRect screenSize = [UIScreen mainScreen].bounds;
-        CGPoint position = ccp(screenSize.size.height/2, screenSize.size.width/2);
-        [deadLabel setPosition:position];
-        [deadLabel setString:@"DEAD"];
-        [levelObjects addChild:deadLabel];
         currLevel = @"LevelA";
         hero.dead = YES;
         [self performSelector:@selector(loadLevel) withObject:self afterDelay:1];
@@ -192,7 +190,7 @@ static MainScene* refSelf;
     CCNode *bullet = [CCBReader load:@"Bullet"];
     [bullet.physicsBody setCollisionGroup:hero];
     
-    bullet.position = hero.position;
+    bullet.position = ccp(hero.position.x + hero.boundingBox.size.width/2, hero.position.y + hero.boundingBox.size.height/2);
     
     [levelObjects addChild:bullet];
     
@@ -208,6 +206,61 @@ static MainScene* refSelf;
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair bullet:(CCNode *)nodeA wildcard:(CCNode *)nodeB
 {
     [nodeA removeFromParent];
+    /* a bullet hit our hero */
+    if (nodeB == hero)
+    {
+        hero.health-=6;
+    }
+    /* bullet hit an enemy */
+    else if ([nodeB isKindOfClass:Enemy.class])
+    {
+        ((Enemy*)nodeB).health-=6;
+    }
+}
+
+
+/* anything that needs to be redrawn for every frame like health labels */
+- (void) update:(CCTime)delta
+{
+    if (healthLabel == nil)
+    {
+        healthLabel = [[CCLabelTTF alloc] init];
+        [healthLabel setAnchorPoint:ccp(0,0)];
+        [healthLabel setPosition:ccp(hero.position.x, hero.position.y)];
+        [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
+        [self.levelObjects addChild:healthLabel];
+    }
+    else
+    {
+        if (hero.health < 0)
+        {
+            [healthLabel setColor:[CCColor redColor]];
+            [healthLabel setString:[NSString stringWithFormat:@"DEAD"]];
+            [healthLabel setPosition:ccp(hero.position.x, hero.position.y + hero.boundingBox.size.height)];
+        }
+        else
+        {
+            [healthLabel setString:[NSString stringWithFormat:@"%d",[hero health]]];
+            [healthLabel setPosition:ccp(hero.position.x, hero.position.y + hero.boundingBox.size.height)];
+        }
+    }
+    for (Enemy *enemy in enemies)
+    {
+        CCLabelTTF *enemyHealthLabel = enemy.enemyHealthLabel;
+        if (enemyHealthLabel == nil)
+        {
+            enemyHealthLabel= [[CCLabelTTF alloc] init];
+            [enemyHealthLabel setAnchorPoint:ccp(0,0)];
+            [enemyHealthLabel setString:[NSString stringWithFormat:@"%d",[enemy health]]];
+            enemy.enemyHealthLabel = enemyHealthLabel;
+            [self.levelObjects addChild:enemy.enemyHealthLabel];
+        }
+        else
+        {
+            [enemyHealthLabel setString:[NSString stringWithFormat:@"%d",[enemy health]]];
+            [enemyHealthLabel setPosition:ccp(enemy.position.x, enemy.position.y + enemy.boundingBox.size.height)];
+        }
+    }
 }
 
 @end

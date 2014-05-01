@@ -20,6 +20,7 @@
 
 @interface Cultist : Enemy
 
-@property (nonatomic, strong) CCLabelTTF* healthLabel;
+@property (nonatomic) int timesUpdated;
+extern const int SHOOTSPEEDs;
 
 @end

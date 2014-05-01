@@ -33,46 +33,35 @@
 }
 
 @synthesize health;
+@synthesize enemyHealthLabel;
 
 @end
 
-@implementation Cultist{
-    int timesUpdated;
+@implementation Cultist
+{
     CGRect zone;
 }
 
-@synthesize healthLabel;
-
+const int SHOOTSPEED = 50;
+@synthesize timesUpdated;
 
 - (void)didLoadFromCCB
 {
-    NSLog(@"CALLED");
-    timesUpdated = 0;
+    [self setTimesUpdated:0];
     [self setHealth:100];
     [self.physicsBody setMass:1];
 }
 
--(void) updateHealthLabel
-{
-    MainScene *scene = [MainScene scene];
-    if (healthLabel == nil)
-    {
-        healthLabel= [[CCLabelTTF alloc] init];
-        [healthLabel setAnchorPoint:ccp(0,0)];
-        [healthLabel setString:[NSString stringWithFormat:@"100"]];
-        [scene.levelObjects addChild:healthLabel];
-    }
-    else
-    {
-        [healthLabel setPosition:ccp(self.position.x, self.position.y + 10)];
-    }
-}
-
-
-
 - (void) update
 {
-    timesUpdated++;
+    self.timesUpdated++;
+    /* do a death check */
+    if ([self health] < 0)
+    {
+        [self.enemyHealthLabel removeFromParent];
+        [self removeFromParent];
+        return;
+    }
     zone = CGRectInset(self.boundingBox, -500, -100);
     
     MainScene *scene = [MainScene scene];
@@ -97,22 +86,24 @@
                 [self setFlipX:TRUE];
             }
             
-            if (heroOrigin.y > enemyOrigin.y + 40)
+            if (heroOrigin.y > enemyOrigin.y + 40 && enemyOrigin.y < 50)
             {
                 [self.physicsBody applyForce:ccp(0, 5000)];
             }
         }
         else
         {
-            [self.physicsBody setVelocity:ccp( 0, self.physicsBody.velocity.y)];
+            [self.physicsBody setVelocity:ccp(0, self.physicsBody.velocity.y)];
             /* shoot */
-            if (timesUpdated == 5) {
-        
-                CGPoint currentPos = scene.hero.position;
+            if (timesUpdated > SHOOTSPEED)
+            {
+                timesUpdated = 0;
+                CGPoint currentPos = ccp(scene.hero.position.x + scene.hero.boundingBox.size.width/2,
+                                         scene.hero.position.y + scene.hero.boundingBox.size.height/2);
                 CCNode *bullet = [CCBReader load:@"Bullet"];
                 [bullet.physicsBody setCollisionGroup:self];
                 [self.physicsBody setCollisionGroup:self];
-                bullet.position = self.position;
+                bullet.position = ccp(self.position.x + self.boundingBox.size.width/2, self.position.y + self.boundingBox.size.height/2);
             
                 [scene.levelObjects addChild:bullet];
             
@@ -123,15 +114,11 @@
                 [bullet.physicsBody applyForce:force];
             }
         }
-    }else{
+    }
+    else
+    {
         [self.physicsBody setVelocity:ccp( 0, self.physicsBody.velocity.y)];
     }
-    if (timesUpdated == 5) {
-        timesUpdated = 0;
-    }
-    
-    [self updateHealthLabel];
-    
 }
 
 
