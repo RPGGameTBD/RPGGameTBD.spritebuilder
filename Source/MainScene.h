@@ -12,6 +12,7 @@
 #import "Hero.h"
 #import <GameKit/GameKit.h>
 #import "AppDelegate.h"
+#import <iAd/iAd.h>
 
 @interface MainScene : CCNode <CCPhysicsCollisionDelegate, GKGameCenterControllerDelegate>
 {
