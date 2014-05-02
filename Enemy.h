@@ -16,12 +16,21 @@
 - (void) update;
 @property (nonatomic) int health;
 @property (nonatomic, strong) CCLabelTTF *enemyHealthLabel;
+@property (nonatomic) BOOL dead;
+@property (nonatomic) int currDeathFrame;
+
 
 @end
 
 @interface Cultist : Enemy
 
 @property (nonatomic) int timesUpdated;
-extern const int SHOOTSPEEDs;
+@property (nonatomic) int shootspeed;
 
+@end
+
+@interface BigCultist : Enemy
+
+@property (nonatomic) int timesUpdated;
+@property (nonatomic) int shootspeed;
 @end

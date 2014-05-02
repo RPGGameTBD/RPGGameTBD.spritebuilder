@@ -226,9 +226,9 @@
 					<key>dynamic</key>
 					<false/>
 					<key>elasticity</key>
-					<real>0.0</real>
+					<real>0.30000001192092896</real>
 					<key>friction</key>
-					<real>0.0</real>
+					<real>0.5</real>
 					<key>points</key>
 					<array>
 						<array>
@@ -330,6 +330,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -434,7 +436,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>Cultist</string>
+				<string>BigCultist</string>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -456,8 +458,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>173</real>
-							<real>9</real>
+							<real>60</real>
+							<real>25</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -482,7 +484,7 @@
 						<key>type</key>
 						<string>CCBFile</string>
 						<key>value</key>
-						<string>Cultist.ccb</string>
+						<string>BigCultist.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -557,8 +559,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

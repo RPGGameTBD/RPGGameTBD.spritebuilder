@@ -10,6 +10,7 @@
 #import "Door.h"
 #import "Enemy.h"
 #import "Ground.h"
+#import "Bullet.h"
 
 @implementation MainScene
 const int JUMPLIMIT = 3;
@@ -168,7 +169,6 @@ static MainScene* refSelf;
         }
     }
     
-    /* bit of a bug here, can be reset immediately after initial jump if timed right */
     if ([self heroOnObject])
     {
         numJumps = 0;
@@ -180,7 +180,6 @@ static MainScene* refSelf;
  */
 -(void)jump
 {
-    NSLog(@"numJumps:%d", numJumps);
     if (numJumps > 0 && numJumps < JUMPLIMIT)
     {
         numJumps++;
@@ -190,6 +189,8 @@ static MainScene* refSelf;
     {
         if ([self heroOnObject])
         {
+            /* fixes timing bug */
+            hero.position = ccp(hero.position.x, hero.position.y + 5);
             numJumps = 1;
             [hero.physicsBody applyForce:ccp(0, 5000)];
         }
@@ -243,7 +244,6 @@ static MainScene* refSelf;
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair bullet:(CCNode *)nodeA wildcard:(CCNode *)nodeB
 {
-    [nodeA removeFromParent];
     /* a bullet hit our hero */
     if (nodeB == hero)
     {
@@ -254,6 +254,17 @@ static MainScene* refSelf;
     {
         ((Enemy*)nodeB).health-=6;
     }
+    
+    /* if two bullets hit each other don't remove them */
+    if (![nodeA isKindOfClass:Bullet.class] || ![nodeB isKindOfClass:Bullet.class])
+    {
+        [nodeA removeFromParent];
+    }
+}
+
+- (void) removeBullet:(CCNode *)nodeA
+{
+    [nodeA removeFromParent];
 }
 
 
@@ -323,25 +334,32 @@ static MainScene* refSelf;
     if (leftButton.pressed && [self heroOnObject])
     {
         hero.flipX = true;
-        [[hero physicsBody] setVelocity:ccp(-200, hero.physicsBody.velocity.y)];
+        if (hero.physicsBody.velocity.x > -200)
+        {
+            [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x - 8, hero.physicsBody.velocity.y)];
+        }
+
     }
     else if (rightButton.pressed && [self heroOnObject])
     {
         hero.flipX = false;
-        [[hero physicsBody] setVelocity:ccp(200, hero.physicsBody.velocity.y)];
-    }
-    else if (!leftButton.pressed && [self heroOnObject])
-    {
-        if ([[MainScene scene] heroOnObject])
+        if (hero.physicsBody.velocity.x < 200)
         {
-            [[hero physicsBody] setVelocity:ccp(0, hero.physicsBody.velocity.y)];
+            [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x + 8, hero.physicsBody.velocity.y)];
         }
     }
-    else if (!rightButton.pressed && [self heroOnObject])
+    else if ([self heroOnObject])
     {
         if ([[MainScene scene] heroOnObject])
         {
-            [[hero physicsBody] setVelocity:ccp(0, hero.physicsBody.velocity.y)];
+            if (hero.physicsBody.velocity.x > 0)
+            {
+                [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x - 8, hero.physicsBody.velocity.y)];
+            }
+            else if (hero.physicsBody.velocity.x < 0)
+            {
+                [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x + 8, hero.physicsBody.velocity.y)];
+            }
         }
     }
 }
