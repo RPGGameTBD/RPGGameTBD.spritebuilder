@@ -8,6 +8,7 @@
 
 #import "Enemy.h"
 #import "MainScene.h"
+#import "CCAnimation.h"
 
 @implementation Enemy
 
@@ -54,17 +55,37 @@
     [self setTimesUpdated:0];
     [self setHealth:40];
     [self.physicsBody setMass:1];
-    [self setShootspeed:50];
+    [self setShootspeed:400];
 }
+
+- (void) deathAnim
+{
+    //Create an animation from the set of frames you created earlier
+    NSMutableArray *frames = [[MainScene scene] deathAnimationsFrames];
+    CCAnimation *animation = [CCAnimation animationWithSpriteFrames: frames delay:0.02];
+    
+    //Create an action with the animation that can then be assigned to a sprite
+    CCActionAnimate *animationAction = [CCActionAnimate actionWithAnimation:animation];
+    
+    [self setScale:0.1];
+    [self runAction:animationAction];
+}
+
+-(void) destroyEnemy
+{
+    [[[MainScene scene] enemies] removeObject:self];
+    [self removeFromParent];}
 
 - (void) update
 {
     self.timesUpdated++;
     /* do a death check */
-    if ([self health] < 0)
+    if ([self health] < 0 && ![self dead])
     {
-        self.dead = true;
-        [self.enemyHealthLabel removeFromParent];
+        [self setDead:YES];
+        //[self scheduleOnce:@selector(destroyEnemy) delay:1];
+        [self deathAnim];
+        //[self.enemyHealthLabel removeFromParent];
         return;
     }
     zone = CGRectInset(self.boundingBox, -500, -100);
@@ -123,37 +144,6 @@
     else
     {
         [self.physicsBody setVelocity:ccp( 0, self.physicsBody.velocity.y)];
-    }
-}
-
-- (void) update:(CCTime)delta
-{
-    NSLog(@"Time");
-    if (self.dead)
-    {
-        self.currDeathFrame++;
-        /*
-        CCSpriteFrame *frame = nil;
-        if (self.currDeathFrame < 10)
-        {
-            frame = [CCSpriteFrame frameWithImageNamed:[NSString stringWithFormat:@"dying__00%d.png", self.currDeathFrame]];
-        }
-        else
-        {
-            frame = [CCSpriteFrame frameWithImageNamed:[NSString stringWithFormat:@"dying__0%d.png", self.currDeathFrame]];
-        }
-        NSLog(@"%d", self.currDeathFrame);
-        [self setSpriteFrame:frame];
-        [self setScale:0.1];
-         
-         */
-        
-        if (self.currDeathFrame == 56)
-        {
-            self.currDeathFrame = 0;
-            [self removeFromParent];
-            [[[MainScene scene] enemies] removeObject:self];
-        }
     }
 }
 

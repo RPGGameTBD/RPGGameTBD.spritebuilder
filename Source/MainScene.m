@@ -11,6 +11,7 @@
 #import "Enemy.h"
 #import "Ground.h"
 #import "Bullet.h"
+#import "CCAnimation.h" 
 
 @implementation MainScene
 const int JUMPLIMIT = 3;
@@ -42,6 +43,9 @@ static MainScene* refSelf;
 /*current ground objects in level */
 @synthesize grounds;
 
+/* animations */
+@synthesize deathAnimationsFrames;
+
 /* here is a class method to get ahold of our MainScene node */
 + (MainScene *) scene
 {
@@ -53,6 +57,7 @@ static MainScene* refSelf;
  */
 - (void)didLoadFromCCB
 {
+    [physicsNodeMS setDebugDraw:YES];
     /* set refSelf */
     refSelf = self;
     
@@ -63,6 +68,25 @@ static MainScene* refSelf;
     [rightButton setExclusiveTouch:NO];
     [leftButton setHero:hero];
     [rightButton setHero:hero];
+    
+    /* load in the animation various animation images */
+    
+    deathAnimationsFrames = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 56; i++)
+    {
+        
+        CCSpriteFrame *frame = nil;
+        if (i < 10)
+        {
+            frame = [CCSpriteFrame frameWithImageNamed:[NSString stringWithFormat:@"dying__00%d.png", i]];
+        }
+        else
+        {
+            frame = [CCSpriteFrame frameWithImageNamed:[NSString stringWithFormat:@"dying__0%d.png", i]];
+        }
+        
+        [deathAnimationsFrames addObject:frame];
+    }
     
     /* shedeule various methods for gameplay */
     
@@ -252,7 +276,10 @@ static MainScene* refSelf;
     /* bullet hit an enemy */
     else if ([nodeB isKindOfClass:Enemy.class])
     {
-        ((Enemy*)nodeB).health-=6;
+        if (((Enemy*)(nodeB)).dead != YES)
+        {
+            ((Enemy*)nodeB).health-=6;
+        }
     }
     
     /* if two bullets hit each other don't remove them */
