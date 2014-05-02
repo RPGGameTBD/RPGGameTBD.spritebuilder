@@ -17,6 +17,7 @@
 }
 
 + (MainScene*) scene;
+extern const int JUMPLIMIT;
 -(void) loadLevelWithHeroPosition:(CGPoint)position flipped:(BOOL)flip;
 -(BOOL) heroOnObject;
 
@@ -28,7 +29,7 @@
 /* Our hero */
 @property (nonatomic, strong) Hero *hero;
 @property (nonatomic, strong) CCLabelTTF *healthLabel;
-
+@property (nonatomic) int numJumps;
 
 /* Main Physics Node */
 @property (nonatomic, strong) CCPhysicsNode *physicsNodeMS;

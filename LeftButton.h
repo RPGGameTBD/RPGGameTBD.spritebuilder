@@ -12,4 +12,5 @@
 
 @interface LeftButton : CCButton
 @property Hero *hero;
+@property (nonatomic) BOOL pressed;
 @end

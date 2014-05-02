@@ -42,7 +42,7 @@
     CGRect zone;
 }
 
-const int SHOOTSPEED = 50;
+const int SHOOTSPEED = 250;
 @synthesize timesUpdated;
 
 - (void)didLoadFromCCB

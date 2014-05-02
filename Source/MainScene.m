@@ -12,6 +12,7 @@
 #import "Ground.h"
 
 @implementation MainScene
+const int JUMPLIMIT = 3;
 static MainScene* refSelf;
 
 /* buttons */
@@ -22,6 +23,7 @@ static MainScene* refSelf;
 /* hero */
 @synthesize hero;
 @synthesize healthLabel;
+@synthesize numJumps;
 
 /* Level Objects */
 @synthesize levelObjects;
@@ -65,9 +67,11 @@ static MainScene* refSelf;
     
     [self schedule:@selector(checkPosition) interval:0.2];
     [self schedule:@selector(deathCheck) interval:0.2];
+    [self schedule:@selector(updateMovement) interval:0.01];
     [self schedule:@selector(updateEnemies) interval:0.01];
 
     /* hero setup */
+    numJumps = 0;
     [hero setDead:NO];
     [hero.physicsBody setMass:1];
     [hero.physicsBody setCollisionGroup:hero];
@@ -96,6 +100,8 @@ static MainScene* refSelf;
     }
     hero.position = position;
     hero.flipX = flip;
+    numJumps = 0;
+
     [levelObjects removeFromParent];
     healthLabel = nil;
     doors = [[NSMutableArray alloc] init];
@@ -161,24 +167,31 @@ static MainScene* refSelf;
             [child removeButton];
         }
     }
+    
+    /* bit of a bug here, can be reset immediately after initial jump if timed right */
+    if ([self heroOnObject])
+    {
+        numJumps = 0;
+    }
 }
 
-/* player jumping method called when jump button pressed 
- * only allows one jump off a jumpable object in the level
+/* player jumping method called when jump button pressed
+ * only allows one(now multiple defined by JUMPLIMIT) jump off a jumpable object in the level
  */
 -(void)jump
 {
-    for (Ground* ground in grounds)
+    NSLog(@"numJumps:%d", numJumps);
+    if (numJumps > 0 && numJumps < JUMPLIMIT)
     {
-        /* make it so hero can only jump off of objects */
-        CGRect groundRect = ground.boundingBox;
-        groundRect.origin.y += groundRect.size.height;
-        groundRect.size.height = 1;
-        CGRect heroRect = hero.boundingBox;
-        if (CGRectIntersectsRect(groundRect, heroRect))
+        numJumps++;
+        [hero.physicsBody applyForce:ccp(0, 5000)];
+    }
+    else
+    {
+        if ([self heroOnObject])
         {
+            numJumps = 1;
             [hero.physicsBody applyForce:ccp(0, 5000)];
-            break;
         }
     }
 }
@@ -296,12 +309,41 @@ static MainScene* refSelf;
         groundRect.origin.y += groundRect.size.height;
         groundRect.size.height = 1;
         CGRect heroRect = hero.boundingBox;
+        heroRect.size.height = 1;
         if (CGRectIntersectsRect(groundRect, heroRect))
         {
             return true;
         }
     }
     return false;
+}
+
+-(void) updateMovement
+{
+    if (leftButton.pressed && [self heroOnObject])
+    {
+        hero.flipX = true;
+        [[hero physicsBody] setVelocity:ccp(-200, hero.physicsBody.velocity.y)];
+    }
+    else if (rightButton.pressed && [self heroOnObject])
+    {
+        hero.flipX = false;
+        [[hero physicsBody] setVelocity:ccp(200, hero.physicsBody.velocity.y)];
+    }
+    else if (!leftButton.pressed && [self heroOnObject])
+    {
+        if ([[MainScene scene] heroOnObject])
+        {
+            [[hero physicsBody] setVelocity:ccp(0, hero.physicsBody.velocity.y)];
+        }
+    }
+    else if (!rightButton.pressed && [self heroOnObject])
+    {
+        if ([[MainScene scene] heroOnObject])
+        {
+            [[hero physicsBody] setVelocity:ccp(0, hero.physicsBody.velocity.y)];
+        }
+    }
 }
 
 @end
