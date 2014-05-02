@@ -110,6 +110,10 @@ static MainScene* refSelf;
     /*load the title screen manually */
     currLevel = @"LevelA";
     [self loadLevelWithHeroPosition:ccp(935, 50) flipped:YES];
+    
+    //init score
+    _score = 0;
+    
 }
 
 /* loads the level specified by currLevel only the main buttons, hero, and health label stay */
@@ -228,6 +232,8 @@ static MainScene* refSelf;
     {
         currLevel = @"LevelA";
         hero.dead = YES;
+        [self reportScore];
+        _score = 0;
         [self performSelector:@selector(loadLevelAfterDeath) withObject:nil afterDelay:1];
     }
 }
@@ -390,5 +396,40 @@ static MainScene* refSelf;
         }
     }
 }
+
+-(void)reportScore{
+    AppController *appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
+    GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:appDelegate.leaderboardIdentifier];
+    score.value = _score;
+    
+    [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", [error localizedDescription]);
+        }
+    }];
+}
+
+-(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard{
+    AppController *appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
+    GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
+    
+    gcViewController.gameCenterDelegate = self;
+    
+    if (shouldShowLeaderboard) {
+        gcViewController.viewState = GKGameCenterViewControllerStateLeaderboards;
+        gcViewController.leaderboardIdentifier = appDelegate.leaderboardIdentifier;
+    }
+    else{
+        gcViewController.viewState = GKGameCenterViewControllerStateAchievements;
+    }
+    
+    [[CCDirector sharedDirector] presentViewController:gcViewController animated:YES completion:nil];
+}
+
+-(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
+{
+    [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

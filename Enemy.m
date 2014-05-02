@@ -78,19 +78,21 @@
 
 - (void) update
 {
+    MainScene *scene = [MainScene scene];
     self.timesUpdated++;
     /* do a death check */
     if ([self health] < 0 && ![self dead])
     {
         [self setDead:YES];
-        //[self scheduleOnce:@selector(destroyEnemy) delay:1];
+        [self scheduleOnce:@selector(destroyEnemy) delay:1];
         [self deathAnim];
-        //[self.enemyHealthLabel removeFromParent];
+        [self.enemyHealthLabel removeFromParent];
+        scene.score++;
         return;
     }
     zone = CGRectInset(self.boundingBox, -500, -100);
     
-    MainScene *scene = [MainScene scene];
+    
     int distance = self.distanceToHero;
     if (CGRectIntersectsRect(zone, scene.hero.boundingBox)) {
 

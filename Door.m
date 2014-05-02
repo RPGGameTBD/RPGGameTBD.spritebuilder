@@ -38,11 +38,15 @@
 - (void) action
 {
     MainScene *scene = [MainScene scene];
+    if ([self.buttonText isEqualToString:@"Show LeaderBoard?"]) {
+        [scene showLeaderboardAndAchievements:YES];
+    }
     if (!scene.hero.dead)
     {
         scene.currLevel = self.area;
         [scene loadLevelWithHeroPosition:point flipped:self.flipHero];
     }
+    
 }
 
 - (void) showButton
@@ -72,7 +76,7 @@
     self.point  = ccp(935, 50);
     self.flipHero = YES;
     self.area = @"LevelA";
-    self.buttonText = @"Continue Game?";
+    self.buttonText = @"Show LeaderBoard?";
     self.button.title = self.buttonText;
     return self;
 }

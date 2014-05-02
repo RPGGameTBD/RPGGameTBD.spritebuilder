@@ -10,8 +10,10 @@
 #import "LeftButton.h"
 #import "RightButton.h"
 #import "Hero.h"
+#import <GameKit/GameKit.h>
+#import "AppDelegate.h"
 
-@interface MainScene : CCNode <CCPhysicsCollisionDelegate>
+@interface MainScene : CCNode <CCPhysicsCollisionDelegate, GKGameCenterControllerDelegate>
 {
 
 }
@@ -20,6 +22,10 @@
 extern const int JUMPLIMIT;
 -(void) loadLevelWithHeroPosition:(CGPoint)position flipped:(BOOL)flip;
 -(BOOL) heroOnObject;
+-(void)reportScore;
+-(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard;
+/*Gamecenter leaderboard*/
+@property (nonatomic) int64_t score;
 
 /* any buttons */
 @property (nonatomic, strong) CCButton *jumpButton;
