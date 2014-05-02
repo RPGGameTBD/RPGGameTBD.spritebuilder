@@ -42,6 +42,8 @@ static MainScene* refSelf;
 
 /*current ground objects in level */
 @synthesize grounds;
+ADBannerView *adView;
+bool adIsShowing;
 
 /* animations */
 @synthesize deathAnimationsFrames;
@@ -57,6 +59,7 @@ static MainScene* refSelf;
  */
 - (void)didLoadFromCCB
 {
+    adIsShowing = false;
     [physicsNodeMS setDebugDraw:YES];
     /* set refSelf */
     refSelf = self;
@@ -94,6 +97,7 @@ static MainScene* refSelf;
     [self schedule:@selector(deathCheck) interval:0.2];
     [self schedule:@selector(updateMovement) interval:0.01];
     [self schedule:@selector(updateEnemies) interval:0.01];
+    [self schedule:@selector(showAd) interval:10.0];
 
     /* hero setup */
     numJumps = 0;
@@ -113,6 +117,12 @@ static MainScene* refSelf;
     
     //init score
     _score = 0;
+    
+    //setup iAD
+    adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+    adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
+    [[[CCDirector sharedDirector] view] addSubview:adView];
+    adIsShowing = true;
     
 }
 
@@ -429,6 +439,17 @@ static MainScene* refSelf;
 -(void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController
 {
     [gameCenterViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)showAd{
+    
+    if (adIsShowing) {
+        [adView setHidden:true];
+        adIsShowing = false;
+    }else{
+        [adView setHidden:false];
+        adIsShowing =true;
+    }
 }
 
 
