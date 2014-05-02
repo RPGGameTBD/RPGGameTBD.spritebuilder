@@ -161,7 +161,7 @@
     [self setTimesUpdated:0];
     [self setHealth:200];
     [self.physicsBody setMass:1];
-    [self setShootspeed:70];
+    [self setShootspeed:35];
 }
 
 - (void) update
@@ -206,7 +206,7 @@
             CGPoint currentPos = ccp(scene.hero.position.x + scene.hero.boundingBox.size.width/2,
                                      scene.hero.position.y + scene.hero.boundingBox.size.height/2);
             CCNode *bullet = [CCBReader load:@"Bullet"];
-            [[bullet physicsBody] setMass:1];
+            [[bullet physicsBody] setMass:2];
             [bullet setScale:5.0];
             [bullet.physicsBody setCollisionGroup:self];
             [self.physicsBody setCollisionGroup:self];
@@ -217,7 +217,7 @@
             CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
             double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
             CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-            CGPoint force = ccpMult(unitDir, 10000);
+            CGPoint force = ccpMult(unitDir, 50000);
             [bullet.physicsBody applyForce:force];
         }
     }
