@@ -59,17 +59,19 @@
 
 - (void) update
 {
+    MainScene *scene = [MainScene scene];
     self.timesUpdated++;
     /* do a death check */
     if ([self health] < 0)
     {
         self.dead = true;
+        scene.score++;
         [self.enemyHealthLabel removeFromParent];
         return;
     }
     zone = CGRectInset(self.boundingBox, -500, -100);
     
-    MainScene *scene = [MainScene scene];
+    
     int distance = self.distanceToHero;
     if (CGRectIntersectsRect(zone, scene.hero.boundingBox)) {
 

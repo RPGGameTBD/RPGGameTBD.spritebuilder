@@ -25,11 +25,15 @@
 
 #import "cocos2d.h"
 
+#import <GameKit/GameKit.h>
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
 #import "MainScene.h"
 
 @implementation AppController
+
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -55,6 +59,11 @@
     
     [self setupCocos2dWithOptions:cocos2dSetup];
     
+    //intit gamecenter stuff
+    _gameCenterEnabled = NO;
+    _leaderboardIdentifier = @"";
+    [self authenticateLocalPlayer];
+    
     return YES;
 }
 
@@ -64,5 +73,36 @@
     CCScene * scene = [CCBReader loadAsScene:@"MainScene"];
     return scene;
 }
+
+-(void)authenticateLocalPlayer{
+    GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
+        if (viewController != nil) {
+            [[CCDirector sharedDirector] presentViewController:viewController animated:YES completion:nil];
+        }
+        else{
+            if ([GKLocalPlayer localPlayer].authenticated) {
+                _gameCenterEnabled = YES;
+                
+                // Get the default leaderboard identifier.
+                [[GKLocalPlayer localPlayer] loadDefaultLeaderboardIdentifierWithCompletionHandler:^(NSString *leaderboardIdentifier, NSError *error) {
+                    
+                    if (error != nil) {
+                        NSLog(@"%@", [error localizedDescription]);
+                    }
+                    else{
+                        _leaderboardIdentifier = leaderboardIdentifier;
+                    }
+                }];
+            }
+            
+            else{
+                _gameCenterEnabled = NO;
+            }
+        }
+    };
+}
+
 
 @end

@@ -29,5 +29,9 @@
 @interface AppController : CCAppDelegate
 {
 }
+-(void) authenticateLocalPlayer;
+@property (nonatomic) BOOL gameCenterEnabled;
+@property (nonatomic, strong) NSString *leaderboardIdentifier;
+
 
 @end

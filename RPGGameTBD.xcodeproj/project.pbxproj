@@ -11,6 +11,7 @@
 		5D08481F18C7E38D00ED2488 /* RightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D08481E18C7E38D00ED2488 /* RightButton.m */; };
 		5D58C2E318E62843001EB69B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E218E62843001EB69B /* Bullet.m */; };
 		5D58C2E718E628D7001EB69B /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E618E628D7001EB69B /* Hero.m */; };
+		5DCE816A19140CDE001D6D77 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCE816919140CDE001D6D77 /* GameKit.framework */; };
 		7D0FECE41913F34300C42532 /* dying__000.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D0FECAB1913F34300C42532 /* dying__000.png */; };
 		7D0FECE51913F34300C42532 /* dying__001.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D0FECAC1913F34300C42532 /* dying__001.png */; };
 		7D0FECE61913F34300C42532 /* dying__002.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D0FECAD1913F34300C42532 /* dying__002.png */; };
@@ -128,6 +129,7 @@
 		5D58C2E218E62843001EB69B /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
 		5D58C2E518E628D7001EB69B /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 		5D58C2E618E628D7001EB69B /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
+		5DCE816919140CDE001D6D77 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		7D0FECAB1913F34300C42532 /* dying__000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dying__000.png; sourceTree = "<group>"; };
 		7D0FECAC1913F34300C42532 /* dying__001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dying__001.png; sourceTree = "<group>"; };
 		7D0FECAD1913F34300C42532 /* dying__002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dying__002.png; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DCE816A19140CDE001D6D77 /* GameKit.framework in Frameworks */,
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
@@ -400,6 +403,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DCE816919140CDE001D6D77 /* GameKit.framework */,
 				B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */,
 				B77F1B3117B978D7009739AE /* QuartzCore.framework */,
 				B77F1B3317B978D7009739AE /* OpenGLES.framework */,
@@ -465,10 +469,10 @@
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = SFYQNF84RJ;
+						DevelopmentTeam = 423Z9LA22R;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
