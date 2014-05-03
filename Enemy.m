@@ -55,20 +55,32 @@
     [self setTimesUpdated:0];
     [self setHealth:5];
     [self.physicsBody setMass:1];
-    [self setShootspeed:400];
+    [self setShootspeed:50];
+    [self startWalkingAnim];
 }
 
 - (void) deathAnim
 {
-    //Create an animation from the set of frames you created earlier
-    NSMutableArray *frames = [[MainScene scene] deathAnimationsFrames];
-    CCAnimation *animation = [CCAnimation animationWithSpriteFrames: frames delay:0.02];
-    
-    //Create an action with the animation that can then be assigned to a sprite
-    CCActionAnimate *animationAction = [CCActionAnimate actionWithAnimation:animation];
-    
-    [self setScale:0.5];
-    [self runAction:animationAction];
+    // the animation manager of each node is stored in the 'userObject' property
+    CCBAnimationManager* animationManager = self.userObject;
+    // timelines can be referenced and run by name
+    [animationManager runAnimationsForSequenceNamed:@"Death"];
+}
+
+- (void) startWalkingAnim
+{
+    // the animation manager of each node is stored in the 'userObject' property
+    CCBAnimationManager* animationManager = self.userObject;
+    // timelines can be referenced and run by name
+    [animationManager runAnimationsForSequenceNamed:@"Walking"];
+}
+
+- (void) stopWalkingAnim
+{
+    // the animation manager of each node is stored in the 'userObject' property
+    CCBAnimationManager* animationManager = self.userObject;
+    // timelines can be referenced and run by name
+    //[animationManager ];
 }
 
 -(void) destroyEnemy
@@ -84,12 +96,15 @@
     if ([self health] < 0 && ![self dead])
     {
         [self setDead:YES];
-        [self scheduleOnce:@selector(destroyEnemy) delay:1];
-        [self deathAnim];
+        [self setPhysicsBody:nil];
+        [self scheduleOnce:@selector(destroyEnemy) delay:2];
+        [self performSelector:@selector(deathAnim) withObject:nil afterDelay:0];
         [self.enemyHealthLabel removeFromParent];
         scene.score++;
         return;
     }
+    if (!self.dead)
+    {
     zone = CGRectInset(self.boundingBox, -500, -100);
     
     
@@ -106,17 +121,17 @@
             if (heroOrigin.x > enemyOrigin.x)
             {
                 [self.physicsBody setVelocity:ccp(100, self.physicsBody.velocity.y)];
-                [self setFlipX:FALSE];
+                [self setFlipX:NO];
             }
             else
             {
                 [self.physicsBody setVelocity:ccp(-100, self.physicsBody.velocity.y)];
-                [self setFlipX:TRUE];
+                [self setFlipX:YES];
             }
             
             if (heroOrigin.y > enemyOrigin.y + 40 && enemyOrigin.y < 50)
             {
-                [self.physicsBody applyForce:ccp(0, 5000)];
+                //[self.physicsBody applyForce:ccp(0, 5000)];
             }
         }
         else
@@ -141,6 +156,7 @@
                 CGPoint force = ccpMult(unitDir, 1000);
                 [bullet.physicsBody applyForce:force];
             }
+        }
         }
     }
     else

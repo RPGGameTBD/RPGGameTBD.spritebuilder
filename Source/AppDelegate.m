@@ -74,30 +74,38 @@
     return scene;
 }
 
--(void)authenticateLocalPlayer{
+-(void)authenticateLocalPlayer
+{
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
     
-    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
-        if (viewController != nil) {
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error)
+    {
+        if (viewController != nil)
+        {
             [[CCDirector sharedDirector] presentViewController:viewController animated:YES completion:nil];
         }
-        else{
-            if ([GKLocalPlayer localPlayer].authenticated) {
+        else
+        {
+            if ([GKLocalPlayer localPlayer].authenticated)
+            {
                 _gameCenterEnabled = YES;
                 
                 // Get the default leaderboard identifier.
-                [[GKLocalPlayer localPlayer] loadDefaultLeaderboardIdentifierWithCompletionHandler:^(NSString *leaderboardIdentifier, NSError *error) {
+                [[GKLocalPlayer localPlayer] loadDefaultLeaderboardIdentifierWithCompletionHandler:^(NSString *leaderboardIdentifier, NSError *error)
+                {
                     
-                    if (error != nil) {
+                    if (error != nil)
+                    {
                         NSLog(@"%@", [error localizedDescription]);
                     }
-                    else{
+                    else
+                    {
                         _leaderboardIdentifier = leaderboardIdentifier;
                     }
                 }];
             }
-            
-            else{
+            else
+            {
                 _gameCenterEnabled = NO;
             }
         }

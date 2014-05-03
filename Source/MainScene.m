@@ -45,9 +45,6 @@ static MainScene* refSelf;
 ADBannerView *adView;
 bool adIsShowing;
 
-/* animations */
-@synthesize deathAnimationsFrames;
-
 /* here is a class method to get ahold of our MainScene node */
 + (MainScene *) scene
 {
@@ -59,6 +56,7 @@ bool adIsShowing;
  */
 - (void)didLoadFromCCB
 {
+    [physicsNodeMS setDebugDraw:YES];
     adIsShowing = false;
     /* set refSelf */
     refSelf = self;
@@ -72,25 +70,9 @@ bool adIsShowing;
     [rightButton setHero:hero];
     
     /* load in the animation various animation images */
-    deathAnimationsFrames = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 56; i++)
-    {
-        
-        CCSpriteFrame *frame = nil;
-        if (i < 10)
-        {
-            NSString *filePath = [NSString stringWithFormat:@"dying__00%d.png", i];
-            frame = [CCSpriteFrame frameWithImageNamed:filePath];
-        }
-        else
-        {
-            NSString *filePath = [NSString stringWithFormat:@"dying__0%d.png", i];
-            frame = [CCSpriteFrame frameWithImageNamed:filePath];
-        }
-        
-        [deathAnimationsFrames addObject:frame];
-    }
-    
+ 
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"DeathAnim.plist"];
+
     /* shedeule various methods for gameplay */
     
     [self schedule:@selector(checkPosition) interval:0.2];
@@ -119,10 +101,12 @@ bool adIsShowing;
     _score = 0;
     
     //setup iAD
+    /*
     adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
     adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
     [[[CCDirector sharedDirector] view] addSubview:adView];
     adIsShowing = true;
+     */
     
 }
 
@@ -374,7 +358,7 @@ bool adIsShowing;
 
 -(void) updateMovement
 {
-    if (leftButton.pressed && [self heroOnObject])
+    if (leftButton.pressed) //&& [self heroOnObject])
     {
         hero.flipX = true;
         if (hero.physicsBody.velocity.x > -200)
@@ -383,7 +367,7 @@ bool adIsShowing;
         }
 
     }
-    else if (rightButton.pressed && [self heroOnObject])
+    else if (rightButton.pressed)//&& [self heroOnObject])
     {
         hero.flipX = false;
         if (hero.physicsBody.velocity.x < 200)
@@ -391,7 +375,7 @@ bool adIsShowing;
             [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x + 8, hero.physicsBody.velocity.y)];
         }
     }
-    else if ([self heroOnObject])
+    else //if ([self heroOnObject])
     {
         if ([[MainScene scene] heroOnObject])
         {

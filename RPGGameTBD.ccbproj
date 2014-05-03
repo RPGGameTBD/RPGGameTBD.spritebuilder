@@ -90,10 +90,13 @@
 		</dict>
 		<key>Door.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>2</integer>
+		</dict>
+		<key>LevelA.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
 		</dict>
 		<key>RPGImages-master/main character/body/lower_torso.png</key>
 		<dict/>
@@ -101,15 +104,11 @@
 		<dict/>
 		<key>TempGround.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
 		<key>TestBackground.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
@@ -196,10 +195,9 @@
 			<integer>1</integer>
 		</dict>
 		<key>cultistDeath</key>
-		<dict>
-			<key>isDirty</key>
-			<true/>
-		</dict>
+		<dict/>
+		<key>death_export</key>
+		<dict/>
 		<key>dev_back_orange.png</key>
 		<dict/>
 		<key>door2.png</key>

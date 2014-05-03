@@ -52,7 +52,4 @@ extern const int JUMPLIMIT;
 @property (nonatomic, strong) NSMutableArray *enemies;
 @property (nonatomic, strong) NSMutableArray *grounds;
 
-/* animation images */
-@property (nonatomic, strong) NSMutableArray *deathAnimationsFrames;
-
 @end
