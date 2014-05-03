@@ -53,7 +53,7 @@
     [self setDead:NO];
     [self setCurrDeathFrame:0];
     [self setTimesUpdated:0];
-    [self setHealth:40];
+    [self setHealth:5];
     [self.physicsBody setMass:1];
     [self setShootspeed:400];
 }
@@ -67,7 +67,7 @@
     //Create an action with the animation that can then be assigned to a sprite
     CCActionAnimate *animationAction = [CCActionAnimate actionWithAnimation:animation];
     
-    [self setScale:0.1];
+    [self setScale:0.5];
     [self runAction:animationAction];
 }
 

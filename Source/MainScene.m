@@ -60,7 +60,6 @@ bool adIsShowing;
 - (void)didLoadFromCCB
 {
     adIsShowing = false;
-    [physicsNodeMS setDebugDraw:YES];
     /* set refSelf */
     refSelf = self;
     
@@ -73,7 +72,6 @@ bool adIsShowing;
     [rightButton setHero:hero];
     
     /* load in the animation various animation images */
-    
     deathAnimationsFrames = [[NSMutableArray alloc] init];
     for (int i = 0; i < 56; i++)
     {
@@ -81,11 +79,13 @@ bool adIsShowing;
         CCSpriteFrame *frame = nil;
         if (i < 10)
         {
-            frame = [CCSpriteFrame frameWithImageNamed:[NSString stringWithFormat:@"dying__00%d.png", i]];
+            NSString *filePath = [NSString stringWithFormat:@"dying__00%d.png", i];
+            frame = [CCSpriteFrame frameWithImageNamed:filePath];
         }
         else
         {
-            frame = [CCSpriteFrame frameWithImageNamed:[NSString stringWithFormat:@"dying__0%d.png", i]];
+            NSString *filePath = [NSString stringWithFormat:@"dying__0%d.png", i];
+            frame = [CCSpriteFrame frameWithImageNamed:filePath];
         }
         
         [deathAnimationsFrames addObject:frame];

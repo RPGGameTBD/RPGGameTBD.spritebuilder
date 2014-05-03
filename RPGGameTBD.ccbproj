@@ -29,7 +29,7 @@
 	<key>javascriptMainCCB</key>
 	<string>MainScene</string>
 	<key>needRepublish</key>
-	<true/>
+	<false/>
 	<key>onlyPublishCCBs</key>
 	<false/>
 	<key>publishAudioQuality_android</key>
@@ -194,6 +194,11 @@
 			<integer>2</integer>
 			<key>tabletScale</key>
 			<integer>1</integer>
+		</dict>
+		<key>cultistDeath</key>
+		<dict>
+			<key>isDirty</key>
+			<true/>
 		</dict>
 		<key>dev_back_orange.png</key>
 		<dict/>
