@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>walk_export/w1/walking__000.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{226, 1}, {114, 338}}</string>
+			<key>offset</key>
+			<string>{9, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{20, 4}, {114, 338}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {112, 339}}</string>
+			<key>offset</key>
+			<string>{10, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{22, 3}, {112, 339}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 342}, {112, 339}}</string>
+			<key>offset</key>
+			<string>{11, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{23, 3}, {112, 339}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{226, 341}, {111, 338}}</string>
+			<key>offset</key>
+			<string>{11, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{24, 3}, {111, 338}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{339, 341}, {109, 338}}</string>
+			<key>offset</key>
+			<string>{12, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 3}, {109, 338}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{334, 681}, {109, 338}}</string>
+			<key>offset</key>
+			<string>{12, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 3}, {109, 338}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 683}, {109, 339}}</string>
+			<key>offset</key>
+			<string>{12, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 2}, {109, 339}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{112, 683}, {109, 339}}</string>
+			<key>offset</key>
+			<string>{12, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 2}, {109, 339}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{115, 1}, {109, 339}}</string>
+			<key>offset</key>
+			<string>{12, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 2}, {109, 339}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{115, 342}, {109, 339}}</string>
+			<key>offset</key>
+			<string>{12, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 2}, {109, 339}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+		<key>walk_export/w1/walking__010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{223, 683}, {109, 339}}</string>
+			<key>offset</key>
+			<string>{12, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 2}, {109, 339}}</string>
+			<key>sourceSize</key>
+			<string>{137, 349}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>w1.png</string>
+	</dict>
+</dict>
+</plist>

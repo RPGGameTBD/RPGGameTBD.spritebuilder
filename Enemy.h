@@ -18,6 +18,7 @@
 @property (nonatomic, strong) CCLabelTTF *enemyHealthLabel;
 @property (nonatomic) BOOL dead;
 @property (nonatomic) int currDeathFrame;
+@property (nonatomic) BOOL walking;
 
 
 @end

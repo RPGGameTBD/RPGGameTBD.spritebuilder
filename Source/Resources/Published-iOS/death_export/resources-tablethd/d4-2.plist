@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>death_export/d4-2/dying__036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1309, 876}, {1242, 1023}}</string>
+			<key>offset</key>
+			<string>{75, -81}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{321, 325}, {1242, 1023}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+		<key>death_export/d4-2/dying__037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{2684, 1}, {1276, 978}}</string>
+			<key>offset</key>
+			<string>{44, -109}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{273, 375}, {1276, 978}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+		<key>death_export/d4-2/dying__038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 816}, {1306, 928}}</string>
+			<key>offset</key>
+			<string>{14, -138}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{228, 429}, {1306, 928}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+		<key>death_export/d4-2/dying__039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1352, 1}, {1330, 873}}</string>
+			<key>offset</key>
+			<string>{-15, -169}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{187, 488}, {1330, 873}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+		<key>death_export/d4-2/dying__040.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {1349, 813}}</string>
+			<key>offset</key>
+			<string>{-41, -201}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{151, 550}, {1349, 813}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{4096, 4096}</string>
+		<key>textureFileName</key>
+		<string>d4-2.png</string>
+	</dict>
+</dict>
+</plist>

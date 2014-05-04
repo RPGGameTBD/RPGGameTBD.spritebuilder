@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>death_export/d3/dying__021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {971, 1285}}</string>
+			<key>offset</key>
+			<string>{362, 27}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{744, 85}, {971, 1285}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+		<key>death_export/d3/dying__022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1288}, {962, 1271}}</string>
+			<key>offset</key>
+			<string>{362, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{748, 95}, {962, 1271}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+		<key>death_export/d3/dying__023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 2561}, {952, 1255}}</string>
+			<key>offset</key>
+			<string>{362, 20}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{753, 107}, {952, 1255}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+		<key>death_export/d3/dying__024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{955, 2561}, {940, 1238}}</string>
+			<key>offset</key>
+			<string>{361, 17}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{758, 119}, {940, 1238}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+		<key>death_export/d3/dying__025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{965, 1288}, {959, 1228}}</string>
+			<key>offset</key>
+			<string>{341, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{729, 129}, {959, 1228}}</string>
+			<key>sourceSize</key>
+			<string>{1735, 1511}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{4096, 4096}</string>
+		<key>textureFileName</key>
+		<string>d3.png</string>
+	</dict>
+</dict>
+</plist>

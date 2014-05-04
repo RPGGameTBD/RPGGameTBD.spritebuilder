@@ -42,6 +42,11 @@ static MainScene* refSelf;
 
 /*current ground objects in level */
 @synthesize grounds;
+
+/* our scoring variable */
+@synthesize score;
+
+/* iAd variables */
 ADBannerView *adView;
 bool adIsShowing;
 
@@ -56,7 +61,7 @@ bool adIsShowing;
  */
 - (void)didLoadFromCCB
 {
-    [physicsNodeMS setDebugDraw:YES];
+    //[physicsNodeMS setDebugDraw:YES];
     adIsShowing = false;
     /* set refSelf */
     refSelf = self;
@@ -68,11 +73,7 @@ bool adIsShowing;
     [rightButton setExclusiveTouch:NO];
     [leftButton setHero:hero];
     [rightButton setHero:hero];
-    
-    /* load in the animation various animation images */
- 
-    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"DeathAnim.plist"];
-
+     
     /* shedeule various methods for gameplay */
     
     [self schedule:@selector(checkPosition) interval:0.2];
@@ -98,7 +99,7 @@ bool adIsShowing;
     [self loadLevelWithHeroPosition:ccp(935, 50) flipped:YES];
     
     //init score
-    _score = 0;
+    score = 0;
     
     //setup iAD
     /*
@@ -227,7 +228,7 @@ bool adIsShowing;
         currLevel = @"LevelA";
         hero.dead = YES;
         [self reportScore];
-        _score = 0;
+        score = 0;
         [self performSelector:@selector(loadLevelAfterDeath) withObject:nil afterDelay:1];
     }
 }
@@ -239,10 +240,17 @@ bool adIsShowing;
 
 - (void) updateEnemies
 {
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     for (Enemy* enemy in enemies)
     {
         [enemy update];
+        if (!enemy.dead)
+        {
+            [tempArray addObject:enemy];
+        }
     }
+    enemies = tempArray;
+    
 }
 
 /* gets touches from anwhere within our scene which activates the shoot mechanism */
@@ -391,12 +399,13 @@ bool adIsShowing;
     }
 }
 
--(void)reportScore{
+-(void)reportScore
+{
     AppController *appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
-    GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:appDelegate.leaderboardIdentifier];
-    score.value = _score;
+    GKScore *boardscore = [[GKScore alloc] initWithLeaderboardIdentifier:appDelegate.leaderboardIdentifier];
+    boardscore.value = score;
     
-    [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+    [GKScore reportScores:@[boardscore] withCompletionHandler:^(NSError *error) {
         if (error != nil) {
             NSLog(@"%@", [error localizedDescription]);
         }
