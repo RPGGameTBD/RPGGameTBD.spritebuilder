@@ -42,11 +42,13 @@ static MainScene* refSelf;
 
 /*current ground objects in level */
 @synthesize grounds;
+
+/* our scoring variable */
+@synthesize score;
+
+/* iAd variables */
 ADBannerView *adView;
 bool adIsShowing;
-
-/* animations */
-@synthesize deathAnimationsFrames;
 
 /* here is a class method to get ahold of our MainScene node */
 + (MainScene *) scene
@@ -59,8 +61,8 @@ bool adIsShowing;
  */
 - (void)didLoadFromCCB
 {
+    //[physicsNodeMS setDebugDraw:YES];
     adIsShowing = false;
-    [physicsNodeMS setDebugDraw:YES];
     /* set refSelf */
     refSelf = self;
     
@@ -71,26 +73,7 @@ bool adIsShowing;
     [rightButton setExclusiveTouch:NO];
     [leftButton setHero:hero];
     [rightButton setHero:hero];
-    
-    /* load in the animation various animation images */
-    
-    deathAnimationsFrames = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 56; i++)
-    {
-        
-        CCSpriteFrame *frame = nil;
-        if (i < 10)
-        {
-            frame = [CCSpriteFrame frameWithImageNamed:[NSString stringWithFormat:@"dying__00%d.png", i]];
-        }
-        else
-        {
-            frame = [CCSpriteFrame frameWithImageNamed:[NSString stringWithFormat:@"dying__0%d.png", i]];
-        }
-        
-        [deathAnimationsFrames addObject:frame];
-    }
-    
+     
     /* shedeule various methods for gameplay */
     
     [self schedule:@selector(checkPosition) interval:0.2];
@@ -116,13 +99,15 @@ bool adIsShowing;
     [self loadLevelWithHeroPosition:ccp(935, 50) flipped:YES];
     
     //init score
-    _score = 0;
+    score = 0;
     
     //setup iAD
+    /*
     adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
     adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
     [[[CCDirector sharedDirector] view] addSubview:adView];
     adIsShowing = true;
+     */
     
 }
 
@@ -243,7 +228,7 @@ bool adIsShowing;
         currLevel = @"LevelA";
         hero.dead = YES;
         [self reportScore];
-        _score = 0;
+        score = 0;
         [self performSelector:@selector(loadLevelAfterDeath) withObject:nil afterDelay:1];
     }
 }
@@ -255,10 +240,17 @@ bool adIsShowing;
 
 - (void) updateEnemies
 {
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     for (Enemy* enemy in enemies)
     {
         [enemy update];
+        if (!enemy.dead)
+        {
+            [tempArray addObject:enemy];
+        }
     }
+    enemies = tempArray;
+    
 }
 
 /* gets touches from anwhere within our scene which activates the shoot mechanism */
@@ -374,7 +366,7 @@ bool adIsShowing;
 
 -(void) updateMovement
 {
-    if (leftButton.pressed && [self heroOnObject])
+    if (leftButton.pressed) //&& [self heroOnObject])
     {
         hero.flipX = true;
         if (hero.physicsBody.velocity.x > -200)
@@ -383,7 +375,7 @@ bool adIsShowing;
         }
 
     }
-    else if (rightButton.pressed && [self heroOnObject])
+    else if (rightButton.pressed)//&& [self heroOnObject])
     {
         hero.flipX = false;
         if (hero.physicsBody.velocity.x < 200)
@@ -391,7 +383,7 @@ bool adIsShowing;
             [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x + 8, hero.physicsBody.velocity.y)];
         }
     }
-    else if ([self heroOnObject])
+    else //if ([self heroOnObject])
     {
         if ([[MainScene scene] heroOnObject])
         {
@@ -407,12 +399,13 @@ bool adIsShowing;
     }
 }
 
--(void)reportScore{
+-(void)reportScore
+{
     AppController *appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
-    GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:appDelegate.leaderboardIdentifier];
-    score.value = _score;
+    GKScore *boardscore = [[GKScore alloc] initWithLeaderboardIdentifier:appDelegate.leaderboardIdentifier];
+    boardscore.value = score;
     
-    [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+    [GKScore reportScores:@[boardscore] withCompletionHandler:^(NSError *error) {
         if (error != nil) {
             NSLog(@"%@", [error localizedDescription]);
         }

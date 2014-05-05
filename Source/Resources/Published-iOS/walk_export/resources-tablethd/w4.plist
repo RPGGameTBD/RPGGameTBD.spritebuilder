@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>walk_export/w4/walking__031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {426, 1356}}</string>
+			<key>offset</key>
+			<string>{48, 3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{110, 17}, {426, 1356}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+		<key>walk_export/w4/walking__032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1359}, {426, 1355}}</string>
+			<key>offset</key>
+			<string>{48, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{110, 18}, {426, 1355}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+		<key>walk_export/w4/walking__033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 2716}, {426, 1354}}</string>
+			<key>offset</key>
+			<string>{48, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{110, 19}, {426, 1354}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+		<key>walk_export/w4/walking__034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{429, 1}, {428, 1353}}</string>
+			<key>offset</key>
+			<string>{47, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{108, 20}, {428, 1353}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+		<key>walk_export/w4/walking__035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1784, 1}, {432, 1350}}</string>
+			<key>offset</key>
+			<string>{45, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{104, 22}, {432, 1350}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+		<key>walk_export/w4/walking__036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{429, 431}, {440, 1349}}</string>
+			<key>offset</key>
+			<string>{45, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{100, 23}, {440, 1349}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+		<key>walk_export/w4/walking__037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1780, 435}, {450, 1348}}</string>
+			<key>offset</key>
+			<string>{46, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{96, 24}, {450, 1348}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+		<key>walk_export/w4/walking__038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{3136, 1}, {452, 1347}}</string>
+			<key>offset</key>
+			<string>{46, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{95, 24}, {452, 1347}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+		<key>walk_export/w4/walking__039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1779, 887}, {440, 1347}}</string>
+			<key>offset</key>
+			<string>{44, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{99, 23}, {440, 1347}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+		<key>walk_export/w4/walking__040.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{429, 873}, {436, 1348}}</string>
+			<key>offset</key>
+			<string>{46, 3}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{103, 21}, {436, 1348}}</string>
+			<key>sourceSize</key>
+			<string>{551, 1397}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{4096, 4096}</string>
+		<key>textureFileName</key>
+		<string>w4.png</string>
+	</dict>
+</dict>
+</plist>

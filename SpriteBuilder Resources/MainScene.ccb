@@ -133,8 +133,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>0.070000000298023224</real>
-									<real>0.070000000298023224</real>
+									<real>0.10000000149011612</real>
+									<real>0.10000000149011612</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -148,6 +148,8 @@
 								<string>Hero.ccb</string>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
