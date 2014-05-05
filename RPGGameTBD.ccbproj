@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>cocos2dUpdateIgnoredVersions</key>
+	<array/>
 	<key>defaultOrientation</key>
 	<integer>0</integer>
 	<key>designTarget</key>
@@ -15,6 +17,8 @@
 	<key>deviceOrientationUpsideDown</key>
 	<false/>
 	<key>deviceScaling</key>
+	<integer>0</integer>
+	<key>engine</key>
 	<integer>0</integer>
 	<key>exporter</key>
 	<string>ccbi</string>
@@ -48,6 +52,8 @@
 	<false/>
 	<key>publishEnablediPhone</key>
 	<true/>
+	<key>publishEnvironment</key>
+	<integer>0</integer>
 	<key>publishResolutionHTML5_height</key>
 	<integer>320</integer>
 	<key>publishResolutionHTML5_scale</key>
@@ -214,8 +220,8 @@
 		</dict>
 	</dict>
 	<key>versionStr</key>
-	<string>Version: 1.0.6
-GitHub: 2a1e3712de
+	<string>Version: 1.1.0.beta.0
+GitHub: 1348621c14
 </string>
 </dict>
 </plist>
