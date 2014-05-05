@@ -56,7 +56,7 @@
     [self setTimesUpdated:0];
     [self setHealth:30];
     [self.physicsBody setMass:1];
-    [self setShootspeed:25];
+    [self setShootspeed:50];
 }
 
 - (void) startWalkingAnim
@@ -198,7 +198,7 @@
                 [bullet.physicsBody setAffectedByGravity:YES];
                 double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
                 CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-                CGPoint force = ccpMult(unitDir, 2000);
+                CGPoint force = ccpMult(unitDir, 1000);
                 [bullet setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
                 [[MainScene scene].levelObjects addChild:bullet];
 
@@ -207,85 +207,5 @@
         }
     }
 }
-
-@end
-
-@implementation BigCultist
-
-@synthesize timesUpdated;
-@synthesize shootspeed;
-
-- (void)didLoadFromCCB
-{
-    [self setTimesUpdated:0];
-    [self setHealth:200];
-    [self.physicsBody setMass:1];
-    [self setShootspeed:35];
-}
-
-- (void) update
-{
-    self.timesUpdated++;
-    /* do a death check */
-    if ([self health] < 0)
-    {
-        [self.enemyHealthLabel removeFromParent];
-        [self removeFromParent];
-        return;
-    }
-    
-    MainScene *scene = [MainScene scene];
-    int distance = self.distanceToHero;
-
-    if (distance < 568 && distance > 150)
-    {
-        CGRect heroRect = scene.hero.boundingBox;
-        CGRect enemyRect = self.boundingBox;
-        
-        CGPoint heroOrigin = heroRect.origin;
-        CGPoint enemyOrigin = enemyRect.origin;
-        if (heroOrigin.x > enemyOrigin.x)
-        {
-            [self.physicsBody setVelocity:ccp(100, self.physicsBody.velocity.y)];
-            [self setFlipX:FALSE];
-        }
-        else
-        {
-            [self.physicsBody setVelocity:ccp(-100, self.physicsBody.velocity.y)];
-            [self setFlipX:TRUE];
-        }
-    }
-    else
-    {
-        [self.physicsBody setVelocity:ccp(0, self.physicsBody.velocity.y)];
-        /* shoot */
-        if (timesUpdated > shootspeed)
-        {
-            timesUpdated = 0;
-            CGPoint currentPos = ccp(scene.hero.position.x + scene.hero.boundingBox.size.width/2,
-                                     scene.hero.position.y + scene.hero.boundingBox.size.height/2);
-            CCNode *bullet = [CCBReader load:@"Bullet"];
-            [[bullet physicsBody] setMass:2];
-            [bullet setScale:5.0];
-            
-            
-            [bullet.physicsBody setCollisionGroup:self];
-            [self.physicsBody setCollisionGroup:self];
-            
-            bullet.position = ccp(self.position.x + self.boundingBox.size.width/2, self.position.y + self.boundingBox.size.height/2);
-            
-            [scene.levelObjects addChild:bullet];
-            
-            CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
-            double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
-            CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-            CGPoint force = ccpMult(unitDir, 50000);
-            [bullet.physicsBody applyForce:force];
-        }
-    }
-}
-
-
-
 
 @end

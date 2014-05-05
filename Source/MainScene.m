@@ -34,6 +34,7 @@ static MainScene* refSelf;
 
 /* current Level */
 @synthesize currLevel;
+@synthesize levelNum;
 
 /*current doors in level */
 @synthesize doors;
@@ -86,6 +87,9 @@ bool adIsShowing;
     [self schedule:@selector(updateMovement) interval:0.01];
     [self schedule:@selector(updateEnemies) interval:0.01];
     [self schedule:@selector(showAd) interval:10.0];
+    
+    /* setup the group enemy for the enemy's collision id */
+    groupEnemy = [[Enemy alloc] init];
 
     /* hero setup */
     numJumps = 0;
@@ -99,15 +103,13 @@ bool adIsShowing;
     /* set self as collision delegate */
     [physicsNodeMS setCollisionDelegate:self];
     
-    /* setup the group enemy for the enemy's collision id */
-    groupEnemy = [[Enemy alloc] init];
-    
     /*load the title screen manually */
     currLevel = @"LevelA";
     [self loadLevelWithHeroPosition:ccp(935, 50) flipped:YES];
     
-    //init score
+    /* init score and level number */
     score = 0;
+    levelNum = 0;
     
     //setup iAD
     /*
@@ -149,6 +151,27 @@ bool adIsShowing;
     CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:levelObjects.boundingBox];
     [physicsNodeMS runAction:follow];
     
+    
+    /* depending on the currLevel and the levelNum we will put in various
+     numbers of enemies with various difficulty settings */
+    if ([currLevel isEqualToString:@"LevelB"])
+    {
+        int startX = 100;
+        for (int i = 0; i <= levelNum; i++)
+        {
+            Enemy *toAdd = (Enemy *)[CCBReader load:@"Cultist"];
+            [toAdd setPosition:ccp(startX, 50)];
+            startX+=200;
+            [levelObjects addChild:toAdd];
+        }
+        levelNum++;
+
+    }
+    else if ([currLevel isEqualToString:@"LevelC"])
+    {
+        
+    }
+    
     /* set all objects above menu */
     for (CCNode *child in levelObjects.children)
     {
@@ -170,8 +193,7 @@ bool adIsShowing;
             [grounds addObject:child];
         }
     }
-    
-    
+
     [hero.physicsBody setVelocity:ccp(0, 0)];
 }
 
@@ -234,6 +256,7 @@ bool adIsShowing;
 {
     if (!hero.dead && ([hero position].y < 30 || [hero health] < 0))
     {
+        levelNum = 0;
         currLevel = @"LevelA";
         hero.dead = YES;
         [self reportScore];
@@ -431,16 +454,20 @@ bool adIsShowing;
 {
     AppController *appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
     GKScore *boardscore = [[GKScore alloc] initWithLeaderboardIdentifier:appDelegate.leaderboardIdentifier];
+    
     boardscore.value = score;
     
-    [GKScore reportScores:@[boardscore] withCompletionHandler:^(NSError *error) {
-        if (error != nil) {
+    [GKScore reportScores:@[boardscore] withCompletionHandler:^(NSError *error)
+    {
+        if (error != nil)
+        {
             NSLog(@"%@", [error localizedDescription]);
         }
     }];
 }
 
--(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard{
+-(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard
+{
     AppController *appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
     GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
     

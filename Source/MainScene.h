@@ -56,6 +56,7 @@ extern const int JUMPLIMIT;
 
 /* Text description of current level we're on */
 @property (nonatomic, strong) NSString *currLevel;
+@property (nonatomic) int levelNum;
 
 /* Arrays with all the Doors and Enemiesof the current level */
 @property (nonatomic, strong) NSMutableArray *doors;
