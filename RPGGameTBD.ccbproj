@@ -112,6 +112,11 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>bullet.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>2</integer>
+		</dict>
 		<key>ccbResources</key>
 		<dict>
 			<key>previewFolderHidden</key>
@@ -194,6 +199,13 @@
 			<key>tabletScale</key>
 			<integer>1</integer>
 		</dict>
+		<key>crossbow_export</key>
+		<dict>
+			<key>isDirty</key>
+			<true/>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
 		<key>cultistDeath</key>
 		<dict/>
 		<key>death_export</key>
@@ -237,8 +249,6 @@
 		</dict>
 		<key>main_walk_export</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>

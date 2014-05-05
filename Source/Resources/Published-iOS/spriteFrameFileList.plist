@@ -10,8 +10,9 @@
 	<key>spriteFrameFiles</key>
 	<array>
 		<string>death_export.plist</string>
-		<string>walk_export.plist</string>
 		<string>main_walk_export.plist</string>
+		<string>walk_export.plist</string>
+		<string>crossbow_export.plist</string>
 	</array>
 </dict>
 </plist>

@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>crossbow_export/crossbow_action__000.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{846, 38}, {74, 33}}</string>
+			<key>offset</key>
+			<string>{6, 33}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {74, 33}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{617, 1}, {75, 34}}</string>
+			<key>offset</key>
+			<string>{4, 33}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 2}, {75, 34}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{386, 1}, {75, 34}}</string>
+			<key>offset</key>
+			<string>{2, 33}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {75, 34}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {75, 35}}</string>
+			<key>offset</key>
+			<string>{1, 32}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{8, 2}, {75, 35}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{155, 1}, {75, 35}}</string>
+			<key>offset</key>
+			<string>{0, 32}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{7, 2}, {75, 35}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{78, 1}, {75, 35}}</string>
+			<key>offset</key>
+			<string>{0, 32}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{6, 2}, {75, 35}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{232, 1}, {75, 35}}</string>
+			<key>offset</key>
+			<string>{0, 32}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{7, 2}, {75, 35}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{463, 1}, {75, 34}}</string>
+			<key>offset</key>
+			<string>{1, 33}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{8, 2}, {75, 34}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{309, 1}, {75, 34}}</string>
+			<key>offset</key>
+			<string>{2, 33}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {75, 34}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{540, 1}, {75, 34}}</string>
+			<key>offset</key>
+			<string>{3, 33}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{10, 2}, {75, 34}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{922, 37}, {74, 34}}</string>
+			<key>offset</key>
+			<string>{5, 33}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 2}, {74, 34}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{309, 37}, {74, 33}}</string>
+			<key>offset</key>
+			<string>{6, 33}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {74, 33}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{770, 1}, {74, 36}}</string>
+			<key>offset</key>
+			<string>{6, 32}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {74, 36}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{385, 37}, {72, 38}}</string>
+			<key>offset</key>
+			<string>{6, 31}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 2}, {72, 38}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 38}, {73, 40}}</string>
+			<key>offset</key>
+			<string>{5, 30}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {73, 40}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{226, 38}, {72, 42}}</string>
+			<key>offset</key>
+			<string>{5, 29}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {72, 42}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{225, 82}, {71, 44}}</string>
+			<key>offset</key>
+			<string>{4, 28}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {71, 44}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{148, 120}, {70, 46}}</string>
+			<key>offset</key>
+			<string>{4, 27}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {70, 46}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{73, 165}, {69, 48}}</string>
+			<key>offset</key>
+			<string>{3, 26}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {69, 48}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{373, 77}, {68, 49}}</string>
+			<key>offset</key>
+			<string>{3, 25}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {68, 49}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{72, 215}, {66, 51}}</string>
+			<key>offset</key>
+			<string>{3, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 2}, {66, 51}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{530, 37}, {64, 55}}</string>
+			<key>offset</key>
+			<string>{2, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 2}, {64, 55}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{368, 128}, {63, 57}}</string>
+			<key>offset</key>
+			<string>{1, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 2}, {63, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{65, 327}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{1, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{596, 37}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{1, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{212, 179}, {63, 57}}</string>
+			<key>offset</key>
+			<string>{0, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {63, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{277, 227}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{0, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 312}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{0, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{289, 168}, {63, 57}}</string>
+			<key>offset</key>
+			<string>{0, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 2}, {63, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{354, 187}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{-1, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__030.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{133, 277}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{-1, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{509, 94}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{-1, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{660, 39}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{-2, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{205, 238}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{-2, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{69, 268}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{-2, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 371}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{-3, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{10, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{433, 139}, {62, 57}}</string>
+			<key>offset</key>
+			<string>{-3, 21}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{10, 2}, {62, 57}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{788, 39}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-3, 22}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{10, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{129, 336}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{497, 153}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__040.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{405, 256}, {61, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {61, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__041.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{561, 154}, {61, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {61, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__042.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{261, 344}, {61, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {61, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__043.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{418, 198}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__044.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{724, 39}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__045.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{197, 297}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__046.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{573, 96}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__047.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{65, 386}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__048.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{269, 286}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__049.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{724, 97}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__050.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{341, 246}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__051.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 430}, {62, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__052.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{333, 304}, {61, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {61, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__053.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{482, 211}, {61, 56}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {61, 56}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__054.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{637, 98}, {62, 55}}</string>
+			<key>offset</key>
+			<string>{-4, 22}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {62, 55}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__055.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{140, 221}, {63, 54}}</string>
+			<key>offset</key>
+			<string>{-3, 23}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {63, 54}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__056.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{443, 85}, {64, 52}}</string>
+			<key>offset</key>
+			<string>{-3, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {64, 52}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__057.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{144, 168}, {66, 51}}</string>
+			<key>offset</key>
+			<string>{-2, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{9, 2}, {66, 51}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__058.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 261}, {66, 49}}</string>
+			<key>offset</key>
+			<string>{-1, 25}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{10, 2}, {66, 49}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__059.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{220, 128}, {67, 49}}</string>
+			<key>offset</key>
+			<string>{0, 25}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{10, 2}, {67, 49}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__060.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{298, 118}, {68, 48}}</string>
+			<key>offset</key>
+			<string>{0, 26}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{10, 2}, {68, 48}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__061.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 212}, {69, 47}}</string>
+			<key>offset</key>
+			<string>{0, 26}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{10, 2}, {69, 47}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__062.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{459, 37}, {69, 46}}</string>
+			<key>offset</key>
+			<string>{1, 27}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 2}, {69, 46}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__063.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 165}, {70, 45}}</string>
+			<key>offset</key>
+			<string>{2, 27}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 2}, {70, 45}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__064.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{300, 72}, {71, 44}}</string>
+			<key>offset</key>
+			<string>{2, 28}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 2}, {71, 44}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__065.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{75, 120}, {71, 43}}</string>
+			<key>offset</key>
+			<string>{2, 28}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 2}, {71, 43}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__066.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 121}, {71, 42}}</string>
+			<key>offset</key>
+			<string>{3, 29}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 2}, {71, 42}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__067.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{151, 77}, {72, 41}}</string>
+			<key>offset</key>
+			<string>{4, 29}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 2}, {72, 41}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__068.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{76, 78}, {72, 40}}</string>
+			<key>offset</key>
+			<string>{4, 30}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 2}, {72, 40}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__069.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 80}, {72, 39}}</string>
+			<key>offset</key>
+			<string>{5, 30}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {72, 39}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__070.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{76, 38}, {73, 38}}</string>
+			<key>offset</key>
+			<string>{5, 31}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {73, 38}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__071.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{151, 38}, {73, 37}}</string>
+			<key>offset</key>
+			<string>{5, 31}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {73, 37}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__072.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{694, 1}, {74, 36}}</string>
+			<key>offset</key>
+			<string>{6, 32}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {74, 36}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__073.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{846, 1}, {74, 35}}</string>
+			<key>offset</key>
+			<string>{6, 32}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {74, 35}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+		<key>crossbow_export/crossbow_action__074.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{922, 1}, {74, 34}}</string>
+			<key>offset</key>
+			<string>{6, 33}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {74, 34}}</string>
+			<key>sourceSize</key>
+			<string>{89, 104}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>crossbow_export.png</string>
+	</dict>
+</dict>
+</plist>

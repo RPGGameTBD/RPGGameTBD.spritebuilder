@@ -32,6 +32,9 @@ extern const int JUMPLIMIT;
 -(void)reportScore;
 -(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard;
 
+/* text box for score */
+@property (nonatomic, strong) CCLabelTTF *scoreBoard;
+
 
 /* any buttons */
 @property (nonatomic, strong) CCButton *jumpButton;

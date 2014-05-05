@@ -44,8 +44,9 @@ static MainScene* refSelf;
 /*current ground objects in level */
 @synthesize grounds;
 
-/* our scoring variable */
+/* our scoring variables */
 @synthesize score;
+@synthesize scoreBoard;
 
 /* iAd variables */
 ADBannerView *adView;
@@ -259,19 +260,25 @@ bool adIsShowing;
 {
     CGPoint touchPos = [touch locationInNode:physicsNodeMS];
     
-    CCNode *bullet = [CCBReader load:@"Bullet"];
+    CCSprite *bullet = (CCSprite *)[CCBReader load:@"Bullet"];
     [bullet.physicsBody setCollisionGroup:hero];
     
     bullet.position = ccp(hero.position.x + hero.boundingBox.size.width/2, hero.position.y + hero.boundingBox.size.height/2);
     
-    [levelObjects addChild:bullet];
+    [bullet setScale:0.33];
+    [bullet setFlipX:!hero.flipX];
+    [bullet.physicsBody setMass:0.05];
+    
+    
     
     /* calculate the direction vector */
     CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), touchPos);
     double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
     CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-    CGPoint force = ccpMult(unitDir, 1000);
+    CGPoint force = ccpMult(unitDir, 2000);
+    [bullet setRotation:3.14];
     
+    [levelObjects addChild:bullet];
     [bullet.physicsBody applyForce:force];
 }
 
@@ -307,6 +314,7 @@ bool adIsShowing;
 /* anything that needs to be redrawn for every frame like health labels */
 - (void) update:(CCTime)delta
 {
+    [scoreBoard setString:[NSString stringWithFormat:@"%lld", score]];
     if (healthLabel == nil)
     {
         healthLabel = [[CCLabelTTF alloc] init];

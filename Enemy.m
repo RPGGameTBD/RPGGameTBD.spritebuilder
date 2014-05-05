@@ -75,7 +75,14 @@
 {
     [self stopAllActions];
     self.walking = false;
+}
 
+- (void) shootAnim
+{
+    // the animation manager of each node is stored in the 'userObject' property
+    CCBAnimationManager* animationManager = self.userObject;
+    // timelines can be referenced and run by name
+    [animationManager runAnimationsForSequenceNamed:@"EnemyShoot"];
 }
 
 - (void) update
@@ -104,13 +111,12 @@
         [[[MainScene scene] levelObjects] addChild:dyingAnim];
         
         scene.score++;
-        NSLog(@"%d", scene.score);
         return;
     }
     if (!self.dead)
     {
         int distance = [self distanceToHero];
-        if (distance > 100)
+        if (distance > 200)
         {
             [self startWalkingAnim];
             CGRect heroRect = scene.hero.boundingBox;
@@ -122,11 +128,21 @@
             {
                 [self.physicsBody setVelocity:ccp(100, self.physicsBody.velocity.y)];
                 [self setFlipX:NO];
+                for (CCSprite *child in self.children)
+                {
+                    [child setFlipX:NO];
+                    [child setAnchorPoint:ccp(0.5, 0.5)];
+                }
             }
             else
             {
                 [self.physicsBody setVelocity:ccp(-100, self.physicsBody.velocity.y)];
                 [self setFlipX:YES];
+                for (CCSprite *child in self.children)
+                {
+                    [child setFlipX:YES];
+                    [child setAnchorPoint:ccp(0.90, 0.5)];
+                }
             }
             
             if (heroOrigin.y > enemyOrigin.y + 40 && enemyOrigin.y < 50)
@@ -137,25 +153,28 @@
         else
         {
             [self pauseWalkingAnim];
-            
             [self.physicsBody setVelocity:ccp(0, self.physicsBody.velocity.y)];
             /* shoot */
             if (timesUpdated > shootspeed)
             {
+                [self shootAnim];
                 timesUpdated = 0;
                 CGPoint currentPos = ccp(scene.hero.position.x + scene.hero.boundingBox.size.width/2,
                                          scene.hero.position.y + scene.hero.boundingBox.size.height/2);
-                CCNode *bullet = [CCBReader load:@"Bullet"];
+                CCSprite *bullet = (CCSprite*)[CCBReader load:@"Bullet"];
                 [bullet.physicsBody setCollisionGroup:self];
                 [self.physicsBody setCollisionGroup:self];
                 bullet.position = ccp(self.position.x + self.boundingBox.size.width/2, self.position.y + self.boundingBox.size.height/2);
                 
+                [bullet setScale:0.33];
+                [bullet setFlipX:!self.flipX];
+                [bullet.physicsBody setMass:0.05];
                 [scene.levelObjects addChild:bullet];
                 
                 CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), currentPos);
                 double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
                 CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-                CGPoint force = ccpMult(unitDir, 1000);
+                CGPoint force = ccpMult(unitDir, 2000);
                 [bullet.physicsBody applyForce:force];
             }
         }
