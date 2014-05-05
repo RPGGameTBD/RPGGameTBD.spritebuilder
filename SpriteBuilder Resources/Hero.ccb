@@ -699,20 +699,20 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>7.90234375</real>
-					<real>-0.66796875</real>
+					<real>14.91015625</real>
+					<real>2.42578125</real>
 				</array>
 				<array>
-					<real>54.90234375</real>
-					<real>-0.08203125</real>
+					<real>44.75390625</real>
+					<real>0.8203125</real>
 				</array>
 				<array>
-					<real>47.6640625</real>
-					<real>107.875</real>
+					<real>36.23046875</real>
+					<real>100.17578125</real>
 				</array>
 				<array>
-					<real>16.64453125</real>
-					<real>108.22265625</real>
+					<real>21.3515625</real>
+					<real>99.22265625</real>
 				</array>
 			</array>
 		</dict>
@@ -794,6 +794,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 		<key>seqExpanded</key>
 		<true/>
 	</dict>

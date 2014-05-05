@@ -48,6 +48,9 @@ static MainScene* refSelf;
 @synthesize score;
 @synthesize scoreBoard;
 
+/* the group Enemy */
+@synthesize groupEnemy;
+
 /* iAd variables */
 ADBannerView *adView;
 bool adIsShowing;
@@ -95,6 +98,9 @@ bool adIsShowing;
     
     /* set self as collision delegate */
     [physicsNodeMS setCollisionDelegate:self];
+    
+    /* setup the group enemy for the enemy's collision id */
+    groupEnemy = [[Enemy alloc] init];
     
     /*load the title screen manually */
     currLevel = @"LevelA";
@@ -156,6 +162,7 @@ bool adIsShowing;
         else if ([child isKindOfClass:Enemy.class])
         {
             [enemies addObject:child];
+            [((Enemy *)child).physicsBody setCollisionGroup:groupEnemy];
         }
         
         if ([child isKindOfClass:Ground.class])
@@ -265,18 +272,27 @@ bool adIsShowing;
     
     bullet.position = ccp(hero.position.x + hero.boundingBox.size.width/2, hero.position.y + hero.boundingBox.size.height/2);
     
+
+    /* calculate the direction vector */
+    CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), touchPos);
+    if (launchDirection.x < 0)
+    {
+        [hero setFlipX:YES];
+    }
+    else
+    {
+        [hero setFlipX:NO];
+    }
+    
     [bullet setScale:0.33];
     [bullet setFlipX:!hero.flipX];
     [bullet.physicsBody setMass:0.05];
-    
-    
-    
-    /* calculate the direction vector */
-    CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), touchPos);
+    [bullet.physicsBody setAffectedByGravity:YES];
+
     double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
     CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
     CGPoint force = ccpMult(unitDir, 2000);
-    [bullet setRotation:3.14];
+    [bullet setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
     
     [levelObjects addChild:bullet];
     [bullet.physicsBody applyForce:force];

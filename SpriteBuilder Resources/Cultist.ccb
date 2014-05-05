@@ -2817,8 +2817,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>41</real>
-							<real>33</real>
+							<real>23</real>
+							<real>80</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2831,8 +2831,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.89999997615814209</real>
-							<real>0.5</real>
+							<real>0.69999998807907104</real>
+							<real>0.94999998807907104</real>
 						</array>
 					</dict>
 					<dict>
@@ -2847,6 +2847,14 @@
 							<false/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>1.809128999710083</real>
 					</dict>
 					<dict>
 						<key>baseValue</key>
@@ -2889,8 +2897,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -2924,20 +2930,20 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>2.20703125</real>
-					<real>-0.34374237060546875</real>
+					<real>9.73828125</real>
+					<real>107.97265625</real>
 				</array>
 				<array>
-					<real>48.890625</real>
-					<real>1.921875</real>
+					<real>11.390625</real>
+					<real>2.3046875</real>
 				</array>
 				<array>
-					<real>38.36328125</real>
-					<real>120.63671875</real>
+					<real>40.80078125</real>
+					<real>3.3046875</real>
 				</array>
 				<array>
-					<real>14.44140625</real>
-					<real>121.73828125</real>
+					<real>29.70703125</real>
+					<real>110.5390625</real>
 				</array>
 			</array>
 		</dict>
@@ -3030,6 +3036,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

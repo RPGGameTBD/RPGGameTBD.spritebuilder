@@ -38,7 +38,7 @@
 - (void) action
 {
     MainScene *scene = [MainScene scene];
-    if ([self.buttonText isEqualToString:@"Show LeaderBoard?"]) {
+    if ([self.buttonText isEqualToString:@"Leaderboard"]) {
         [scene showLeaderboardAndAchievements:YES];
     }
     if (!scene.hero.dead)
@@ -76,7 +76,7 @@
     self.point  = ccp(935, 50);
     self.flipHero = YES;
     self.area = @"LevelA";
-    self.buttonText = @"Show LeaderBoard?";
+    self.buttonText = @"Leaderboard";
     self.button.title = self.buttonText;
     return self;
 }

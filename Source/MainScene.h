@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Apportable. All rights reserved.
 //
 
+#import "Enemy.h"
 #import "CCNode.h"
 #import "LeftButton.h"
 #import "RightButton.h"
@@ -60,5 +61,8 @@ extern const int JUMPLIMIT;
 @property (nonatomic, strong) NSMutableArray *doors;
 @property (nonatomic, strong) NSMutableArray *enemies;
 @property (nonatomic, strong) NSMutableArray *grounds;
+
+/* the enemy used for collision id */
+@property (nonatomic, strong) Enemy *groupEnemy;
 
 @end
