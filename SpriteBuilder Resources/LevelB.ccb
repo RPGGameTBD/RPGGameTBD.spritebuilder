@@ -469,8 +469,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>539</real>
-							<real>19</real>
+							<real>633</real>
+							<real>7</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -483,8 +483,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -531,8 +531,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>221</real>
-							<real>160</real>
+							<real>296</real>
+							<real>9</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -545,8 +545,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -591,8 +591,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>344</real>
-							<real>164</real>
+							<real>719</real>
+							<real>6</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -605,8 +605,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -651,8 +651,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>282</real>
-							<real>27</real>
+							<real>527</real>
+							<real>8</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -665,8 +665,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -711,8 +711,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>935</real>
-							<real>16</real>
+							<real>833</real>
+							<real>9</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -725,308 +725,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Cultist.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Cultist</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>651</real>
-							<real>170</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Cultist.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Cultist</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>468</real>
-							<real>178</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Cultist.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Cultist</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>653</real>
-							<real>24</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Cultist.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Cultist</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>420</real>
-							<real>29</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>Cultist.ccb</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>Cultist</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>781</real>
-							<real>41</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>0.33000001311302185</real>
-							<real>0.33000001311302185</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>

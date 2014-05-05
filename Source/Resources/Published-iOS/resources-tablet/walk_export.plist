@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>walk_export/walking__000.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1845}, {78, 227}}</string>
+			<key>offset</key>
+			<string>{6, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 2}, {78, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1925}, {76, 227}}</string>
+			<key>offset</key>
+			<string>{6, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{14, 2}, {76, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{230, 1839}, {76, 226}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{15, 2}, {76, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{521, 459}, {75, 226}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 2}, {75, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{226, 921}, {74, 227}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {74, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1615}, {74, 228}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {74, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{225, 1381}, {74, 227}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {74, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{299, 231}, {73, 227}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 1}, {73, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1155}, {74, 228}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {74, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{301, 1379}, {74, 227}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {74, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1385}, {74, 228}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {74, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{75, 461}, {73, 228}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 1}, {73, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{150, 461}, {73, 228}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 1}, {73, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 925}, {74, 228}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {74, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{75, 1}, {74, 228}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {74, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{376, 918}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 1}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{225, 1151}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{8, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 0}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 463}, {72, 229}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 0}, {72, 229}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {72, 229}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 0}, {72, 229}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 694}, {72, 229}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 0}, {72, 229}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 232}, {72, 229}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 0}, {72, 229}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{225, 691}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{151, 1381}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{447, 688}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 1}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{449, 1147}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{8, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 1}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{302, 918}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 2}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{375, 1}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 2}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{375, 1147}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 2}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{447, 459}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 2}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{373, 460}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 2}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__030.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{521, 687}, {72, 226}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {72, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{527, 915}, {72, 226}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {72, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{451, 1376}, {72, 226}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {72, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{595, 687}, {72, 226}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {72, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{523, 1145}, {72, 226}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {72, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{525, 1373}, {73, 225}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 4}, {73, 225}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{451, 1604}, {73, 225}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 4}, {73, 225}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{672, 229}, {75, 225}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 4}, {75, 225}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{598, 457}, {75, 225}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 4}, {75, 225}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{673, 1}, {73, 225}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 4}, {73, 225}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__040.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{597, 1143}, {73, 224}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 4}, {73, 224}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__041.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{748, 1}, {73, 225}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {73, 225}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__042.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{598, 1}, {73, 226}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {73, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__043.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{523, 1}, {73, 226}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {73, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__044.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{300, 1}, {73, 227}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {73, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__045.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{299, 1150}, {74, 227}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 3}, {74, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__046.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{299, 460}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{8, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 3}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__047.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{150, 231}, {73, 228}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__048.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{75, 231}, {73, 228}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__049.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{151, 1}, {73, 228}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__050.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{75, 691}, {73, 228}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__051.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{150, 691}, {73, 228}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__052.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{77, 921}, {73, 228}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__053.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{77, 1151}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__054.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{374, 230}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__055.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{77, 1381}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__056.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{225, 231}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__057.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{377, 1376}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__058.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{448, 230}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__059.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{373, 689}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__060.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{299, 689}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__061.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{151, 1611}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__062.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{77, 1611}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__063.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{226, 1}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__064.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{151, 1151}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__065.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{225, 461}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__066.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{152, 921}, {72, 228}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 228}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__067.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{449, 1}, {72, 227}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 1}, {72, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__068.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{597, 229}, {73, 226}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__069.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{301, 1608}, {73, 227}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__070.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{376, 1608}, {73, 227}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__071.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{522, 230}, {73, 226}}</string>
+			<key>offset</key>
+			<string>{7, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 2}, {73, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__072.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{225, 1610}, {74, 227}}</string>
+			<key>offset</key>
+			<string>{7, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 2}, {74, 227}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__073.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{450, 917}, {75, 226}}</string>
+			<key>offset</key>
+			<string>{6, 1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 2}, {75, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+		<key>walk_export/walking__074.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{230, 1917}, {76, 226}}</string>
+			<key>offset</key>
+			<string>{6, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{14, 2}, {76, 226}}</string>
+			<key>sourceSize</key>
+			<string>{92, 233}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{2048, 2048}</string>
+		<key>textureFileName</key>
+		<string>walk_export.png</string>
+	</dict>
+</dict>
+</plist>

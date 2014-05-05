@@ -20,6 +20,652 @@
 	<false/>
 	<key>nodeGraph</key>
 	<dict>
+		<key>animatedProperties</key>
+		<dict>
+			<key>0</key>
+			<dict>
+				<key>spriteFrame</key>
+				<dict>
+					<key>keyframes</key>
+					<array>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.0</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__000.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.033333335071802139</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__002.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.066666670143604279</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__004.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.10000000149011612</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__007.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.13333334028720856</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__009.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.1666666716337204</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__012.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.20000000298023224</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__014.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.23333333432674408</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__017.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.26666668057441711</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__019.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.30000001192092896</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__022.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.3333333432674408</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__024.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.36666667461395264</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__027.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.40000000596046448</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__029.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.43333333730697632</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__032.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.46666666865348816</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__034.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.5</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__037.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.53333336114883423</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__039.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.56666666269302368</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__042.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.60000002384185791</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__044.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.63333332538604736</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__047.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.66666668653488159</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__049.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.69999998807907104</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__052.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.73333334922790527</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__054.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.76666665077209473</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__057.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.80000001192092896</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__059.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.83333331346511841</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__062.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.86666667461395264</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__064.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.89999997615814209</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__067.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.93333333730697632</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__069.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.96666663885116577</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__072.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>1</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__074.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>1.0333333015441895</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__077.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>1.0666667222976685</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__079.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>1.1000000238418579</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__082.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>1.1333333253860474</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>main_walk_export/walking__084.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+					</array>
+					<key>name</key>
+					<string>spriteFrame</string>
+					<key>type</key>
+					<integer>7</integer>
+				</dict>
+			</dict>
+		</dict>
 		<key>baseClass</key>
 		<string>CCSprite</string>
 		<key>children</key>
@@ -53,20 +699,20 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.0</real>
-					<real>0.0</real>
+					<real>7.90234375</real>
+					<real>-0.66796875</real>
 				</array>
 				<array>
-					<real>0.0</real>
-					<real>940</real>
+					<real>54.90234375</real>
+					<real>-0.08203125</real>
 				</array>
 				<array>
-					<real>386</real>
-					<real>940</real>
+					<real>47.6640625</real>
+					<real>107.875</real>
 				</array>
 				<array>
-					<real>386</real>
-					<real>0.0</real>
+					<real>16.64453125</real>
+					<real>108.22265625</real>
 				</array>
 			</array>
 		</dict>
@@ -119,6 +765,11 @@
 				</array>
 			</dict>
 			<dict>
+				<key>baseValue</key>
+				<array>
+					<string>main_walk_export/walking__000.png</string>
+					<string>Use regular file</string>
+				</array>
 				<key>name</key>
 				<string>spriteFrame</string>
 				<key>type</key>
@@ -126,7 +777,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>hero.png</string>
+					<string>main_walk_export/walking__000.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -143,7 +794,7 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
+		<key>seqExpanded</key>
 		<true/>
 	</dict>
 	<key>notes</key>
@@ -183,7 +834,7 @@
 	<array>
 		<dict>
 			<key>autoPlay</key>
-			<true/>
+			<false/>
 			<key>callbackChannel</key>
 			<dict>
 				<key>keyframes</key>
@@ -192,15 +843,15 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>1.1666666269302368</real>
 			<key>name</key>
-			<string>Default Timeline</string>
+			<string>MainWalking</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>1.1000000238418579</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

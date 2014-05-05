@@ -42,6 +42,7 @@ extern const int JUMPLIMIT;
 @property (nonatomic, strong) Hero *hero;
 @property (nonatomic, strong) CCLabelTTF *healthLabel;
 @property (nonatomic) int numJumps;
+@property (nonatomic) BOOL walking;
 
 /* Main Physics Node */
 @property (nonatomic, strong) CCPhysicsNode *physicsNodeMS;

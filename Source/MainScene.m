@@ -26,6 +26,7 @@ static MainScene* refSelf;
 @synthesize hero;
 @synthesize healthLabel;
 @synthesize numJumps;
+@synthesize walking;
 
 /* Level Objects */
 @synthesize levelObjects;
@@ -368,6 +369,7 @@ bool adIsShowing;
 {
     if (leftButton.pressed) //&& [self heroOnObject])
     {
+        [self startWalking];
         hero.flipX = true;
         if (hero.physicsBody.velocity.x > -200)
         {
@@ -377,6 +379,7 @@ bool adIsShowing;
     }
     else if (rightButton.pressed)//&& [self heroOnObject])
     {
+        [self startWalking];
         hero.flipX = false;
         if (hero.physicsBody.velocity.x < 200)
         {
@@ -387,6 +390,7 @@ bool adIsShowing;
     {
         if ([[MainScene scene] heroOnObject])
         {
+            [self pauseWalking];
             if (hero.physicsBody.velocity.x > 0)
             {
                 [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x - 8, hero.physicsBody.velocity.y)];
@@ -443,6 +447,25 @@ bool adIsShowing;
         [adView setHidden:false];
         adIsShowing =true;
     }
+}
+
+- (void) startWalking
+{
+    if (!self.walking)
+    {
+        self.walking = true;
+        // the animation manager of each node is stored in the 'userObject' property
+        CCBAnimationManager* animationManager = hero.userObject;
+        // timelines can be referenced and run by name
+        [animationManager runAnimationsForSequenceNamed:@"MainWalking"];
+    }
+}
+
+- (void) pauseWalking
+{
+    [hero stopAllActions];
+    self.walking = false;
+    
 }
 
 

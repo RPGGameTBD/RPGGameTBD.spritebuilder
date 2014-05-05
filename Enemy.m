@@ -83,7 +83,7 @@
     MainScene *scene = [MainScene scene];
     self.timesUpdated++;
     /* do a death check */
-    if ([self health] < 0)
+    if ([self health] <= 0)
     {
         self.dead = true;
         CCSprite *dyingAnim = (CCSprite*)[CCBReader load:@"CultistDying"];
@@ -96,7 +96,6 @@
         {
             [dyingAnim setAnchorPoint:ccp(0.75, 0.1)];
         }
-        [dyingAnim setScale:0.33];
         [dyingAnim setFlipX:self.flipX];
         
         [self.enemyHealthLabel removeFromParent];

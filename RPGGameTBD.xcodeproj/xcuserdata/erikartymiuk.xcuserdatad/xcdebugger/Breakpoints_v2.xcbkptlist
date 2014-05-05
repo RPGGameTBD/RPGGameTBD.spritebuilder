@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "420932312.71783"
+            timestampString = "421003164.891935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "-jump"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "420932312.71783"
+            timestampString = "421003164.891935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "311"
-            endingLineNumber = "311"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
             landmarkName = "-update:"
             landmarkType = "5">
          </BreakpointContent>
@@ -94,11 +94,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "420932312.71783"
+            timestampString = "421003164.891935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-didLoadFromCCB"
             landmarkType = "5">
          </BreakpointContent>
@@ -110,11 +110,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "420932312.71783"
+            timestampString = "421003164.891935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-didLoadFromCCB"
             landmarkType = "5">
          </BreakpointContent>
@@ -126,12 +126,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "420932312.71783"
+            timestampString = "421003164.891935"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-didLoadFromCCB"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Enemy.m"
+            timestampString = "420997416.162969"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-update"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
