@@ -50,6 +50,10 @@ static MainScene* refSelf;
 ADBannerView *adView;
 bool adIsShowing;
 
+//multiplayer match stuff
+bool isHost;
+CCNode *opponent;
+
 /* here is a class method to get ahold of our MainScene node */
 + (MainScene *) scene
 {
@@ -108,6 +112,24 @@ bool adIsShowing;
     [[[CCDirector sharedDirector] view] addSubview:adView];
     adIsShowing = true;
      */
+    
+    //init multiplayer stuff
+    isHost = nil;
+    opponent = [CCBReader load:@"Hero"];
+    
+    //setup appDelegate
+    _appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
+    
+    //setup as observer of connected state notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(peerChangedStateWithNotification:)
+                                                 name:@"MPCDemo_DidChangeStateNotification"
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleReceivedDataWithNotification:)
+                                                 name:@"MPCDemo_DidReceiveDataNotification"
+                                               object:nil];
     
 }
 
@@ -401,8 +423,7 @@ bool adIsShowing;
 
 -(void)reportScore
 {
-    AppController *appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
-    GKScore *boardscore = [[GKScore alloc] initWithLeaderboardIdentifier:appDelegate.leaderboardIdentifier];
+    GKScore *boardscore = [[GKScore alloc] initWithLeaderboardIdentifier:_appDelegate.leaderboardIdentifier];
     boardscore.value = score;
     
     [GKScore reportScores:@[boardscore] withCompletionHandler:^(NSError *error) {
@@ -413,14 +434,13 @@ bool adIsShowing;
 }
 
 -(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard{
-    AppController *appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
     GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
     
     gcViewController.gameCenterDelegate = self;
     
     if (shouldShowLeaderboard) {
         gcViewController.viewState = GKGameCenterViewControllerStateLeaderboards;
-        gcViewController.leaderboardIdentifier = appDelegate.leaderboardIdentifier;
+        gcViewController.leaderboardIdentifier = _appDelegate.leaderboardIdentifier;
     }
     else{
         gcViewController.viewState = GKGameCenterViewControllerStateAchievements;
@@ -445,5 +465,70 @@ bool adIsShowing;
     }
 }
 
+- (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController {
+    [self.appDelegate.mpcHandler.browser dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController {
+    [self.appDelegate.mpcHandler.browser dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)peerChangedStateWithNotification:(NSNotification *)notification {
+    // Get the state of the peer.
+    int state = [[[notification userInfo] objectForKey:@"state"] intValue];
+    
+    // We care only for the Connected and the Not Connected states.
+    // The Connecting state will be simply ignored.
+    if (state != MCSessionStateConnecting) {
+        [self addOpponent];
+    }
+}
+
+- (void)handleReceivedDataWithNotification:(NSNotification *)notification {
+    NSLog(@"got data");
+    // Get the user info dictionary that was received along with the notification.
+    NSDictionary *userInfoDict = [notification userInfo];
+    
+    // Convert the received data into a NSString object.
+    NSData *receivedData = [userInfoDict objectForKey:@"data"];
+    /*NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:receivedData];
+    unarchiver.requiresSecureCoding = NO;
+    NSValue *value = [unarchiver decodeObject];
+    [unarchiver finishDecoding];
+    opponent.position = [value CGPointValue];*/
+    
+    NSString *message =
+    [[NSString alloc] initWithData:receivedData
+                          encoding:NSUTF8StringEncoding];
+    opponent.position = CGPointFromString(message);
+    NSLog(@"%@", message);
+    
+}
+
+- (void)addOpponent{
+    opponent.position = ccp(330, 50);
+    [opponent setScale:.1];
+    [physicsNodeMS addChild:opponent];
+    [opponent setZOrder:1];
+    [self schedule:@selector(sendPositionData) interval:0.01];
+}
+
+- (void)sendPositionData{
+    /*NSCoder *coder;
+    NSValue *value = [NSValue valueWithCGPoint:hero.position];
+    [coder encodeObject:value];
+    NSLog(@"%@",coder);
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:value];*/
+    NSString *message = [NSString stringWithFormat:@"%@", NSStringFromCGPoint(hero.position)];
+    NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSError *error = nil;
+    if (![self.appDelegate.mpcHandler.session sendData:data
+                        toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                       withMode:MCSessionSendDataUnreliable
+                          error:&error]) {
+        NSLog(@"[Error] %@", error);
+    }
+}
 
 @end

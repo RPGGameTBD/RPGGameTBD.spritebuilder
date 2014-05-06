@@ -12,6 +12,8 @@
 		5D58C2E318E62843001EB69B /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E218E62843001EB69B /* Bullet.m */; };
 		5D58C2E718E628D7001EB69B /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D58C2E618E628D7001EB69B /* Hero.m */; };
 		5D6D000819144868004D4232 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6D000719144868004D4232 /* iAd.framework */; };
+		5DC1942E19180FA900E7B079 /* MPCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC1942D19180FA900E7B079 /* MPCHandler.m */; };
+		5DC194311918104A00E7B079 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC194301918104A00E7B079 /* MultipeerConnectivity.framework */; };
 		5DCE816A19140CDE001D6D77 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCE816919140CDE001D6D77 /* GameKit.framework */; };
 		7D2CE40518E2546800878AB6 /* FirstLevel.m1 in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CE40418E2546800878AB6 /* FirstLevel.m1 */; };
 		7D6BD35F1909C41C00EEBE24 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6BD35E1909C41C00EEBE24 /* Door.m */; };
@@ -74,6 +76,9 @@
 		5D58C2E518E628D7001EB69B /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 		5D58C2E618E628D7001EB69B /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
 		5D6D000719144868004D4232 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		5DC1942C19180FA900E7B079 /* MPCHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCHandler.h; sourceTree = "<group>"; };
+		5DC1942D19180FA900E7B079 /* MPCHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCHandler.m; sourceTree = "<group>"; };
+		5DC194301918104A00E7B079 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		5DCE816919140CDE001D6D77 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		7D2CE40318E2546800878AB6 /* FirstLevel.h1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FirstLevel.h1; sourceTree = "<group>"; };
 		7D2CE40418E2546800878AB6 /* FirstLevel.m1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FirstLevel.m1; sourceTree = "<group>"; };
@@ -123,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DC194311918104A00E7B079 /* MultipeerConnectivity.framework in Frameworks */,
 				5D6D000819144868004D4232 /* iAd.framework in Frameworks */,
 				5DCE816A19140CDE001D6D77 /* GameKit.framework in Frameworks */,
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
@@ -154,6 +160,8 @@
 			children = (
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
+				5DC1942C19180FA900E7B079 /* MPCHandler.h */,
+				5DC1942D19180FA900E7B079 /* MPCHandler.m */,
 				5D08481918C7E37B00ED2488 /* LeftButton.h */,
 				5D08481A18C7E37B00ED2488 /* LeftButton.m */,
 				5D08481D18C7E38D00ED2488 /* RightButton.h */,
@@ -228,6 +236,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DC194301918104A00E7B079 /* MultipeerConnectivity.framework */,
 				5D6D000719144868004D4232 /* iAd.framework */,
 				5DCE816919140CDE001D6D77 /* GameKit.framework */,
 				B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */,
@@ -294,7 +303,7 @@
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = SFYQNF84RJ;
+						DevelopmentTeam = 423Z9LA22R;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -375,6 +384,7 @@
 				7D6BD35F1909C41C00EEBE24 /* Door.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				7D2CE40518E2546800878AB6 /* FirstLevel.m1 in Sources */,
+				5DC1942E19180FA900E7B079 /* MPCHandler.m in Sources */,
 				5D08481B18C7E37B00ED2488 /* LeftButton.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 			);

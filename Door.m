@@ -38,8 +38,24 @@
 - (void) action
 {
     MainScene *scene = [MainScene scene];
-    if ([self.buttonText isEqualToString:@"Show LeaderBoard?"]) {
-        [scene showLeaderboardAndAchievements:YES];
+    if ([self.buttonText isEqualToString:@"Deathmatch?"]) {
+        //[scene showLeaderboardAndAchievements:YES];
+        [scene.appDelegate.mpcHandler setupPeerWithDisplayName:[UIDevice currentDevice].name];
+        [scene.appDelegate.mpcHandler setupSession];
+        [scene.appDelegate.mpcHandler advertiseSelf:true];
+        if (scene.appDelegate.mpcHandler.session != nil) {
+            [[scene.appDelegate mpcHandler] setupBrowser];
+            [[[scene.appDelegate mpcHandler] browser] setDelegate:scene];
+            
+            [[CCDirector sharedDirector] presentViewController:scene.appDelegate.mpcHandler.browser
+                               animated:YES
+                             completion:nil];
+        }
+        scene.currLevel = self.area;
+        [scene loadLevelWithHeroPosition:point flipped:self.flipHero];
+        //[scene addOpponent];
+        
+        return;
     }
     if (!scene.hero.dead)
     {
@@ -73,10 +89,10 @@
 -(id) init
 {
     self = [super init];
-    self.point  = ccp(935, 50);
+    self.point  = ccp(630, 50);
     self.flipHero = YES;
-    self.area = @"LevelA";
-    self.buttonText = @"Show LeaderBoard?";
+    self.area = @"LevelC";
+    self.buttonText = @"Deathmatch?";
     self.button.title = self.buttonText;
     return self;
 }

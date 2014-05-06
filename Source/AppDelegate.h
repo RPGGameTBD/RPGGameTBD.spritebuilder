@@ -25,11 +25,13 @@
 
 #import <UIKit/UIKit.h>
 #import "cocos2d.h"
+#import "MPCHandler.h"
 
 @interface AppController : CCAppDelegate
 {
 }
 -(void) authenticateLocalPlayer;
+@property (nonatomic, strong) MPCHandler *mpcHandler;
 @property (nonatomic) BOOL gameCenterEnabled;
 @property (nonatomic, strong) NSString *leaderboardIdentifier;
 

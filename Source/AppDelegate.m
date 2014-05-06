@@ -62,6 +62,10 @@
     //intit gamecenter stuff
     _gameCenterEnabled = NO;
     _leaderboardIdentifier = @"";
+    
+    //init multiplayer handler
+    self.mpcHandler = [[MPCHandler alloc] init];
+    
     [self authenticateLocalPlayer];
     
     return YES;

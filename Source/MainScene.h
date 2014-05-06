@@ -13,8 +13,9 @@
 #import <GameKit/GameKit.h>
 #import "AppDelegate.h"
 #import <iAd/iAd.h>
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
-@interface MainScene : CCNode <CCPhysicsCollisionDelegate, GKGameCenterControllerDelegate>
+@interface MainScene : CCNode <CCPhysicsCollisionDelegate, GKGameCenterControllerDelegate, MCBrowserViewControllerDelegate>
 {
 
 }
@@ -31,6 +32,7 @@ extern const int JUMPLIMIT;
 @property (nonatomic) int64_t score;
 -(void)reportScore;
 -(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard;
+- (void)addOpponent;
 
 
 /* any buttons */
@@ -56,5 +58,8 @@ extern const int JUMPLIMIT;
 @property (nonatomic, strong) NSMutableArray *doors;
 @property (nonatomic, strong) NSMutableArray *enemies;
 @property (nonatomic, strong) NSMutableArray *grounds;
+
+//reference to appdelegate
+@property (strong, nonatomic) AppController *appDelegate;
 
 @end
