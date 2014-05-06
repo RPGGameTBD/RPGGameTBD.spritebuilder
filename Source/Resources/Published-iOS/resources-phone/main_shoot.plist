@@ -1,0 +1,1552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>main_shoot/firing__000.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{313, 59}, {60, 27}}</string>
+			<key>offset</key>
+			<string>{9, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{19, 18}, {60, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{375, 59}, {60, 27}}</string>
+			<key>offset</key>
+			<string>{8, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 18}, {60, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{443, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{7, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{499, 59}, {60, 27}}</string>
+			<key>offset</key>
+			<string>{7, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 18}, {60, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{695, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{6, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 150}, {59, 27}}</string>
+			<key>offset</key>
+			<string>{6, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 18}, {59, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{128, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{5, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{380, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{4, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{632, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{4, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {62, 27}}</string>
+			<key>offset</key>
+			<string>{4, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 18}, {62, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{506, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{4, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{632, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{4, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{758, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{4, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{884, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{4, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{191, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{4, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{443, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{5, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{695, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{5, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{821, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{5, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{947, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{5, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{254, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{5, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{623, 59}, {60, 27}}</string>
+			<key>offset</key>
+			<string>{6, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 18}, {60, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{947, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{6, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{254, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{6, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{506, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{6, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{758, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{6, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{884, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{6, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{128, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{6, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{317, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{7, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{437, 59}, {60, 27}}</string>
+			<key>offset</key>
+			<string>{8, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 18}, {60, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{569, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{7, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__030.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{317, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{7, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{569, 1}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{7, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{17, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{189, 59}, {60, 27}}</string>
+			<key>offset</key>
+			<string>{8, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 18}, {60, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{251, 59}, {60, 27}}</string>
+			<key>offset</key>
+			<string>{8, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 18}, {60, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{64, 31}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{8, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{380, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{8, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{18, 18}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 121}, {59, 27}}</string>
+			<key>offset</key>
+			<string>{9, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{20, 18}, {59, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/firing__037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{561, 59}, {60, 27}}</string>
+			<key>offset</key>
+			<string>{9, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{19, 18}, {60, 27}}</string>
+			<key>sourceSize</key>
+			<string>{80, 113}</string>
+		</dict>
+		<key>main_shoot/reloading__000.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{821, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{7, 16}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{65, 1}, {61, 28}}</string>
+			<key>offset</key>
+			<string>{7, 16}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {61, 28}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{63, 60}, {60, 28}}</string>
+			<key>offset</key>
+			<string>{7, 16}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {60, 28}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{125, 91}, {59, 29}}</string>
+			<key>offset</key>
+			<string>{6, 15}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {59, 29}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{746, 92}, {59, 30}}</string>
+			<key>offset</key>
+			<string>{6, 15}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {59, 30}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{868, 92}, {59, 30}}</string>
+			<key>offset</key>
+			<string>{5, 15}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 13}, {59, 30}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{807, 59}, {59, 31}}</string>
+			<key>offset</key>
+			<string>{5, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 13}, {59, 31}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{868, 59}, {59, 31}}</string>
+			<key>offset</key>
+			<string>{4, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 13}, {59, 31}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{124, 122}, {58, 32}}</string>
+			<key>offset</key>
+			<string>{4, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 13}, {58, 32}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{61, 185}, {57, 33}}</string>
+			<key>offset</key>
+			<string>{3, 13}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 13}, {57, 33}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{990, 59}, {58, 33}}</string>
+			<key>offset</key>
+			<string>{3, 13}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 13}, {58, 33}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{184, 153}, {57, 34}}</string>
+			<key>offset</key>
+			<string>{2, 13}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 13}, {57, 34}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{120, 191}, {56, 34}}</string>
+			<key>offset</key>
+			<string>{2, 13}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 13}, {56, 34}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{181, 189}, {56, 35}}</string>
+			<key>offset</key>
+			<string>{1, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 13}, {56, 35}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{484, 88}, {55, 35}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 13}, {55, 35}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{597, 88}, {54, 37}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {54, 37}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{418, 125}, {53, 38}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {53, 38}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{233, 238}, {52, 39}}</string>
+			<key>offset</key>
+			<string>{-1, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {52, 39}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{356, 168}, {52, 41}}</string>
+			<key>offset</key>
+			<string>{-2, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {52, 41}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{166, 268}, {51, 41}}</string>
+			<key>offset</key>
+			<string>{-2, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {51, 41}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{348, 211}, {50, 43}}</string>
+			<key>offset</key>
+			<string>{-3, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {50, 43}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{219, 279}, {49, 43}}</string>
+			<key>offset</key>
+			<string>{-3, 9}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {49, 43}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{54, 341}, {48, 46}}</string>
+			<key>offset</key>
+			<string>{-4, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 10}, {48, 46}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{109, 313}, {48, 46}}</string>
+			<key>offset</key>
+			<string>{-4, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 10}, {48, 46}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{400, 253}, {49, 44}}</string>
+			<key>offset</key>
+			<string>{-3, 9}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {49, 44}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{462, 208}, {49, 45}}</string>
+			<key>offset</key>
+			<string>{-3, 9}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {49, 45}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{339, 256}, {49, 43}}</string>
+			<key>offset</key>
+			<string>{-3, 9}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {49, 43}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{166, 311}, {49, 43}}</string>
+			<key>offset</key>
+			<string>{-3, 9}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {49, 43}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{578, 171}, {50, 43}}</string>
+			<key>offset</key>
+			<string>{-3, 9}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {50, 43}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{636, 132}, {50, 44}}</string>
+			<key>offset</key>
+			<string>{-3, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {50, 44}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__030.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{526, 171}, {50, 44}}</string>
+			<key>offset</key>
+			<string>{-3, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {50, 44}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{410, 208}, {50, 43}}</string>
+			<key>offset</key>
+			<string>{-3, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {50, 43}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{287, 245}, {50, 42}}</string>
+			<key>offset</key>
+			<string>{-3, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {50, 42}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{56, 297}, {51, 42}}</string>
+			<key>offset</key>
+			<string>{-2, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {51, 42}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{113, 268}, {51, 43}}</string>
+			<key>offset</key>
+			<string>{-2, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {51, 43}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{709, 124}, {51, 41}}</string>
+			<key>offset</key>
+			<string>{-2, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {51, 41}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 326}, {51, 41}}</string>
+			<key>offset</key>
+			<string>{-2, 10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 12}, {51, 41}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{528, 127}, {52, 42}}</string>
+			<key>offset</key>
+			<string>{-2, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {52, 42}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{582, 127}, {52, 42}}</string>
+			<key>offset</key>
+			<string>{-2, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {52, 42}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{472, 165}, {52, 41}}</string>
+			<key>offset</key>
+			<string>{-2, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {52, 41}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__040.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{418, 165}, {52, 41}}</string>
+			<key>offset</key>
+			<string>{-2, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {52, 41}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__041.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{301, 161}, {53, 41}}</string>
+			<key>offset</key>
+			<string>{-1, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {53, 41}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__042.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{363, 125}, {53, 41}}</string>
+			<key>offset</key>
+			<string>{-1, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {53, 41}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__043.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{178, 226}, {53, 40}}</string>
+			<key>offset</key>
+			<string>{-1, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {53, 40}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__044.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{239, 196}, {53, 40}}</string>
+			<key>offset</key>
+			<string>{-1, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{11, 11}, {53, 40}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__045.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{294, 204}, {52, 39}}</string>
+			<key>offset</key>
+			<string>{-1, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {52, 39}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__046.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{58, 256}, {53, 39}}</string>
+			<key>offset</key>
+			<string>{0, 11}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {53, 39}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__047.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{118, 227}, {53, 39}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 11}, {53, 39}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__048.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{473, 125}, {53, 38}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {53, 38}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__049.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 286}, {53, 38}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {53, 38}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__050.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{653, 93}, {54, 37}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {54, 37}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__051.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{541, 88}, {54, 37}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {54, 37}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__052.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 247}, {55, 37}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 12}, {55, 37}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__053.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{427, 88}, {55, 35}}</string>
+			<key>offset</key>
+			<string>{0, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 13}, {55, 35}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__054.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{243, 159}, {56, 35}}</string>
+			<key>offset</key>
+			<string>{1, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 13}, {56, 35}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__055.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{305, 124}, {56, 35}}</string>
+			<key>offset</key>
+			<string>{1, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{12, 13}, {56, 35}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__056.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{369, 88}, {56, 35}}</string>
+			<key>offset</key>
+			<string>{2, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 13}, {56, 35}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__057.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{60, 220}, {56, 34}}</string>
+			<key>offset</key>
+			<string>{2, 13}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 13}, {56, 34}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__058.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{310, 88}, {57, 34}}</string>
+			<key>offset</key>
+			<string>{2, 13}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 13}, {57, 34}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__059.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{246, 123}, {57, 34}}</string>
+			<key>offset</key>
+			<string>{2, 13}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 13}, {57, 34}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__060.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 212}, {57, 33}}</string>
+			<key>offset</key>
+			<string>{2, 13}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{13, 13}, {57, 33}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__061.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{990, 119}, {58, 33}}</string>
+			<key>offset</key>
+			<string>{3, 13}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{13, 13}, {58, 33}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__062.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{122, 156}, {57, 33}}</string>
+			<key>offset</key>
+			<string>{3, 13}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 13}, {57, 33}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__063.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{250, 88}, {58, 33}}</string>
+			<key>offset</key>
+			<string>{4, 13}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 13}, {58, 33}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__064.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{186, 119}, {58, 32}}</string>
+			<key>offset</key>
+			<string>{4, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 13}, {58, 32}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__065.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{62, 151}, {58, 32}}</string>
+			<key>offset</key>
+			<string>{4, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 13}, {58, 32}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__066.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{685, 59}, {59, 32}}</string>
+			<key>offset</key>
+			<string>{4, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 13}, {59, 32}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__067.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{929, 59}, {59, 31}}</string>
+			<key>offset</key>
+			<string>{4, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{14, 13}, {59, 31}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__068.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 179}, {58, 31}}</string>
+			<key>offset</key>
+			<string>{5, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 13}, {58, 31}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__069.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{746, 59}, {59, 31}}</string>
+			<key>offset</key>
+			<string>{5, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 13}, {59, 31}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__070.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{807, 92}, {59, 30}}</string>
+			<key>offset</key>
+			<string>{5, 15}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 13}, {59, 30}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__071.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{929, 92}, {59, 30}}</string>
+			<key>offset</key>
+			<string>{5, 15}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 13}, {59, 30}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__072.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{127, 59}, {60, 30}}</string>
+			<key>offset</key>
+			<string>{6, 15}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{15, 13}, {60, 30}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__073.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{63, 120}, {59, 29}}</string>
+			<key>offset</key>
+			<string>{6, 15}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {59, 29}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__074.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{189, 88}, {59, 29}}</string>
+			<key>offset</key>
+			<string>{6, 15}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {59, 29}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__075.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 60}, {60, 29}}</string>
+			<key>offset</key>
+			<string>{7, 15}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {60, 29}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__076.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 91}, {60, 28}}</string>
+			<key>offset</key>
+			<string>{7, 16}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {60, 28}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__077.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{63, 90}, {60, 28}}</string>
+			<key>offset</key>
+			<string>{7, 16}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {60, 28}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__078.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 30}, {61, 28}}</string>
+			<key>offset</key>
+			<string>{7, 16}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {61, 28}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+		<key>main_shoot/reloading__079.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{191, 30}, {61, 27}}</string>
+			<key>offset</key>
+			<string>{7, 16}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{16, 13}, {61, 27}}</string>
+			<key>sourceSize</key>
+			<string>{78, 86}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{1024, 1024}</string>
+		<key>textureFileName</key>
+		<string>main_shoot.png</string>
+	</dict>
+</dict>
+</plist>

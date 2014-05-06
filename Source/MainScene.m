@@ -135,6 +135,23 @@ bool adIsShowing;
     hero.position = position;
     hero.flipX = flip;
     numJumps = 0;
+    
+    for (CCSprite *child in hero.children)
+    {
+        if (flip)
+        {
+            [child setFlipX:YES];
+            [child setPosition:ccp(44, 76)];
+            [child setAnchorPoint:ccp(0.69, 0.79)];
+        }
+        else
+        {
+            [child setFlipX:NO];
+            [child setPosition:ccp(27, 76)];
+            [child setAnchorPoint:ccp(0.38, 0.79)];
+        }
+    }
+
 
     [levelObjects removeFromParent];
     healthLabel = nil;
@@ -295,17 +312,34 @@ bool adIsShowing;
     
     bullet.position = ccp(hero.position.x + hero.boundingBox.size.width/2, hero.position.y + hero.boundingBox.size.height/2);
     
+    
 
     /* calculate the direction vector */
     CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), touchPos);
     if (launchDirection.x < 0)
     {
         [hero setFlipX:YES];
+        for (CCSprite *child in hero.children)
+        {
+            [child setFlipX:YES];
+            [child setPosition:ccp(44, 76)];
+            [child setAnchorPoint:ccp(0.69, 0.79)];
+            [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+        }
     }
     else
     {
         [hero setFlipX:NO];
+        for (CCSprite *child in hero.children)
+        {
+            [child setFlipX:NO];
+            [child setPosition:ccp(27, 76)];
+            [child setAnchorPoint:ccp(0.38, 0.79)];
+            [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+        }
     }
+    
+   
     
     [bullet setScale:0.33];
     [bullet setFlipX:!hero.flipX];
@@ -315,11 +349,20 @@ bool adIsShowing;
     double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
     CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
     CGPoint force = ccpMult(unitDir, 2000);
-    [bullet setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+    float angle = -180 * atan(launchDirection.y/launchDirection.x)/M_PI;
+    [bullet setRotation:angle];    
     
     [levelObjects addChild:bullet];
     [bullet.physicsBody applyForce:force];
+    [self shootAnim];
 }
+
+- (void) shootAnim
+{
+    // the animation manager of each node is stored in the 'userObject' property
+    CCBAnimationManager* animationManager = hero.userObject;
+    // timelines can be referenced and run by name
+    [animationManager runAnimationsForSequenceNamed:@"MainShoot"];}
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair bullet:(CCNode *)nodeA wildcard:(CCNode *)nodeB
 {
@@ -416,8 +459,16 @@ bool adIsShowing;
 {
     if (leftButton.pressed) //&& [self heroOnObject])
     {
+
         [self startWalking];
-        hero.flipX = true;
+        [hero setFlipX:YES];
+        for (CCSprite *child in hero.children)
+        {
+            [child setFlipX:YES];
+            [child setPosition:ccp(44, 76)];
+            [child setAnchorPoint:ccp(0.69, 0.79)];
+        }
+
         if (hero.physicsBody.velocity.x > -200)
         {
             [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x - 8, hero.physicsBody.velocity.y)];
@@ -427,7 +478,13 @@ bool adIsShowing;
     else if (rightButton.pressed)//&& [self heroOnObject])
     {
         [self startWalking];
-        hero.flipX = false;
+        [hero setFlipX:NO];
+        for (CCSprite *child in hero.children)
+        {
+            [child setFlipX:NO];
+            [child setPosition:ccp(27, 76)];
+            [child setAnchorPoint:ccp(0.38, 0.79)];
+        }
         if (hero.physicsBody.velocity.x < 200)
         {
             [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x + 8, hero.physicsBody.velocity.y)];
