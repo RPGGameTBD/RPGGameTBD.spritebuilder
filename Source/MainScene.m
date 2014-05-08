@@ -667,7 +667,7 @@ CCSprite  *opponent;
         if (self.walking) {
             message3 = @"t";
         }else{
-           message3 = @"%f";
+           message3 = @"f";
         }
         
         NSData *data3 = [message3 dataUsingEncoding:NSUTF8StringEncoding];
