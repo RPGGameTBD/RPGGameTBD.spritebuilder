@@ -131,6 +131,9 @@ bool adIsShowing;
         [hero setDead:NO];
         hero.dead = NO;
         hero.health = 100;
+        score = 0;
+        [hero setVisible:YES];
+
     }
     hero.position = position;
     hero.flipX = flip;
@@ -268,13 +271,6 @@ bool adIsShowing;
     }
 }
 
-- (void) deathAnim
-{
-    // the animation manager of each node is stored in the 'userObject' property
-    CCBAnimationManager* animationManager = hero.userObject;
-    // timelines can be referenced and run by name
-    [animationManager runAnimationsForSequenceNamed:@"MainDying"];}
-
 /* death occurs if hero falls off a ledge or her heatlh reaches zero */
 - (void) deathCheck
 {
@@ -283,8 +279,29 @@ bool adIsShowing;
         levelNum = 0;
         currLevel = @"LevelA";
         hero.dead = YES;
-        //[self deathAnim];
+        
+        CCSprite *dyingAnim = (CCSprite*)[CCBReader load:@"MainDying"];
+        [dyingAnim setPosition:ccp(hero.position.x, hero.position.y)];
+        if (hero.flipX)
+        {
+            [dyingAnim setAnchorPoint:ccp(0, 0.1)];
+        }
+        else
+        {
+            [dyingAnim setAnchorPoint:ccp(0.75, 0.1)];
+        }
+        [dyingAnim setFlipX:hero.flipX];
+        
+        [hero setVisible:NO];
+        
+        [[[MainScene scene] levelObjects] addChild:dyingAnim];
+        
+        // the animation manager of each node is stored in the 'userObject' property
+        CCBAnimationManager* animationManager = dyingAnim.userObject;
+        // timelines can be referenced and run by name
+        [animationManager runAnimationsForSequenceNamed:@"MainDying"];
         [self reportScore];
+        
         [self performSelector:@selector(loadLevelAfterDeath) withObject:nil afterDelay:7];
     }
 }
