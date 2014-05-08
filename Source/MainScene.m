@@ -510,7 +510,7 @@ CCNode *opponent;
     [opponent setScale:.1];
     [physicsNodeMS addChild:opponent];
     [opponent setZOrder:1];
-    [self schedule:@selector(sendPositionData) interval:0.01];
+    [self schedule:@selector(sendPositionData) interval:0.05];
 }
 
 - (void)sendPositionData{
