@@ -38,6 +38,7 @@
 - (void) action
 {
     MainScene *scene = [MainScene scene];
+
     if ([self.buttonText isEqualToString:@"Deathmatch?"]) {
         //[scene showLeaderboardAndAchievements:YES];
         [scene.appDelegate.mpcHandler setupPeerWithDisplayName:[UIDevice currentDevice].name];
@@ -57,6 +58,9 @@
         
         return;
     }
+    /*if ([self.buttonText isEqualToString:@"Leaderboard"]) {
+        [scene showLeaderboardAndAchievements:YES];
+    }*/
     if (!scene.hero.dead)
     {
         scene.currLevel = self.area;
@@ -91,8 +95,13 @@
     self = [super init];
     self.point  = ccp(630, 50);
     self.flipHero = YES;
+
     self.area = @"LevelC";
     self.buttonText = @"Deathmatch?";
+/*
+    self.area = @"LevelA";
+    self.buttonText = @"Leaderboard";
+*/
     self.button.title = self.buttonText;
     return self;
 }

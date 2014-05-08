@@ -26,6 +26,7 @@ static MainScene* refSelf;
 @synthesize hero;
 @synthesize healthLabel;
 @synthesize numJumps;
+@synthesize walking;
 
 /* Level Objects */
 @synthesize levelObjects;
@@ -33,6 +34,7 @@ static MainScene* refSelf;
 
 /* current Level */
 @synthesize currLevel;
+@synthesize levelNum;
 
 /*current doors in level */
 @synthesize doors;
@@ -43,16 +45,22 @@ static MainScene* refSelf;
 /*current ground objects in level */
 @synthesize grounds;
 
-/* our scoring variable */
+/* our scoring variables */
 @synthesize score;
+@synthesize scoreBoard;
+
+/* the group Enemy */
+@synthesize groupEnemy;
 
 /* iAd variables */
 ADBannerView *adView;
 bool adIsShowing;
 
 //multiplayer match stuff
+bool multWalk;
+bool oldFlip;
 bool isHost;
-CCNode *opponent;
+CCSprite  *opponent;
 
 /* here is a class method to get ahold of our MainScene node */
 + (MainScene *) scene
@@ -85,6 +93,9 @@ CCNode *opponent;
     [self schedule:@selector(updateMovement) interval:0.01];
     [self schedule:@selector(updateEnemies) interval:0.01];
     [self schedule:@selector(showAd) interval:10.0];
+    
+    /* setup the group enemy for the enemy's collision id */
+    groupEnemy = [[Enemy alloc] init];
 
     /* hero setup */
     numJumps = 0;
@@ -102,8 +113,9 @@ CCNode *opponent;
     currLevel = @"LevelA";
     [self loadLevelWithHeroPosition:ccp(935, 50) flipped:YES];
     
-    //init score
+    /* init score and level number */
     score = 0;
+    levelNum = 0;
     
     //setup iAD
     /*
@@ -114,6 +126,8 @@ CCNode *opponent;
      */
     
     //init multiplayer stuff
+    multWalk = nil;
+    oldFlip = nil;
     isHost = nil;
     opponent = [CCBReader load:@"Hero"];
     
@@ -147,6 +161,23 @@ CCNode *opponent;
     hero.position = position;
     hero.flipX = flip;
     numJumps = 0;
+    
+    for (CCSprite *child in hero.children)
+    {
+        if (flip)
+        {
+            [child setFlipX:YES];
+            [child setPosition:ccp(44, 76)];
+            [child setAnchorPoint:ccp(0.69, 0.79)];
+        }
+        else
+        {
+            [child setFlipX:NO];
+            [child setPosition:ccp(27, 76)];
+            [child setAnchorPoint:ccp(0.38, 0.79)];
+        }
+    }
+
 
     [levelObjects removeFromParent];
     healthLabel = nil;
@@ -163,6 +194,27 @@ CCNode *opponent;
     CCActionFollow *follow = [CCActionFollow actionWithTarget:hero worldBoundary:levelObjects.boundingBox];
     [physicsNodeMS runAction:follow];
     
+    
+    /* depending on the currLevel and the levelNum we will put in various
+     numbers of enemies with various difficulty settings */
+    if ([currLevel isEqualToString:@"LevelB"])
+    {
+        int startX = 100;
+        for (int i = 0; i <= levelNum; i++)
+        {
+            Enemy *toAdd = (Enemy *)[CCBReader load:@"Cultist"];
+            [toAdd setPosition:ccp(startX, 50)];
+            startX+=200;
+            [levelObjects addChild:toAdd];
+        }
+        levelNum++;
+
+    }
+    else if ([currLevel isEqualToString:@"LevelC"])
+    {
+        
+    }
+    
     /* set all objects above menu */
     for (CCNode *child in levelObjects.children)
     {
@@ -176,6 +228,7 @@ CCNode *opponent;
         else if ([child isKindOfClass:Enemy.class])
         {
             [enemies addObject:child];
+            [((Enemy *)child).physicsBody setCollisionGroup:groupEnemy];
         }
         
         if ([child isKindOfClass:Ground.class])
@@ -183,8 +236,7 @@ CCNode *opponent;
             [grounds addObject:child];
         }
     }
-    
-    
+
     [hero.physicsBody setVelocity:ccp(0, 0)];
 }
 
@@ -247,6 +299,7 @@ CCNode *opponent;
 {
     if (!hero.dead && ([hero position].y < 30 || [hero health] < 0))
     {
+        levelNum = 0;
         currLevel = @"LevelA";
         hero.dead = YES;
         [self reportScore];
@@ -280,21 +333,62 @@ CCNode *opponent;
 {
     CGPoint touchPos = [touch locationInNode:physicsNodeMS];
     
-    CCNode *bullet = [CCBReader load:@"Bullet"];
+    CCSprite *bullet = (CCSprite *)[CCBReader load:@"Bullet"];
     [bullet.physicsBody setCollisionGroup:hero];
     
     bullet.position = ccp(hero.position.x + hero.boundingBox.size.width/2, hero.position.y + hero.boundingBox.size.height/2);
     
-    [levelObjects addChild:bullet];
     
+
     /* calculate the direction vector */
     CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), touchPos);
+    if (launchDirection.x < 0)
+    {
+        [hero setFlipX:YES];
+        for (CCSprite *child in hero.children)
+        {
+            [child setFlipX:YES];
+            [child setPosition:ccp(44, 76)];
+            [child setAnchorPoint:ccp(0.69, 0.79)];
+            [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+        }
+    }
+    else
+    {
+        [hero setFlipX:NO];
+        for (CCSprite *child in hero.children)
+        {
+            [child setFlipX:NO];
+            [child setPosition:ccp(27, 76)];
+            [child setAnchorPoint:ccp(0.38, 0.79)];
+            [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+        }
+    }
+    
+   
+    
+    [bullet setScale:0.33];
+    [bullet setFlipX:!hero.flipX];
+    [bullet.physicsBody setMass:0.05];
+    [bullet.physicsBody setAffectedByGravity:YES];
+
     double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
     CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
-    CGPoint force = ccpMult(unitDir, 1000);
+    CGPoint force = ccpMult(unitDir, 2000);
+    float angle = -180 * atan(launchDirection.y/launchDirection.x)/M_PI;
+    [bullet setRotation:angle];    
     
+    [levelObjects addChild:bullet];
     [bullet.physicsBody applyForce:force];
+    [self shootAnim];
 }
+
+- (void) shootAnim
+{
+    // the animation manager of each node is stored in the 'userObject' property
+    CCBAnimationManager* animationManager = hero.userObject;
+    // timelines can be referenced and run by name
+    [animationManager runAnimationsForSequenceNamed:@"MainShoot"];}
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair bullet:(CCNode *)nodeA wildcard:(CCNode *)nodeB
 {
@@ -328,6 +422,7 @@ CCNode *opponent;
 /* anything that needs to be redrawn for every frame like health labels */
 - (void) update:(CCTime)delta
 {
+    [scoreBoard setString:[NSString stringWithFormat:@"%lld", score]];
     if (healthLabel == nil)
     {
         healthLabel = [[CCLabelTTF alloc] init];
@@ -390,7 +485,16 @@ CCNode *opponent;
 {
     if (leftButton.pressed) //&& [self heroOnObject])
     {
-        hero.flipX = true;
+
+        [self startWalking];
+        [hero setFlipX:YES];
+        for (CCSprite *child in hero.children)
+        {
+            [child setFlipX:YES];
+            [child setPosition:ccp(44, 76)];
+            [child setAnchorPoint:ccp(0.69, 0.79)];
+        }
+
         if (hero.physicsBody.velocity.x > -200)
         {
             [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x - 8, hero.physicsBody.velocity.y)];
@@ -399,7 +503,14 @@ CCNode *opponent;
     }
     else if (rightButton.pressed)//&& [self heroOnObject])
     {
-        hero.flipX = false;
+        [self startWalking];
+        [hero setFlipX:NO];
+        for (CCSprite *child in hero.children)
+        {
+            [child setFlipX:NO];
+            [child setPosition:ccp(27, 76)];
+            [child setAnchorPoint:ccp(0.38, 0.79)];
+        }
         if (hero.physicsBody.velocity.x < 200)
         {
             [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x + 8, hero.physicsBody.velocity.y)];
@@ -409,6 +520,7 @@ CCNode *opponent;
     {
         if ([[MainScene scene] heroOnObject])
         {
+            [self pauseWalking];
             if (hero.physicsBody.velocity.x > 0)
             {
                 [[hero physicsBody] setVelocity:ccp(hero.physicsBody.velocity.x - 8, hero.physicsBody.velocity.y)];
@@ -423,15 +535,20 @@ CCNode *opponent;
 
 -(void)reportScore
 {
+
     GKScore *boardscore = [[GKScore alloc] initWithLeaderboardIdentifier:_appDelegate.leaderboardIdentifier];
+
     boardscore.value = score;
     
-    [GKScore reportScores:@[boardscore] withCompletionHandler:^(NSError *error) {
-        if (error != nil) {
+    [GKScore reportScores:@[boardscore] withCompletionHandler:^(NSError *error)
+    {
+        if (error != nil)
+        {
             NSLog(@"%@", [error localizedDescription]);
         }
     }];
 }
+
 
 -(void)showLeaderboardAndAchievements:(BOOL)shouldShowLeaderboard{
     GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
@@ -464,6 +581,7 @@ CCNode *opponent;
         adIsShowing =true;
     }
 }
+
 
 - (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController {
     [self.appDelegate.mpcHandler.browser dismissViewControllerAnimated:YES completion:nil];
@@ -500,17 +618,41 @@ CCNode *opponent;
     NSString *message =
     [[NSString alloc] initWithData:receivedData
                           encoding:NSUTF8StringEncoding];
-    opponent.position = CGPointFromString(message);
-    NSLog(@"%@", message);
+    if ([message isEqualToString:@"1"] || [message isEqualToString:@"0"]) {
+        opponent.flipX = [message boolValue];
+        for (CCSprite *child in opponent.children)
+        {
+            [child setFlipX:[message boolValue]];
+            if (opponent.flipX) {
+                [child setPosition:ccp(44, 76)];
+                [child setAnchorPoint:ccp(0.69, 0.79)];
+            }else{
+                [child setPosition:ccp(27, 76)];
+                [child setAnchorPoint:ccp(0.38, 0.79)];
+            }
+        }
+    }else if ([message isEqualToString:@"t"] || [message isEqualToString:@"f"]){
+        //NSLog(@"%@", message);
+        if ([message boolValue]) {
+            CCBAnimationManager* animationManager = opponent.userObject;
+            // timelines can be referenced and run by name
+            [animationManager runAnimationsForSequenceNamed:@"MainWalking"];
+        }else{
+            [opponent stopAllActions];
+        }
+    }else{
+        opponent.position = CGPointFromString(message);
+        //NSLog(@"%@", message);
+    }
     
 }
 
 - (void)addOpponent{
     opponent.position = ccp(330, 50);
-    [opponent setScale:.1];
     [physicsNodeMS addChild:opponent];
     [opponent setZOrder:1];
     [self schedule:@selector(sendPositionData) interval:0.05];
+    
 }
 
 - (void)sendPositionData{
@@ -519,7 +661,43 @@ CCNode *opponent;
     [coder encodeObject:value];
     NSLog(@"%@",coder);
         NSData *data = [NSKeyedArchiver archivedDataWithRootObject:value];*/
+    NSLog(@"%d",self.walking);
+    if (multWalk != self.walking){
+        NSString *message3;
+        if (self.walking) {
+            message3 = @"t";
+        }else{
+           message3 = @"%f";
+        }
+        
+        NSData *data3 = [message3 dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error3 = nil;
+        if (![self.appDelegate.mpcHandler.session sendData:data3
+                                                   toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                                  withMode:MCSessionSendDataReliable
+                                                     error:&error3]) {
+            NSLog(@"[Error] %@", error3);
+        }
+        multWalk = self.walking;
+    }
+    
+    if (oldFlip != hero.flipX){
+        NSString *message2 = [NSString stringWithFormat:@"%d", hero.flipX];
+        NSData *data2 = [message2 dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *error2 = nil;
+        if (![self.appDelegate.mpcHandler.session sendData:data2
+                                                   toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                                  withMode:MCSessionSendDataReliable
+                                                     error:&error2]) {
+            NSLog(@"[Error] %@", error2);
+        }
+        oldFlip = hero.flipX;
+    }
+
+    
     NSString *message = [NSString stringWithFormat:@"%@", NSStringFromCGPoint(hero.position)];
+    
+   
     NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
     
     NSError *error = nil;
@@ -530,5 +708,26 @@ CCNode *opponent;
         NSLog(@"[Error] %@", error);
     }
 }
+
+- (void) startWalking
+{
+    if (!self.walking)
+    {
+        self.walking = true;
+        // the animation manager of each node is stored in the 'userObject' property
+        CCBAnimationManager* animationManager = hero.userObject;
+        // timelines can be referenced and run by name
+        [animationManager runAnimationsForSequenceNamed:@"MainWalking"];
+    }
+}
+
+- (void) pauseWalking
+{
+    [hero stopAllActions];
+    self.walking = false;
+    
+}
+
+
 
 @end

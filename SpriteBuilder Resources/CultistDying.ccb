@@ -42,7 +42,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1/dying__000.png</string>
+								<string>death_export/dying__000.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -60,7 +60,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1/dying__001.png</string>
+								<string>death_export/dying__001.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -78,7 +78,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1/dying__002.png</string>
+								<string>death_export/dying__002.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -96,7 +96,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1/dying__003.png</string>
+								<string>death_export/dying__003.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -114,7 +114,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1/dying__004.png</string>
+								<string>death_export/dying__004.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -132,7 +132,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1-2/dying__005.png</string>
+								<string>death_export/dying__005.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -150,7 +150,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1-2/dying__006.png</string>
+								<string>death_export/dying__006.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -168,7 +168,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1-2/dying__007.png</string>
+								<string>death_export/dying__007.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -186,7 +186,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1-2/dying__008.png</string>
+								<string>death_export/dying__008.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -204,7 +204,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1-2/dying__009.png</string>
+								<string>death_export/dying__009.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -222,7 +222,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d1-2/dying__010.png</string>
+								<string>death_export/dying__010.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -240,7 +240,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2/dying__011.png</string>
+								<string>death_export/dying__011.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -258,7 +258,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2/dying__012.png</string>
+								<string>death_export/dying__012.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -276,7 +276,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2/dying__013.png</string>
+								<string>death_export/dying__013.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -294,7 +294,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2/dying__014.png</string>
+								<string>death_export/dying__014.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -312,7 +312,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2/dying__015.png</string>
+								<string>death_export/dying__015.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -330,7 +330,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2-2/dying__016.png</string>
+								<string>death_export/dying__016.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -348,7 +348,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2-2/dying__017.png</string>
+								<string>death_export/dying__017.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -366,7 +366,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2-2/dying__018.png</string>
+								<string>death_export/dying__018.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -384,7 +384,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2-2/dying__019.png</string>
+								<string>death_export/dying__019.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -402,7 +402,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d2-2/dying__020.png</string>
+								<string>death_export/dying__020.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -420,7 +420,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3/dying__021.png</string>
+								<string>death_export/dying__021.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -438,7 +438,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3/dying__022.png</string>
+								<string>death_export/dying__022.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -456,7 +456,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3/dying__023.png</string>
+								<string>death_export/dying__023.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -474,7 +474,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3/dying__024.png</string>
+								<string>death_export/dying__024.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -492,7 +492,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3/dying__025.png</string>
+								<string>death_export/dying__025.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -510,7 +510,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3-2/dying__026.png</string>
+								<string>death_export/dying__026.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -528,7 +528,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3-2/dying__027.png</string>
+								<string>death_export/dying__027.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -546,7 +546,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3-2/dying__028.png</string>
+								<string>death_export/dying__028.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -564,7 +564,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3-2/dying__029.png</string>
+								<string>death_export/dying__029.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -582,7 +582,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d3-2/dying__030.png</string>
+								<string>death_export/dying__030.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -600,7 +600,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4/dying__031.png</string>
+								<string>death_export/dying__031.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -618,7 +618,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4/dying__032.png</string>
+								<string>death_export/dying__032.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -636,7 +636,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4/dying__033.png</string>
+								<string>death_export/dying__033.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -654,7 +654,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4/dying__034.png</string>
+								<string>death_export/dying__034.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -672,7 +672,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4/dying__035.png</string>
+								<string>death_export/dying__035.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -690,7 +690,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4-2/dying__036.png</string>
+								<string>death_export/dying__036.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -708,7 +708,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4-2/dying__037.png</string>
+								<string>death_export/dying__037.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -726,7 +726,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4-2/dying__038.png</string>
+								<string>death_export/dying__038.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -744,7 +744,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4-2/dying__039.png</string>
+								<string>death_export/dying__039.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -762,7 +762,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d4-2/dying__040.png</string>
+								<string>death_export/dying__040.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -780,7 +780,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5/dying__041.png</string>
+								<string>death_export/dying__041.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -798,7 +798,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5/dying__042.png</string>
+								<string>death_export/dying__042.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -816,7 +816,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5/dying__043.png</string>
+								<string>death_export/dying__043.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -834,7 +834,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5/dying__044.png</string>
+								<string>death_export/dying__044.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -852,7 +852,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5/dying__045.png</string>
+								<string>death_export/dying__045.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -870,7 +870,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5-2/dying__046.png</string>
+								<string>death_export/dying__046.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -888,7 +888,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5-2/dying__047.png</string>
+								<string>death_export/dying__047.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -906,7 +906,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5-2/dying__048.png</string>
+								<string>death_export/dying__048.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -924,7 +924,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5-2/dying__049.png</string>
+								<string>death_export/dying__049.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -942,7 +942,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d5-2/dying__050.png</string>
+								<string>death_export/dying__050.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -960,7 +960,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d6/dying__051.png</string>
+								<string>death_export/dying__051.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -978,7 +978,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d6/dying__052.png</string>
+								<string>death_export/dying__052.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -996,7 +996,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d6/dying__053.png</string>
+								<string>death_export/dying__053.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -1014,7 +1014,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d6/dying__054.png</string>
+								<string>death_export/dying__054.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -1032,7 +1032,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d6/dying__055.png</string>
+								<string>death_export/dying__055.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -1050,7 +1050,7 @@
 							<integer>7</integer>
 							<key>value</key>
 							<array>
-								<string>death_export/d6/dying__056.png</string>
+								<string>death_export/dying__056.png</string>
 								<string>Use regular file</string>
 							</array>
 						</dict>
@@ -1125,7 +1125,7 @@
 			<dict>
 				<key>baseValue</key>
 				<array>
-					<string>death_export/d1/dying__000.png</string>
+					<string>death_export/dying__000.png</string>
 					<string>Use regular file</string>
 				</array>
 				<key>name</key>
@@ -1135,7 +1135,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>death_export/d1/dying__000.png</string>
+					<string>death_export/dying__000.png</string>
 				</array>
 			</dict>
 			<dict>

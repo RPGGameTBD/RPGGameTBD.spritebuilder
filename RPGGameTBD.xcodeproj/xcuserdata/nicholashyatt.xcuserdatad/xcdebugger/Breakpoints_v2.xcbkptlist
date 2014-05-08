@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "421031443.497077"
+            timestampString = "421279518.265107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "516"
-            endingLineNumber = "516"
-            landmarkName = "-sendPositionData"
+            startingLineNumber = "520"
+            endingLineNumber = "520"
+            landmarkName = "-updateMovement"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "421031311.316019"
+            timestampString = "421279518.265107"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "503"
-            endingLineNumber = "503"
-            landmarkName = "-handleReceivedDataWithNotification:"
+            startingLineNumber = "507"
+            endingLineNumber = "507"
+            landmarkName = "-updateMovement"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

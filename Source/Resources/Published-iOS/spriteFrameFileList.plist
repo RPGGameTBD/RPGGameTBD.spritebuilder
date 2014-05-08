@@ -9,25 +9,11 @@
 	</dict>
 	<key>spriteFrameFiles</key>
 	<array>
-		<string>death_export/d5.plist</string>
-		<string>death_export/d3.plist</string>
-		<string>death_export/d1-2.plist</string>
-		<string>death_export/d1.plist</string>
-		<string>walk_export/w8.plist</string>
-		<string>death_export/d4-2.plist</string>
-		<string>walk_export/w2.plist</string>
-		<string>death_export/d6.plist</string>
-		<string>death_export/d4.plist</string>
-		<string>death_export/d2.plist</string>
-		<string>death_export/d2-2.plist</string>
-		<string>walk_export/w1.plist</string>
-		<string>walk_export/w3.plist</string>
-		<string>death_export/d5-2.plist</string>
-		<string>walk_export/w4.plist</string>
-		<string>walk_export/w6.plist</string>
-		<string>walk_export/w5.plist</string>
-		<string>death_export/d3-2.plist</string>
-		<string>walk_export/w7.plist</string>
+		<string>death_export.plist</string>
+		<string>main_walk_export.plist</string>
+		<string>walk_export.plist</string>
+		<string>crossbow_export.plist</string>
+		<string>main_shoot.plist</string>
 	</array>
 </dict>
 </plist>
