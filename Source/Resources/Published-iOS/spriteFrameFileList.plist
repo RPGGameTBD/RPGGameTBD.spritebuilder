@@ -12,6 +12,7 @@
 		<string>death_export.plist</string>
 		<string>main_walk_export.plist</string>
 		<string>walk_export.plist</string>
+		<string>death_main.plist</string>
 		<string>crossbow_export.plist</string>
 		<string>main_shoot.plist</string>
 	</array>

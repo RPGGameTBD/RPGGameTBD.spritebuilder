@@ -268,6 +268,13 @@ bool adIsShowing;
     }
 }
 
+- (void) deathAnim
+{
+    // the animation manager of each node is stored in the 'userObject' property
+    CCBAnimationManager* animationManager = hero.userObject;
+    // timelines can be referenced and run by name
+    [animationManager runAnimationsForSequenceNamed:@"MainDying"];}
+
 /* death occurs if hero falls off a ledge or her heatlh reaches zero */
 - (void) deathCheck
 {
@@ -276,15 +283,17 @@ bool adIsShowing;
         levelNum = 0;
         currLevel = @"LevelA";
         hero.dead = YES;
+        //[self deathAnim];
         [self reportScore];
-        score = 0;
-        [self performSelector:@selector(loadLevelAfterDeath) withObject:nil afterDelay:1];
+        [self performSelector:@selector(loadLevelAfterDeath) withObject:nil afterDelay:7];
     }
 }
 
 - (void) loadLevelAfterDeath
 {
     [self loadLevelWithHeroPosition:ccp(935, 50) flipped:YES];
+    score = 0;
+
 }
 
 - (void) updateEnemies

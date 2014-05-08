@@ -1,0 +1,2462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>death_main/dying__000.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {90, 194}}</string>
+			<key>offset</key>
+			<string>{-42, 27}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{30, 1}, {90, 194}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__001.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 197}, {89, 194}}</string>
+			<key>offset</key>
+			<string>{-43, 24}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{29, 4}, {89, 194}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__002.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 785}, {88, 193}}</string>
+			<key>offset</key>
+			<string>{-45, 20}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{28, 8}, {88, 193}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__003.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{159, 392}, {86, 192}}</string>
+			<key>offset</key>
+			<string>{-47, 18}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{27, 11}, {86, 192}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__004.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{748, 1537}, {89, 189}}</string>
+			<key>offset</key>
+			<string>{-46, 16}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 14}, {89, 189}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__005.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{751, 1345}, {92, 185}}</string>
+			<key>offset</key>
+			<string>{-45, 14}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 18}, {92, 185}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__006.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{752, 1153}, {94, 184}}</string>
+			<key>offset</key>
+			<string>{-44, 12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{26, 21}, {94, 184}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__007.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{818, 961}, {95, 183}}</string>
+			<key>offset</key>
+			<string>{-42, 9}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{27, 24}, {95, 183}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__008.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{838, 769}, {98, 181}}</string>
+			<key>offset</key>
+			<string>{-41, 6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{27, 28}, {98, 181}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__009.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{855, 385}, {99, 180}}</string>
+			<key>offset</key>
+			<string>{-39, 4}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{28, 31}, {99, 180}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__010.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{330, 1942}, {101, 179}}</string>
+			<key>offset</key>
+			<string>{-37, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{29, 34}, {101, 179}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__011.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{916, 193}, {101, 177}}</string>
+			<key>offset</key>
+			<string>{-35, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 38}, {101, 177}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__012.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{813, 1728}, {101, 171}}</string>
+			<key>offset</key>
+			<string>{-33, -1}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{33, 41}, {101, 171}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__013.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1945}, {102, 166}}</string>
+			<key>offset</key>
+			<string>{-31, -2}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{35, 44}, {102, 166}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__014.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{916, 1699}, {101, 162}}</string>
+			<key>offset</key>
+			<string>{-28, -4}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{38, 48}, {101, 162}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__015.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1019, 175}, {100, 159}}</string>
+			<key>offset</key>
+			<string>{-26, -5}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{41, 51}, {100, 159}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__016.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1071, 1276}, {99, 154}}</string>
+			<key>offset</key>
+			<string>{-22, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{45, 54}, {99, 154}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__017.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1474, 1}, {98, 151}}</string>
+			<key>offset</key>
+			<string>{-21, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{47, 56}, {98, 151}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__018.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1299, 961}, {97, 151}}</string>
+			<key>offset</key>
+			<string>{-20, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{48, 57}, {97, 151}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__019.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1418, 155}, {98, 151}}</string>
+			<key>offset</key>
+			<string>{-20, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{48, 57}, {98, 151}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__020.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1271, 1160}, {98, 151}}</string>
+			<key>offset</key>
+			<string>{-20, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{48, 57}, {98, 151}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__021.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1412, 312}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__022.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1391, 625}, {97, 151}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 58}, {97, 151}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__023.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1363, 786}, {97, 151}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 58}, {97, 151}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__024.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1200, 1006}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__025.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1220, 1545}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__026.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1172, 1391}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__027.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1172, 1237}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__028.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1375, 1}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__029.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1319, 158}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__030.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1360, 471}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__031.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1292, 632}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__032.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1264, 807}, {97, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {97, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__033.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1312, 317}, {98, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {98, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__034.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1260, 478}, {98, 152}}</string>
+			<key>offset</key>
+			<string>{-19, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {98, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__035.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1163, 852}, {99, 152}}</string>
+			<key>offset</key>
+			<string>{-18, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {99, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__036.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1232, 1843}, {99, 152}}</string>
+			<key>offset</key>
+			<string>{-18, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {99, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__037.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1192, 653}, {98, 152}}</string>
+			<key>offset</key>
+			<string>{-18, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 57}, {98, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__038.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1175, 1742}, {99, 152}}</string>
+			<key>offset</key>
+			<string>{-17, -8}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{50, 57}, {99, 152}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__039.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1099, 1082}, {99, 153}}</string>
+			<key>offset</key>
+			<string>{-17, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 56}, {99, 153}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__040.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1119, 1587}, {99, 153}}</string>
+			<key>offset</key>
+			<string>{-17, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 56}, {99, 153}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__041.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1071, 1432}, {99, 153}}</string>
+			<key>offset</key>
+			<string>{-17, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 56}, {99, 153}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__042.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1131, 1887}, {99, 154}}</string>
+			<key>offset</key>
+			<string>{-17, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 55}, {99, 154}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__043.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1030, 1887}, {99, 154}}</string>
+			<key>offset</key>
+			<string>{-17, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 55}, {99, 154}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__044.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1019, 1786}, {99, 154}}</string>
+			<key>offset</key>
+			<string>{-17, -7}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{50, 55}, {99, 154}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__045.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1274, 1}, {99, 155}}</string>
+			<key>offset</key>
+			<string>{-17, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 54}, {99, 155}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__046.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1218, 160}, {99, 155}}</string>
+			<key>offset</key>
+			<string>{-17, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 54}, {99, 155}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__047.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1019, 1629}, {98, 155}}</string>
+			<key>offset</key>
+			<string>{-18, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 54}, {98, 155}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__048.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{971, 1311}, {98, 157}}</string>
+			<key>offset</key>
+			<string>{-18, -5}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 52}, {98, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__049.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1160, 495}, {98, 156}}</string>
+			<key>offset</key>
+			<string>{-18, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 53}, {98, 156}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__050.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1064, 923}, {97, 157}}</string>
+			<key>offset</key>
+			<string>{-18, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 53}, {97, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__051.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1000, 1117}, {97, 157}}</string>
+			<key>offset</key>
+			<string>{-18, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 53}, {97, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__052.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1116, 336}, {96, 157}}</string>
+			<key>offset</key>
+			<string>{-19, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 53}, {96, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__053.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1177, 1}, {95, 157}}</string>
+			<key>offset</key>
+			<string>{-18, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{51, 53}, {95, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__054.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1096, 693}, {94, 157}}</string>
+			<key>offset</key>
+			<string>{-19, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{51, 53}, {94, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__055.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1121, 161}, {95, 157}}</string>
+			<key>offset</key>
+			<string>{-19, -6}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 53}, {95, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__056.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1214, 320}, {96, 156}}</string>
+			<key>offset</key>
+			<string>{-20, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 54}, {96, 156}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__057.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1062, 534}, {96, 157}}</string>
+			<key>offset</key>
+			<string>{-21, -7}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{48, 54}, {96, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__058.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1078, 1}, {97, 158}}</string>
+			<key>offset</key>
+			<string>{-21, -8}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{47, 54}, {97, 158}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__059.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{964, 534}, {96, 157}}</string>
+			<key>offset</key>
+			<string>{-21, -9}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{48, 56}, {96, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__060.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{974, 1470}, {95, 157}}</string>
+			<key>offset</key>
+			<string>{-20, -10}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{49, 57}, {95, 157}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__061.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{169, 1942}, {102, 159}}</string>
+			<key>offset</key>
+			<string>{-19, -11}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{47, 57}, {102, 159}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__062.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{511, 1932}, {113, 162}}</string>
+			<key>offset</key>
+			<string>{-16, -12}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 56}, {113, 162}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__063.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{845, 1339}, {124, 164}}</string>
+			<key>offset</key>
+			<string>{-14, -12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{41, 55}, {124, 164}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__064.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{839, 1532}, {133, 165}}</string>
+			<key>offset</key>
+			<string>{-12, -12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{38, 55}, {133, 165}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__065.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{863, 1901}, {142, 165}}</string>
+			<key>offset</key>
+			<string>{-10, -12}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{36, 55}, {142, 165}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__066.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{848, 1146}, {150, 163}}</string>
+			<key>offset</key>
+			<string>{-9, -12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{33, 56}, {150, 163}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__067.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{956, 372}, {158, 160}}</string>
+			<key>offset</key>
+			<string>{-7, -12}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 57}, {158, 160}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__068.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{938, 759}, {162, 156}}</string>
+			<key>offset</key>
+			<string>{-6, -10}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{30, 57}, {162, 156}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__069.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{915, 952}, {163, 147}}</string>
+			<key>offset</key>
+			<string>{-7, -18}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{28, 70}, {163, 147}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__070.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{941, 1}, {172, 135}}</string>
+			<key>offset</key>
+			<string>{-4, -25}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{27, 83}, {172, 135}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__071.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{840, 577}, {180, 122}}</string>
+			<key>offset</key>
+			<string>{0, -33}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{27, 97}, {180, 122}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__072.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{675, 1926}, {186, 107}}</string>
+			<key>offset</key>
+			<string>{4, -39}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{28, 111}, {186, 107}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__073.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{306, 1}, {191, 92}}</string>
+			<key>offset</key>
+			<string>{7, -46}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{29, 125}, {191, 92}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__074.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{76, 589}, {193, 84}}</string>
+			<key>offset</key>
+			<string>{11, -56}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{32, 139}, {193, 84}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__075.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{78, 393}, {193, 79}}</string>
+			<key>offset</key>
+			<string>{15, -64}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{36, 150}, {193, 79}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__076.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{92, 197}, {193, 77}}</string>
+			<key>offset</key>
+			<string>{16, -65}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{37, 152}, {193, 77}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__077.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 393}, {194, 75}}</string>
+			<key>offset</key>
+			<string>{17, -65}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{37, 153}, {194, 75}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__078.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 589}, {194, 73}}</string>
+			<key>offset</key>
+			<string>{18, -65}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{38, 154}, {194, 73}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__079.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{93, 1}, {193, 71}}</string>
+			<key>offset</key>
+			<string>{18, -65}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{39, 155}, {193, 71}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__080.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{166, 1}, {193, 70}}</string>
+			<key>offset</key>
+			<string>{19, -66}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{40, 156}, {193, 70}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__081.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{171, 196}, {192, 68}}</string>
+			<key>offset</key>
+			<string>{20, -67}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{41, 158}, {192, 68}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__082.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{238, 1}, {192, 66}}</string>
+			<key>offset</key>
+			<string>{21, -67}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{42, 159}, {192, 66}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__083.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{139, 1556}, {191, 66}}</string>
+			<key>offset</key>
+			<string>{21, -68}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 160}, {191, 66}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__084.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{513, 193}, {190, 66}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 161}, {190, 66}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__085.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{452, 385}, {190, 66}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 161}, {190, 66}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__086.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{874, 1}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__087.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{771, 769}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__088.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{679, 1731}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__089.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{704, 769}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__090.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{684, 1345}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__091.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{721, 385}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__092.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{617, 1346}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__093.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{654, 385}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__094.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{550, 1347}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__095.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{648, 193}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__096.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{570, 769}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__097.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{483, 1350}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__098.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{480, 1547}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__099.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{606, 1}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__100.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{520, 385}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__101.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{505, 577}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__102.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{746, 1730}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__103.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{788, 385}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__104.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{685, 1153}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__105.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{782, 193}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__106.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{618, 1153}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__107.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{715, 193}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__108.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{551, 1154}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__109.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{673, 1}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__110.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{503, 770}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__111.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{849, 193}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__112.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{751, 961}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__113.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{807, 1}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__114.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{684, 961}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__115.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{612, 1734}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__116.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{617, 961}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__117.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{547, 1542}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__118.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{587, 385}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__119.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{550, 962}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__120.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{773, 577}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__121.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{681, 1538}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__122.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{706, 577}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__123.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{614, 1539}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__124.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{639, 577}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__125.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{229, 779}, {191, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__126.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{273, 1749}, {191, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__127.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{207, 1556}, {191, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__128.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{206, 1749}, {191, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__129.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{139, 1749}, {191, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__130.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{241, 195}, {192, 65}}</string>
+			<key>offset</key>
+			<string>{22, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {192, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__131.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{308, 194}, {191, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__132.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{247, 389}, {191, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__133.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{231, 586}, {191, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__134.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{208, 977}, {191, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__135.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{572, 577}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__136.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{484, 1155}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__137.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{545, 1739}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__138.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{478, 1740}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__139.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{581, 193}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__140.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{740, 1}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__141.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{637, 769}, {190, 65}}</string>
+			<key>offset</key>
+			<string>{21, -69}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 65}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__142.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{482, 963}, {190, 66}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 66}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__143.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{416, 1158}, {190, 66}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 66}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__144.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{415, 1355}, {190, 66}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 66}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__145.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{412, 1548}, {190, 66}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 66}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__146.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{538, 1}, {190, 66}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 66}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__147.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{208, 1170}, {190, 68}}</string>
+			<key>offset</key>
+			<string>{21, -71}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 68}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__148.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{409, 1746}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__149.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{340, 1746}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__150.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{275, 972}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__151.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{343, 1554}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__152.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{277, 1362}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__153.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{274, 1554}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__154.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{436, 578}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__155.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{413, 966}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__156.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{346, 1356}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__157.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{383, 386}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__158.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{70, 1366}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__159.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{91, 784}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__160.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1173}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__161.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 980}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__162.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{139, 1363}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__163.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{139, 1170}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__164.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{160, 784}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{21, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{43, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__165.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{444, 193}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__166.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{365, 774}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__167.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{278, 1164}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__168.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{375, 194}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__169.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{298, 582}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__170.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{208, 1362}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__171.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{434, 771}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__172.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{347, 1163}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__173.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{469, 1}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__174.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{367, 579}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__175.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{344, 971}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__176.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{400, 1}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__177.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{314, 387}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__178.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{296, 779}, {190, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {190, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__179.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1366}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__180.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{162, 586}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__181.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{139, 977}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__182.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{70, 1752}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__183.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{70, 1559}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__184.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{70, 1173}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__185.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{70, 980}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__186.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1752}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+		<key>death_main/dying__187.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1559}, {191, 67}}</string>
+			<key>offset</key>
+			<string>{22, -70}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{44, 162}, {191, 67}}</string>
+			<key>sourceSize</key>
+			<string>{235, 251}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{2048, 2048}</string>
+		<key>textureFileName</key>
+		<string>death_main.png</string>
+	</dict>
+</dict>
+</plist>
