@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "421086319.502241"
+            timestampString = "421281604.400391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "-jump"
             landmarkType = "5">
          </BreakpointContent>
@@ -68,12 +68,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "421088313.925431"
+            timestampString = "421281604.400391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
-            landmarkName = "-update:"
+            startingLineNumber = "419"
+            endingLineNumber = "419"
+            landmarkName = "-removeBullet:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -142,12 +142,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Source/MainScene.m"
-            timestampString = "421088313.925431"
+            timestampString = "421281604.400391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "399"
-            endingLineNumber = "399"
-            landmarkName = "-update:"
+            startingLineNumber = "416"
+            endingLineNumber = "416"
+            landmarkName = "-removeBullet:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
