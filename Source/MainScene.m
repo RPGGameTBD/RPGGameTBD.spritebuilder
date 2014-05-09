@@ -160,6 +160,7 @@ Hero *opponent;
         hero.dead = NO;
         hero.health = 100;
         score = 0;
+        [hero.physicsBody setSensor:NO];
         [self schedule:@selector(updateMovement) interval:0.01];
         [hero setVisible:YES];
 
@@ -871,7 +872,7 @@ Hero *opponent;
     
     [self schedule:@selector(sendPositionData) interval:0.1];
     [self schedule:@selector(updateOpponentVelocity) interval:.3];
-    [self schedule:@selector(correctOpponentPosition) interval:1.0];
+    //[self schedule:@selector(correctOpponentPosition) interval:1.0];
     
 }
 
