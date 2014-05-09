@@ -52,8 +52,7 @@
                                animated:YES
                              completion:nil];
         }
-        scene.currLevel = self.area;
-        [scene loadLevelWithHeroPosition:point flipped:self.flipHero];
+        
         //[scene addOpponent];
         
         return;

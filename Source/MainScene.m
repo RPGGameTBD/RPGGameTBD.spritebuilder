@@ -259,7 +259,7 @@ Hero *opponent;
     for (Door *child in doors)
     {
         CGRect doorRect = child.boundingBox;
-        if (CGRectIntersectsRect(heroRect, doorRect))
+        if (CGRectIntersectsRect(heroRect, doorRect) && !multiPlayerMode)
         {
             //Make a button with the specified text show up
             [child showButton];
@@ -328,9 +328,29 @@ Hero *opponent;
         CCBAnimationManager* animationManager = dyingAnim.userObject;
         // timelines can be referenced and run by name
         [animationManager runAnimationsForSequenceNamed:@"MainDying"];
+        if (multiPlayerMode) {
+            [self opponentDeathAnim];
+        }
         [self reportScore];
         
         [self performSelector:@selector(loadLevelAfterDeath) withObject:nil afterDelay:7];
+    }
+    if (multiPlayerMode) {
+        if (opponent.position.y < 30) {
+            NSString *message = @"update";
+            
+            
+            NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+            
+            NSError *error = nil;
+            if (![self.appDelegate.mpcHandler.session sendData:data
+                                                       toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                                      withMode:MCSessionSendDataReliable
+                                                         error:&error]) {
+                NSLog(@"[Error] %@", error);
+            }
+
+        }
     }
 }
 
@@ -623,6 +643,9 @@ Hero *opponent;
 - (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController {
     [self.appDelegate.mpcHandler.browser dismissViewControllerAnimated:YES completion:nil];
     [self.appDelegate.mpcHandler advertiseSelf:false];
+    currLevel = @"LevelC";
+    [self loadLevelWithHeroPosition:ccp(630, 50) flipped:YES];
+    [self addOpponent];
     if (isHost == true) {
         NSString *message = @"host";
         
@@ -646,6 +669,8 @@ Hero *opponent;
 - (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController {
     [self.appDelegate.mpcHandler.browser dismissViewControllerAnimated:YES completion:nil];
     [self.appDelegate.mpcHandler advertiseSelf:false];
+    self.appDelegate.mpcHandler.session = nil;
+    multiPlayerMode = false;
 }
 
 - (void)peerChangedStateWithNotification:(NSNotification *)notification {
@@ -655,7 +680,14 @@ Hero *opponent;
     // We care only for the Connected and the Not Connected states.
     // The Connecting state will be simply ignored.
     if (state != MCSessionStateConnecting) {
-        [self addOpponent];
+        if ([self.appDelegate.mpcHandler.session.connectedPeers count] < 1) {
+            multiPlayerMode = false;
+            currLevel = @"LevelA";
+            [self loadLevelAfterDeath];
+            [self unschedule:@selector(sendPositionData)];
+            [self unschedule:@selector(updateOpponentVelocity)];
+            [opponent removeFromParent];
+        }
     }
 }
 
@@ -755,8 +787,34 @@ Hero *opponent;
     }else if ([message hasPrefix:@"velocity"]){
         opponent.physicsBody.velocity = CGPointFromString(message);
         //NSLog(@"%@", message);
-    }else{
+    }else if ([message isEqualToString:@"death"]){
+        
+        CCSprite *dyingAnim = (CCSprite*)[CCBReader load:@"MainDying"];
+        [dyingAnim setPosition:ccp(opponent.position.x, opponent.position.y)];
+        if (opponent.flipX)
+        {
+            [dyingAnim setAnchorPoint:ccp(0, 0.1)];
+        }
+        else
+        {
+            [dyingAnim setAnchorPoint:ccp(0.75, 0.1)];
+        }
+        [dyingAnim setFlipX:opponent.flipX];
+        
+        [opponent setVisible:NO];
+        
+        [[[MainScene scene] levelObjects] addChild:dyingAnim];
+        
+        // the animation manager of each node is stored in the 'userObject' property
+        CCBAnimationManager* animationManager = dyingAnim.userObject;
+        // timelines can be referenced and run by name
+        [animationManager runAnimationsForSequenceNamed:@"MainDying"];
+    }else if ([message isEqualToString:@"update"]){
+        [self correctOpponentPosition];
+    }else
+    {
         opponent.position = CGPointFromString(message);
+        [opponent setVisible:YES];
     }
     
 }
@@ -818,6 +876,22 @@ Hero *opponent;
 
     
     
+}
+
+- (void) opponentDeathAnim{
+    NSString *message = @"death";
+    
+    
+    NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSError *error = nil;
+    if (![self.appDelegate.mpcHandler.session sendData:data
+                                               toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                              withMode:MCSessionSendDataReliable
+                                                 error:&error]) {
+        NSLog(@"[Error] %@", error);
+    }
+
 }
 
 - (void) correctOpponentPosition{
