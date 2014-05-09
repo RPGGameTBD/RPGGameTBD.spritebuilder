@@ -132,6 +132,8 @@ bool adIsShowing;
         hero.dead = NO;
         hero.health = 100;
         score = 0;
+        [hero.physicsBody setSensor:NO];
+        [hero.physicsBody setAffectedByGravity:YES];
         [self schedule:@selector(updateMovement) interval:0.01];
         [hero setVisible:YES];
 
@@ -296,6 +298,7 @@ bool adIsShowing;
         [hero setVisible:NO];
         [self unschedule:@selector(updateMovement)];
         [hero.physicsBody setSensor:YES];
+        [hero.physicsBody setAffectedByGravity:NO];
         [hero.physicsBody setVelocity:ccp(0,0)];
         
         [[[MainScene scene] levelObjects] addChild:dyingAnim];
@@ -335,6 +338,10 @@ bool adIsShowing;
 /* gets touches from anwhere within our scene which activates the shoot mechanism */
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    if (hero.dead)
+    {
+        return;
+    }
     [self shootAnim];
 
     CGPoint touchPos = [touch locationInNode:physicsNodeMS];
