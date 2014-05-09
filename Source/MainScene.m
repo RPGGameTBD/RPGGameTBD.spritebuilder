@@ -331,6 +331,8 @@ bool adIsShowing;
 /* gets touches from anwhere within our scene which activates the shoot mechanism */
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    [self shootAnim];
+
     CGPoint touchPos = [touch locationInNode:physicsNodeMS];
     
     CCSprite *bullet = (CCSprite *)[CCBReader load:@"Bullet"];
@@ -338,8 +340,6 @@ bool adIsShowing;
     
     bullet.position = ccp(hero.position.x + hero.boundingBox.size.width/2, hero.position.y + hero.boundingBox.size.height/2);
     
-    
-
     /* calculate the direction vector */
     CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), touchPos);
     if (launchDirection.x < 0)
@@ -351,7 +351,16 @@ bool adIsShowing;
             [child setPosition:ccp(44, 76)];
             [child setAnchorPoint:ccp(0.69, 0.79)];
             [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+        
+            CGPoint worldPoint = [child convertToWorldSpace:child.position];
+            
+            CCNode *node = [physicsNodeMS.children objectAtIndex:0];
+            worldPoint = [node convertToNodeSpace:worldPoint];
+            
+
+            bullet.position = ccp(worldPoint.x, worldPoint.y + 5);
         }
+
     }
     else
     {
@@ -362,6 +371,14 @@ bool adIsShowing;
             [child setPosition:ccp(27, 76)];
             [child setAnchorPoint:ccp(0.38, 0.79)];
             [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+            
+            CGPoint worldPoint = [child convertToWorldSpace:child.position];
+            
+            CCNode *node = [physicsNodeMS.children objectAtIndex:0];
+            worldPoint = [node convertToNodeSpace:worldPoint];
+            
+            
+            bullet.position = ccp(worldPoint.x, worldPoint.y + 5);
         }
     }
     
@@ -376,11 +393,10 @@ bool adIsShowing;
     CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
     CGPoint force = ccpMult(unitDir, 2000);
     float angle = -180 * atan(launchDirection.y/launchDirection.x)/M_PI;
-    [bullet setRotation:angle];    
+    [bullet setRotation:angle];
     
     [levelObjects addChild:bullet];
     [bullet.physicsBody applyForce:force];
-    [self shootAnim];
 }
 
 - (void) shootAnim
