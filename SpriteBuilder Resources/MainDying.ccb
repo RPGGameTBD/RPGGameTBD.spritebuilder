@@ -3481,8 +3481,8 @@
 				<string>Point</string>
 				<key>value</key>
 				<array>
-					<real>0.5</real>
-					<real>0.5</real>
+					<real>0.80000001192092896</real>
+					<real>0.25</real>
 				</array>
 			</dict>
 			<dict>
@@ -3527,7 +3527,20 @@
 					<real>1</real>
 				</array>
 			</dict>
+			<dict>
+				<key>name</key>
+				<string>flip</string>
+				<key>type</key>
+				<string>Flip</string>
+				<key>value</key>
+				<array>
+					<true/>
+					<false/>
+				</array>
+			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 		<key>seqExpanded</key>
 		<true/>
 	</dict>

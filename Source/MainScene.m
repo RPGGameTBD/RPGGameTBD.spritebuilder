@@ -160,6 +160,7 @@ Hero *opponent;
         hero.dead = NO;
         hero.health = 100;
         score = 0;
+        [self schedule:@selector(updateMovement) interval:0.01];
         [hero setVisible:YES];
 
     }
@@ -312,15 +313,18 @@ Hero *opponent;
         [dyingAnim setPosition:ccp(hero.position.x, hero.position.y)];
         if (hero.flipX)
         {
-            [dyingAnim setAnchorPoint:ccp(0, 0.1)];
+            [dyingAnim setAnchorPoint:ccp(0.5, 0.25)];
         }
         else
         {
-            [dyingAnim setAnchorPoint:ccp(0.75, 0.1)];
+            [dyingAnim setAnchorPoint:ccp(0.2, 0.25)];
         }
         [dyingAnim setFlipX:hero.flipX];
         
         [hero setVisible:NO];
+        [self unschedule:@selector(updateMovement)];
+        [hero.physicsBody setSensor:YES];
+        [hero.physicsBody setVelocity:ccp(0,0)];
         
         [[[MainScene scene] levelObjects] addChild:dyingAnim];
         
