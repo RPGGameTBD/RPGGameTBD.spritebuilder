@@ -93,6 +93,11 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>LeftLevelA.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>LevelA.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -100,6 +105,11 @@
 		</dict>
 		<key>RPGImages-master/main character/body/lower_torso.png</key>
 		<dict/>
+		<key>RightLevelA.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>Sprites</key>
 		<dict/>
 		<key>TempGround.png</key>
