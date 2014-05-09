@@ -831,7 +831,7 @@ Hero *opponent;
     
     [self schedule:@selector(sendPositionData) interval:0.1];
     [self schedule:@selector(updateOpponentVelocity) interval:.3];
-    //[self schedule:@selector(correctOpponentPosition) interval:.7];
+    [self schedule:@selector(correctOpponentPosition) interval:1.0];
     
 }
 
