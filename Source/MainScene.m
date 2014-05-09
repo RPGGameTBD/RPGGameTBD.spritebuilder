@@ -131,7 +131,7 @@ Hero *opponent;
     multWalk = nil;
     oldFlip = nil;
     isHost = true;
-    opponent = [CCBReader load:@"Hero"];
+    opponent = (Hero*)[CCBReader load:@"Hero"];
     
     //setup appDelegate
     _appDelegate = (AppController *)[[UIApplication sharedApplication] delegate];
@@ -161,6 +161,8 @@ Hero *opponent;
         hero.health = 100;
         score = 0;
         [hero.physicsBody setSensor:NO];
+
+        [hero.physicsBody setAffectedByGravity:YES];
         [self schedule:@selector(updateMovement) interval:0.01];
         [hero setVisible:YES];
 
@@ -325,6 +327,7 @@ Hero *opponent;
         [hero setVisible:NO];
         [self unschedule:@selector(updateMovement)];
         [hero.physicsBody setSensor:YES];
+        [hero.physicsBody setAffectedByGravity:NO];
         [hero.physicsBody setVelocity:ccp(0,0)];
         
         [[[MainScene scene] levelObjects] addChild:dyingAnim];
@@ -390,6 +393,10 @@ Hero *opponent;
 /* gets touches from anwhere within our scene which activates the shoot mechanism */
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    if (hero.dead)
+    {
+        return;
+    }
     [self shootAnim];
 
     CGPoint touchPos = [touch locationInNode:physicsNodeMS];

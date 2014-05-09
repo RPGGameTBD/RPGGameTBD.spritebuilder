@@ -361,7 +361,7 @@
 					<key>elasticity</key>
 					<real>0.30000001192092896</real>
 					<key>friction</key>
-					<real>0.5</real>
+					<real>0.0</real>
 					<key>points</key>
 					<array>
 						<array>
@@ -463,6 +463,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -494,7 +496,7 @@
 					<key>elasticity</key>
 					<real>0.30000001192092896</real>
 					<key>friction</key>
-					<real>0.5</real>
+					<real>0.0</real>
 					<key>points</key>
 					<array>
 						<array>
@@ -858,8 +860,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
