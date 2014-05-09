@@ -385,6 +385,8 @@ Hero *opponent;
 /* gets touches from anwhere within our scene which activates the shoot mechanism */
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    [self shootAnim];
+
     CGPoint touchPos = [touch locationInNode:physicsNodeMS];
     
     CCSprite *bullet = (CCSprite *)[CCBReader load:@"Bullet"];
@@ -392,8 +394,6 @@ Hero *opponent;
     
     bullet.position = ccp(hero.position.x + hero.boundingBox.size.width/2, hero.position.y + hero.boundingBox.size.height/2);
     
-    
-
     /* calculate the direction vector */
     CGPoint launchDirection = ccpAdd(ccp(-bullet.position.x,-bullet.position.y), touchPos);
     if (launchDirection.x < 0)
@@ -405,7 +405,16 @@ Hero *opponent;
             [child setPosition:ccp(44, 76)];
             [child setAnchorPoint:ccp(0.69, 0.79)];
             [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+        
+            CGPoint worldPoint = [child convertToWorldSpace:child.position];
+            
+            CCNode *node = [physicsNodeMS.children objectAtIndex:0];
+            worldPoint = [node convertToNodeSpace:worldPoint];
+            
+
+            bullet.position = ccp(worldPoint.x, worldPoint.y + 5);
         }
+
     }
     else
     {
@@ -416,6 +425,14 @@ Hero *opponent;
             [child setPosition:ccp(27, 76)];
             [child setAnchorPoint:ccp(0.38, 0.79)];
             [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+            
+            CGPoint worldPoint = [child convertToWorldSpace:child.position];
+            
+            CCNode *node = [physicsNodeMS.children objectAtIndex:0];
+            worldPoint = [node convertToNodeSpace:worldPoint];
+            
+            
+            bullet.position = ccp(worldPoint.x, worldPoint.y + 5);
         }
     }
     
@@ -430,10 +447,11 @@ Hero *opponent;
     CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
     CGPoint force = ccpMult(unitDir, 2000);
     float angle = -180 * atan(launchDirection.y/launchDirection.x)/M_PI;
-    [bullet setRotation:angle];    
+    [bullet setRotation:angle];
     
     [levelObjects addChild:bullet];
     [bullet.physicsBody applyForce:force];
+
     [self shootAnim];
     if (multiPlayerMode) {
         [self opponentShootWithLaunchDirection:launchDirection];
@@ -731,6 +749,9 @@ Hero *opponent;
         }
     }else if ([message hasPrefix:@"shoot"]){
         message = [message substringFromIndex:5];
+        CCBAnimationManager* animationManager = opponent.userObject;
+        // timelines can be referenced and run by name
+        [animationManager runAnimationsForSequenceNamed:@"MainShoot"];
         CCSprite *bullet = (CCSprite *)[CCBReader load:@"Bullet"];
         [bullet.physicsBody setCollisionGroup:opponent];
         
@@ -749,7 +770,16 @@ Hero *opponent;
                 [child setPosition:ccp(44, 76)];
                 [child setAnchorPoint:ccp(0.69, 0.79)];
                 [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+                
+                CGPoint worldPoint = [child convertToWorldSpace:child.position];
+                
+                CCNode *node = [physicsNodeMS.children objectAtIndex:0];
+                worldPoint = [node convertToNodeSpace:worldPoint];
+                
+                
+                bullet.position = ccp(worldPoint.x, worldPoint.y + 5);
             }
+            
         }
         else
         {
@@ -760,6 +790,14 @@ Hero *opponent;
                 [child setPosition:ccp(27, 76)];
                 [child setAnchorPoint:ccp(0.38, 0.79)];
                 [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+                
+                CGPoint worldPoint = [child convertToWorldSpace:child.position];
+                
+                CCNode *node = [physicsNodeMS.children objectAtIndex:0];
+                worldPoint = [node convertToNodeSpace:worldPoint];
+                
+                
+                bullet.position = ccp(worldPoint.x, worldPoint.y + 5);
             }
         }
         
@@ -778,9 +816,7 @@ Hero *opponent;
         
         [levelObjects addChild:bullet];
         [bullet.physicsBody applyForce:force];
-        CCBAnimationManager* animationManager = opponent.userObject;
-        // timelines can be referenced and run by name
-        [animationManager runAnimationsForSequenceNamed:@"MainShoot"];
+        
         
     }else if([message isEqualToString:@"host"]){
         isHost = false;
