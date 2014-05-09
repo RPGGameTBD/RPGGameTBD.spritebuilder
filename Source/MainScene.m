@@ -57,10 +57,11 @@ ADBannerView *adView;
 bool adIsShowing;
 
 //multiplayer match stuff
+bool multiPlayerMode;
 bool multWalk;
 bool oldFlip;
 bool isHost;
-CCSprite  *opponent;
+Hero *opponent;
 
 /* here is a class method to get ahold of our MainScene node */
 + (MainScene *) scene
@@ -126,9 +127,10 @@ CCSprite  *opponent;
      */
     
     //init multiplayer stuff
+    multiPlayerMode = false;
     multWalk = nil;
     oldFlip = nil;
-    isHost = nil;
+    isHost = true;
     opponent = [CCBReader load:@"Hero"];
     
     //setup appDelegate
@@ -310,6 +312,12 @@ CCSprite  *opponent;
 
 - (void) loadLevelAfterDeath
 {
+    if (multiPlayerMode) {
+        currLevel = @"LevelC";
+        [self loadLevelWithHeroPosition:ccp(630, 50) flipped:YES];
+        [self correctOpponentPosition];
+        return;
+    }
     [self loadLevelWithHeroPosition:ccp(935, 50) flipped:YES];
 }
 
@@ -381,6 +389,9 @@ CCSprite  *opponent;
     [levelObjects addChild:bullet];
     [bullet.physicsBody applyForce:force];
     [self shootAnim];
+    if (multiPlayerMode) {
+        [self opponentShootWithLaunchDirection:launchDirection];
+    }
 }
 
 - (void) shootAnim
@@ -585,10 +596,30 @@ CCSprite  *opponent;
 
 - (void)browserViewControllerDidFinish:(MCBrowserViewController *)browserViewController {
     [self.appDelegate.mpcHandler.browser dismissViewControllerAnimated:YES completion:nil];
+    [self.appDelegate.mpcHandler advertiseSelf:false];
+    if (isHost == true) {
+        NSString *message = @"host";
+        
+        
+        NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSError *error = nil;
+        if (![self.appDelegate.mpcHandler.session sendData:data
+                                                   toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                                  withMode:MCSessionSendDataReliable
+                                                     error:&error]) {
+            NSLog(@"[Error] %@", error);
+        }
+        Hero *temp = opponent;
+        opponent = hero;
+        hero = temp;
+        [hero setHealth:100];
+    }
 }
 
 - (void)browserViewControllerWasCancelled:(MCBrowserViewController *)browserViewController {
     [self.appDelegate.mpcHandler.browser dismissViewControllerAnimated:YES completion:nil];
+    [self.appDelegate.mpcHandler advertiseSelf:false];
 }
 
 - (void)peerChangedStateWithNotification:(NSNotification *)notification {
@@ -640,18 +671,83 @@ CCSprite  *opponent;
         }else{
             [opponent stopAllActions];
         }
+    }else if ([message hasPrefix:@"shoot"]){
+        message = [message substringFromIndex:5];
+        CCSprite *bullet = (CCSprite *)[CCBReader load:@"Bullet"];
+        [bullet.physicsBody setCollisionGroup:opponent];
+        
+        bullet.position = ccp(opponent.position.x + opponent.boundingBox.size.width/2, opponent.position.y + opponent.boundingBox.size.height/2);
+        
+        
+        
+        /* calculate the direction vector */
+        CGPoint launchDirection = CGPointFromString(message);
+        if (launchDirection.x < 0)
+        {
+            [opponent setFlipX:YES];
+            for (CCSprite *child in opponent.children)
+            {
+                [child setFlipX:YES];
+                [child setPosition:ccp(44, 76)];
+                [child setAnchorPoint:ccp(0.69, 0.79)];
+                [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+            }
+        }
+        else
+        {
+            [opponent setFlipX:NO];
+            for (CCSprite *child in opponent.children)
+            {
+                [child setFlipX:NO];
+                [child setPosition:ccp(27, 76)];
+                [child setAnchorPoint:ccp(0.38, 0.79)];
+                [child setRotation:-180 * atan(launchDirection.y/launchDirection.x)/M_PI];
+            }
+        }
+        
+        
+        
+        [bullet setScale:0.33];
+        [bullet setFlipX:!opponent.flipX];
+        [bullet.physicsBody setMass:0.05];
+        [bullet.physicsBody setAffectedByGravity:YES];
+        
+        double length = sqrt(pow(launchDirection.x, 2) + pow(launchDirection.y, 2));
+        CGPoint unitDir = ccp(launchDirection.x/length, launchDirection.y/length);
+        CGPoint force = ccpMult(unitDir, 2000);
+        float angle = -180 * atan(launchDirection.y/launchDirection.x)/M_PI;
+        [bullet setRotation:angle];    
+        
+        [levelObjects addChild:bullet];
+        [bullet.physicsBody applyForce:force];
+        CCBAnimationManager* animationManager = opponent.userObject;
+        // timelines can be referenced and run by name
+        [animationManager runAnimationsForSequenceNamed:@"MainShoot"];
+        
+    }else if([message isEqualToString:@"host"]){
+        isHost = false;
+    }else if ([message hasPrefix:@"velocity"]){
+        opponent.physicsBody.velocity = CGPointFromString(message);
+        //NSLog(@"%@", message);
     }else{
         opponent.position = CGPointFromString(message);
-        //NSLog(@"%@", message);
     }
     
 }
 
 - (void)addOpponent{
+    multiPlayerMode = true;
     opponent.position = ccp(330, 50);
     [physicsNodeMS addChild:opponent];
     [opponent setZOrder:1];
-    [self schedule:@selector(sendPositionData) interval:0.05];
+    [opponent.physicsBody setMass:1];
+    [opponent.physicsBody setAllowsRotation:false];
+    [opponent.physicsBody setCollisionGroup:opponent];
+    
+    
+    [self schedule:@selector(sendPositionData) interval:0.1];
+    [self schedule:@selector(updateOpponentVelocity) interval:.3];
+    //[self schedule:@selector(correctOpponentPosition) interval:.7];
     
 }
 
@@ -695,20 +791,54 @@ CCSprite  *opponent;
     }
 
     
-    NSString *message = [NSString stringWithFormat:@"%@", NSStringFromCGPoint(hero.position)];
     
-   
+}
+
+- (void) correctOpponentPosition{
+    NSString *message = [NSString stringWithFormat:@"%@", NSStringFromCGPoint(hero.position)];
+     
+     
+     NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+     
+     NSError *error = nil;
+     if (![self.appDelegate.mpcHandler.session sendData:data
+     toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+     withMode:MCSessionSendDataReliable
+     error:&error]) {
+     NSLog(@"[Error] %@", error);
+     }
+}
+
+- (void) updateOpponentVelocity{
+    NSString *message = [NSString stringWithFormat:@"velocity%@", NSStringFromCGPoint(hero.physicsBody.velocity)];
+    
+    
     NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
     
     NSError *error = nil;
     if (![self.appDelegate.mpcHandler.session sendData:data
-                        toPeers:self.appDelegate.mpcHandler.session.connectedPeers
-                       withMode:MCSessionSendDataUnreliable
-                          error:&error]) {
+                                               toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                              withMode:MCSessionSendDataReliable
+                                                 error:&error]) {
         NSLog(@"[Error] %@", error);
     }
 }
 
+- (void) opponentShootWithLaunchDirection:(CGPoint )launchDirection{
+    
+    NSString *message = [NSString stringWithFormat:@"shoot%@", NSStringFromCGPoint(launchDirection)];
+    
+    
+    NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSError *error = nil;
+    if (![self.appDelegate.mpcHandler.session sendData:data
+                                               toPeers:self.appDelegate.mpcHandler.session.connectedPeers
+                                              withMode:MCSessionSendDataReliable
+                                                 error:&error]) {
+        NSLog(@"[Error] %@", error);
+    }
+}
 - (void) startWalking
 {
     if (!self.walking)
